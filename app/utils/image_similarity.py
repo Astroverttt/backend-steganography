@@ -7,11 +7,14 @@ from skimage.metrics import structural_similarity as ssim
 import logging
 import torch
 import torchvision.transforms as transforms
-from torchvision.models import resnet18
+from torchvision.models import resnet18, ResNet18_Weights
 from imagehash import average_hash, phash, dhash, whash
 
-_restnet_model = resnet18(pretrained=True)
+model = resnet18(weights=None)
+
+_restnet_model = resnet18(weights=ResNet18_Weights.DEFAULT)
 _restnet_model.eval()
+
 
 _transforms = transforms.Compose([
     transforms.Resize((224, 224)),

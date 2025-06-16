@@ -1,15 +1,19 @@
 import os
 import logging
 from fastapi import FastAPI
+from fastapi import staticfiles
 from dotenv import load_dotenv
 from app.db.database import Base, engine
 from app.api.routes import users, auth, uploads, explore, payments
+
 
 load_dotenv()
 
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+app.mount("/static", staticfiles.StaticFiles(directory="static"), name="static")
 
 LOG_DIR = "logs"
 os.makedirs(LOG_DIR, exist_ok=True)

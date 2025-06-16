@@ -8,6 +8,7 @@ from app.steganography import embed_message_lsb, xor_encrypt_decrypt
 from app.utils.image_similarity import compute_all_hashes, is_similar_image
 import os, uuid, hashlib, io
 from PIL import Image
+from app.utils.send_email import send_certificate_email
 
 router = APIRouter()
 
@@ -27,6 +28,7 @@ async def upload_artwork(
     watermark_creator_message: str = Form(None),
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user)
+
 ):
     temp_file_path = None
     watermarked_image_path = None
@@ -71,7 +73,9 @@ async def upload_artwork(
         final_image_name = f"{unique_key}_stego.{file_extension}"
         final_image_path = os.path.join(WATERMARKED_DIR, final_image_name)
         os.rename(watermarked_image_path, final_image_path)
+        BASE_URL = "http://localhost:8000"
         image_url_db = f"/static/watermarked/{final_image_name}"
+        image_url_full = f"http://localhost:8000{image_url_db}"
 
         # Simpan ke database
         artwork = Artwork(
@@ -93,6 +97,18 @@ async def upload_artwork(
         db.commit()
         db.refresh(artwork)
 
+        await send_certificate_email(
+            to_email=merged_user.email,
+            context={
+                "title": title,
+                "category": category or "-",
+                "description": description or "-",
+                "unique_key": unique_key,
+                "buyer_code": buyer_secret_code,
+                "image_url": image_url_full
+            }
+        )
+
         return {
             "message": "Artwork uploaded successfully with steganography",
             "artwork_id": artwork.id,
@@ -106,3 +122,4 @@ async def upload_artwork(
         if watermarked_image_path and os.path.exists(watermarked_image_path):
             os.remove(watermarked_image_path)
         raise HTTPException(status_code=500, detail=f"Upload gagal: {str(e)}")
+    

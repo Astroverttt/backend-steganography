@@ -8,14 +8,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-# --- BARIS INI YANG HARUS DIPERBAIKI ---
-# Mengambil URL database dari objek settings.
-# Pastikan di file .env Anda, variabelnya bernama DATABASE_URL
-# dan di app/core/config.py, properti di kelas Settings juga bernama DATABASE_URL.
 SQLALCHEMY_DATABASE_URL = settings.DATABASE_URL
-
-# Baris ini tidak diperlukan karena SQLALCHEMY_DATABASE_URL sudah didefinisikan di atas
-# DBURL = settings.DBURL
 
 # Menggunakan URL database yang sudah benar untuk membuat engine
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
