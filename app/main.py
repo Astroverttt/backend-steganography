@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi import staticfiles
 from dotenv import load_dotenv
 from app.db.database import Base, engine
-from app.api.routes import users, auth, uploads, explore, payments
+from app.api.routes import users, auth, uploads, explore, payments, extract
 
 
 load_dotenv()
@@ -35,3 +35,4 @@ app.include_router(auth.router, prefix="/auth", tags=["Auth"])
 app.include_router(uploads.router, prefix="/api/artwork", tags=["Artworks"])
 app.include_router(explore.router, prefix="/explores", tags=["Explores"])
 app.include_router(payments.router, prefix="/payments", tags=["Payments"])
+app.include_router(extract.router, prefix="/extract", tags=["Extract"])
