@@ -38,3 +38,4 @@ class ArtworkUploadRequest(BaseModel):
     category: str
     description: Optional[str] = None
     license_type: str
+    price: Decimal = Decimal("0.0")

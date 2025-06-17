@@ -41,23 +41,30 @@ async def upload_artwork(
         temp_file_name = f"{uuid.uuid4().hex}.{file_extension}"
         temp_file_path = os.path.join(UPLOAD_DIR, temp_file_name)
 
+        license_type = license_type.upper()
+        if license_type not in ["FREE", "PAID"]:
+            raise HTTPException(status_code=400, detail="Tipe lisensi tidak valid.")
+        
+        if license_type == "FREE":
+            price = 0.0
+        elif license_type == "PAID":
+            if price <= 0.0:
+                raise HTTPException(status_code=400, detail="Harga harus diisi jika lisensi berbayar.")
+
         content = await image.read()
         pil_image = Image.open(io.BytesIO(content)).convert("RGB")
         uploaded_hashes = compute_all_hashes(pil_image)
 
-        # Cek gambar serupa terhadap semua artwork di DB
         existing_artworks = db.query(Artwork).all()
         for artwork in existing_artworks:
             if is_similar_image(uploaded_hashes, pil_image, artwork):
                 raise HTTPException(status_code=400, detail="Gambar terlalu mirip (duplikat atau visual).")
 
-        # Simpan file asli
         with open(temp_file_path, "wb") as f:
             f.write(content)
 
-        # Watermark
         watermark_hak_cipta = hashlib.sha256(unique_key.encode()).hexdigest()
-        buyer_secret_code = uuid.uuid4().hex[:12]
+        buyer_secret_code = uuid.uuid4().hex[:8]
         pesan_gabungan = f"COPYRIGHT:{watermark_hak_cipta}"
 
         if watermark_creator_message:
@@ -66,7 +73,6 @@ async def upload_artwork(
 
         watermarked_image_path = embed_message_lsb(temp_file_path, pesan_gabungan)
 
-        # Hapus gambar asli
         if os.path.exists(temp_file_path):
             os.remove(temp_file_path)
 
@@ -77,7 +83,6 @@ async def upload_artwork(
         image_url_db = f"/static/watermarked/{final_image_name}"
         image_url_full = f"http://localhost:8000{image_url_db}"
 
-        # Simpan ke database
         artwork = Artwork(
             id=uuid.uuid4(),
             owner_id=merged_user.id,
