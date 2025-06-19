@@ -14,6 +14,7 @@ class User(Base):
     is_active = Column(Boolean, default=True)
     artworks = relationship("Artwork", back_populates="owner") 
     receipts = relationship("Receipt", back_populates="buyer")
+    likes = relationship("Like", back_populates="user", cascade="all, delete")
     
 # class Artwork(Base): #Tambahkan Class Artwork
 #     __tablename__ = "artworks"

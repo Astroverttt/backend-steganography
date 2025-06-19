@@ -27,3 +27,4 @@ class Artwork(Base):
     hash_whash = Column(String, nullable=True)
     owner = relationship("User", back_populates="artworks")
     receipts = relationship("Receipt", back_populates="artwork")
+    likes = relationship("Like", back_populates="artwork", cascade="all, delete")
