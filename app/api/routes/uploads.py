@@ -118,6 +118,8 @@ async def upload_artwork(
             "message": "Artwork uploaded successfully with steganography",
             "artwork_id": artwork.id,
             "image_url": image_url_db,
+            "unique_key": unique_key,
+            "copyright_hash": watermark_hak_cipta,
             "buyer_secret_code": buyer_secret_code
         }
 

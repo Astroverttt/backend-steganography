@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Konfirmasi Pembelian Karya</title>
+  </head>
+  <body style="font-family: Arial, sans-serif; color: #333">
+    <h2>🎉🎉 Terima kasih telah membeli karya <i>{{ artwork_title }}</i>!</h2>
+
+    <p>Berikut detail pembelianmu:</p>
+    <ul>
+      <li><strong>Tanggal Beli:</strong> {{ purchase_date }}</li>
+      <li><strong>Harga:</strong> Rp {{ price }}</li>
+      <li>
+        <strong>Kode Rahasia (buyer_secret_code):</strong>
+        <code>{{ buyer_secret_code }}</code>
+      </li>
+    </ul>
+
+    <p>
+      🔽
+      <a
+        href="{{ download_url }}"
+        style="
+          padding: 10px 15px;
+          background-color: #007bff;
+          color: white;
+          text-decoration: none;
+        "
+      >
+        Download Karya
+      </a>
+    </p>
+    <p>
+      🔍
+      <a
+        href="{{ watermark_api }}"
+        style="
+          padding: 10px 15px;
+          background-color: #28a745;
+          color: white;
+          text-decoration: none;
+        "
+      >
+        Lihat Watermark
+      </a>
+    </p>
+
+    <hr />
+    <p>
+      Jaga informasi ini baik-baik sebagai bukti kepemilikan karya yang sah.
+    </p>
+  </body>
+</html>

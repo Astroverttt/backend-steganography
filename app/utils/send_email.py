@@ -2,6 +2,7 @@ from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
 from pydantic import EmailStr
 from jinja2 import Environment, FileSystemLoader, TemplateNotFound
 from app.core.config import settings
+from app.core.mail_config import conf, env
 
 conf = ConnectionConfig(
     MAIL_USERNAME=settings.MAIL_USERNAME,
@@ -26,6 +27,23 @@ async def send_certificate_email(to_email: EmailStr, context: dict):
 
     message = MessageSchema(
         subject="Sertifikat Kepemilikan Karya Digital",
+        recipients=[to_email],
+        body=html_content,
+        subtype="html"
+    )
+
+    fm = FastMail(conf)
+    await fm.send_message(message)
+
+async def send_purchase_email(to_email: EmailStr, context: dict):
+    try:
+        template = env.get_template("purchase_email.html")
+        html_content = template.render(**context)
+    except TemplateNotFound:
+        raise RuntimeError("Template 'purchase_email.html' not found in app/templates")
+
+    message = MessageSchema(
+        subject="Konfirmasi Pembelian Karya",
         recipients=[to_email],
         body=html_content,
         subtype="html"
