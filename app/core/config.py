@@ -1,4 +1,3 @@
-# app/core/config.py
 import os
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -22,4 +21,4 @@ class Settings(BaseSettings):
     MAIL_STARTTLS: bool = Field(True, env="MAIL_STARTTLS")
     MAIL_SSL_TLS: bool = Field(False, env="MAIL_SSL_TLS")
 
-settings = Settings()
+settings = Settings()  # ← ini cukup dideklarasikan di akhir, tanpa diimpor lagi

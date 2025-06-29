@@ -12,7 +12,6 @@ async def handle_midtrans_notification(request: Request):
         body = await request.body()
         data = json.loads(body)
 
-        # Verifikasi signature
         order_id = data["order_id"]
         status_code = data["status_code"]
         gross_amount = data["gross_amount"]

@@ -5,6 +5,9 @@ from logging.config import fileConfig
 from sqlalchemy import create_engine
 from sqlalchemy import pool
 from alembic import context
+from app.db.database import Base
+
+target_metadata = Base.metadata
 
 # Tambahkan path ke root proyek Anda agar model dapat diimpor
 # Ini sangat penting agar Python bisa menemukan modul 'app.db.database' dan 'app.models'

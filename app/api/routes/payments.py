@@ -39,6 +39,13 @@ async def initiate_payment(
     if artwork.price <= 0:
         raise HTTPException(status_code=400, detail="Karya ini gratis, tidak memerlukan pembayaran")
 
+    existing_receipt = db.query(Receipt).filter_by(
+        buyer_id=current_user.id,
+        artwork_id=artwork.id
+    ).first()
+    if existing_receipt:
+        raise HTTPException(status_code=400, detail="Karya ini sudah terjual.")
+
     order_id = f"ORDER-{uuid.uuid4()}"
     buyer_secret_code = uuid.uuid4().hex[:8]
 
@@ -55,7 +62,7 @@ async def initiate_payment(
             "gross_amount": int(artwork.price)
         },
         "customer_details": {
-            "first_name": current_user.fullname,
+            "first_name": current_user.username,
             "email": current_user.email
         },
         "item_details": [
@@ -80,7 +87,8 @@ async def initiate_payment(
             buyer_id=current_user.id,
             artwork_id=artwork.id,
             amount=artwork.price,
-            buyer_secret_code=buyer_secret_code
+            buyer_secret_code=buyer_secret_code,
+            order_id=order_id
         )
         db.add(temp_receipt)
         db.commit()
@@ -106,15 +114,21 @@ async def payment_callback(request: Request, db: Session = Depends(get_db)):
     gross_amount = callback_data.get("gross_amount")
     received_signature = callback_data.get("signature_key")
 
-    input_string = order_id + status_code + gross_amount + MIDTRANS_SERVER_KEY
-    expected_signature = hmac.new(
-        MIDTRANS_SERVER_KEY.encode(),
-        input_string.encode(),
-        hashlib.sha512
-    ).hexdigest()
+    server_key = os.getenv("MIDTRANS_SERVER_KEY")
+    if not server_key:
+        raise HTTPException(status_code=500, detail="Server key tidak ditemukan di environment")
+
+    input_string = order_id + status_code + gross_amount + server_key
+    expected_signature = hashlib.sha512(input_string.encode()).hexdigest()
+
+    print("✅ COMPARING SIGNATURES:")
+    print(f"Input: {order_id}+{status_code}+{gross_amount}+{server_key}")
+    print(f"Expected: {expected_signature}")
+    print(f"Received: {received_signature}")
 
     if received_signature != expected_signature:
         raise HTTPException(status_code=403, detail="Signature tidak valid")
+
 
     transaction_status = callback_data.get("transaction_status")
     if transaction_status == "settlement":
@@ -128,20 +142,36 @@ async def payment_callback(request: Request, db: Session = Depends(get_db)):
                 raise HTTPException(status_code=404, detail="Pembeli tidak ditemukan")
 
             receipt = db.query(Receipt).filter_by(artwork_id=artwork_id, buyer_id=buyer.id).first()
-            if receipt:
-                db.commit()
+            if not receipt:
+                receipt = Receipt(
+                    artwork_id=artwork_id,
+                    buyer_id=buyer.id,
+                    amount=gross_amount,
+                    buyer_secret_code=uuid.uuid4().hex[:8]
+                )
+                db.add(receipt)
 
-    await send_purchase_email(
-    to_email=buyer.email,
-    context={
-        "artwork_title": receipt.artwork.title,
-        "purchase_date": receipt.purchase_date.strftime("%d %B %Y"),
-        "price": float(receipt.amount),
-        "buyer_secret_code": receipt.buyer_secret_code,
-        "download_url": f"http://localhost:8000{receipt.artwork.image_url}",
-        "watermark_api": "http://localhost:8000/extract/extract-watermark"
-    }
-)
+            receipt.order_id = order_id
+            receipt.transaction_id = callback_data.get("transaction_id")
+            receipt.payment_type = callback_data.get("payment_type")
+
+            if status_code == "200":
+                receipt.status = "paid"
+
+            db.commit()
+            db.refresh(receipt)
+
+            await send_purchase_email(
+                to_email=buyer.email,
+                context={
+                    "artwork_title": receipt.artwork.title,
+                    "purchase_date": receipt.purchase_date.strftime("%d %B %Y"),
+                    "price": float(receipt.amount),
+                    "buyer_secret_code": receipt.buyer_secret_code,
+                    "download_url": f"http://localhost:8000{receipt.artwork.image_url}",
+                    "watermark_api": "http://localhost:8000/extract/extract-watermark"
+                }
+            )
 
     return {"message": "Callback Midtrans diterima"}
 

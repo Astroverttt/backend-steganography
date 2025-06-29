@@ -43,7 +43,7 @@ async def send_purchase_email(to_email: EmailStr, context: dict):
         raise RuntimeError("Template 'purchase_email.html' not found in app/templates")
 
     message = MessageSchema(
-        subject="Konfirmasi Pembelian Karya",
+        subject="Tanda Terima Pembelian Karya Digital",
         recipients=[to_email],
         body=html_content,
         subtype="html"
@@ -51,3 +51,4 @@ async def send_purchase_email(to_email: EmailStr, context: dict):
 
     fm = FastMail(conf)
     await fm.send_message(message)
+
