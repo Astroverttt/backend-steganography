@@ -164,14 +164,16 @@ async def payment_callback(request: Request, db: Session = Depends(get_db)):
             await send_purchase_email(
                 to_email=buyer.email,
                 context={
-                    "artwork_title": receipt.artwork.title,
-                    "purchase_date": receipt.purchase_date.strftime("%d %B %Y"),
-                    "price": float(receipt.amount),
-                    "buyer_secret_code": receipt.buyer_secret_code,
-                    "download_url": f"http://localhost:8000{receipt.artwork.image_url}",
-                    "watermark_api": "http://localhost:8000/extract/extract-watermark"
-                }
-            )
+        "artwork_title": receipt.artwork.title,
+        "purchase_date": receipt.purchase_date.strftime("%d %B %Y"),
+        "price": float(receipt.amount),
+        "buyer_secret_code": receipt.buyer_secret_code,
+        "download_url": f"http://localhost:8000{receipt.artwork.image_url}",
+        "image_url": receipt.artwork.image_url,  
+        "watermark_api": "http://localhost:8000/extract/extract-watermark"
+    }
+)
+
 
     return {"message": "Callback Midtrans diterima"}
 
@@ -183,7 +185,6 @@ async def get_my_purchases(
 ):
     receipts = db.query(Receipt).filter_by(buyer_id=current_user.id).all()
     return receipts
-
 
 @router.get("/receipt/{id}", response_model=ReceiptDetailResponse)
 async def get_receipt_detail(
