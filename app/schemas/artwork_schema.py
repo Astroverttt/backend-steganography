@@ -1,37 +1,43 @@
 from pydantic import BaseModel
 from uuid import UUID
 from decimal import Decimal
-from typing import Optional
+from typing import Optional, List
+from datetime import datetime
+
 
 class ArtworkCreate(BaseModel):
     id: UUID
     title: str
-    description: str | None = None
-    category: str | None = None
-    license_type: str | None = None
+    description: Optional[str] = None
+    category: Optional[str] = None
+    license_type: Optional[str] = None
     price: Decimal
     image_url: str
     unique_key: str
     hash: str
     user_id: UUID
 
-    class Config:
-        from_attributes = True
+    model_config = {
+        "from_attributes": True
+    }
+
 
 class ArtworkResponse(BaseModel):
     id: UUID
-    user_id: UUID
+    owner_id: UUID
     title: str
-    description: str | None = None
-    category: str | None = None
-    license_type: str | None = None
+    description: Optional[str] = None
+    category: Optional[str] = None
+    license_type: Optional[str] = None
     price: Decimal
     image_url: str
     unique_key: str
     hash: str
 
-    class Config:
-        from_attributes = True
+    model_config = {
+        "from_attributes": True
+    }
+
 
 class ArtworkUploadRequest(BaseModel):
     title: str
@@ -39,3 +45,10 @@ class ArtworkUploadRequest(BaseModel):
     description: Optional[str] = None
     license_type: str
     price: Decimal = Decimal("0.0")
+
+
+class ArtworkListResponse(BaseModel):
+    status: str
+    message: str
+    result: List[ArtworkResponse]
+    total: int

@@ -2,12 +2,12 @@ from fastapi import APIRouter, Query, Depends
 from sqlalchemy.orm import Session
 from app.api.deps import get_db
 from app.models.artwork import Artwork
-from app.schemas.artwork_schema import ArtworkResponse
+from app.schemas.artwork_schema import ArtworkListResponse
 from typing import Optional, List
 
 router = APIRouter()
 
-@router.get("/explore", response_model=dict)
+@router.get("/explore", response_model=ArtworkListResponse)
 def explore_items(
     db: Session = Depends(get_db),
     skip: int = Query(0, ge=0),
@@ -23,17 +23,9 @@ def explore_items(
 
     artworks = artworks_query.offset(skip).limit(limit).all()
 
-    if not artworks:
-        return{
-            "status": "success",
-            "message": "Artworks not found.",\
-            "result": [],
-            "total": 0
-        }
-    
-    return{
+    return {
         "status": "success",
-        "message": "Artworks found.",
+        "message": "Artworks found." if artworks else "Artworks not found.",
         "result": artworks,
         "total": len(artworks)
     }

@@ -13,3 +13,7 @@ fastapi-mail
 alembic
 email-validator
 python-dotenv
+bcrypt
+jose
+scikit-image
+torch
