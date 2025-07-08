@@ -5,16 +5,13 @@ from fastapi import staticfiles
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from app.db.database import Base, engine
-from app.api.routes import users, auth, uploads, explore, payments, extract, likes
-
+from app.api.routes import users, auth, uploads, explore, payments, extract, likes 
 
 load_dotenv()
 
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
-
-app.mount("/static", staticfiles.StaticFiles(directory="static"), name="static")
 
 LOG_DIR = "logs"
 os.makedirs(LOG_DIR, exist_ok=True)
@@ -24,7 +21,7 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)s | %(name)s | %(message)s",
     handlers=[
         logging.FileHandler(os.path.join(LOG_DIR, "app.log")),
-        logging.StreamHandler() 
+        logging.StreamHandler()
     ]
 )
 
@@ -32,18 +29,19 @@ logger = logging.getLogger(__name__)
 logger.info("Server FastAPI dimulai...")
 
 origins = [
-    "http://localhost:3000",        
-    "http://192.168.56.1:3000",        
+    "http://localhost:3000",
+    "http://192.168.56.1:3000",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],          
+    allow_origins=["*"],  # <- sesuaikan jika nanti deploy
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# Routes
 app.include_router(users.router, prefix="/users", tags=["Users"])
 app.include_router(auth.router, prefix="/auth", tags=["Auth"])
 app.include_router(uploads.router, prefix="/api/artwork", tags=["Artworks"])

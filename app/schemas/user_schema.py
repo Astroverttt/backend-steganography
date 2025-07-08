@@ -27,6 +27,11 @@ class UserResponse(BaseModel):
     id: UUID
     username: str
     email: EmailStr
+    profile_picture: Optional[str] = None
+
+    model_config = {
+        "from_attributes": True
+    }
 
 class UserSchema(BaseModel):
     id: int
@@ -41,9 +46,15 @@ class UserSchema(BaseModel):
 class UserDelete(BaseModel):
     id: int
 
-    # class Config:
-    #     orm_mode = True
-    
+    model_config = {
+        "from_attributes": True
+    }
+
+class UserPublic(BaseModel):
+    id: UUID
+    username: str
+    profile_picture: Optional[str] = None
+
     model_config = {
         "from_attributes": True
     }

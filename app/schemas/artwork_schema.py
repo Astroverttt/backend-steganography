@@ -38,6 +38,13 @@ class ArtworkResponse(BaseModel):
         "from_attributes": True
     }
 
+class UserInfo(BaseModel):
+    username: str
+    profile_picture: Optional[str] = None
+
+    model_config = {
+        "from_attributes": True
+    }
 
 class ArtworkUploadRequest(BaseModel):
     title: str
