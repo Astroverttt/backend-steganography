@@ -1,7 +1,7 @@
 import os
 import logging
 from fastapi import FastAPI
-from fastapi import staticfiles
+from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from app.db.database import Base, engine
@@ -35,17 +35,21 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # <- sesuaikan jika nanti deploy
+    allow_origins=[
+        "http://localhost:3000",
+        "http://192.168.56.1:3000"
+    ],  # <- sesuaikan jika nanti deploy
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 # Routes
-app.include_router(users.router, prefix="/users", tags=["Users"])
-app.include_router(auth.router, prefix="/auth", tags=["Auth"])
+app.include_router(users.router, prefix="/api/users", tags=["Users"])
+app.include_router(auth.router, prefix="/api/auth", tags=["Auth"])
 app.include_router(uploads.router, prefix="/api/artwork", tags=["Artworks"])
-app.include_router(explore.router, prefix="/explores", tags=["Explores"])
-app.include_router(payments.router, prefix="/payments", tags=["Payments"])
-app.include_router(extract.router, prefix="/extract", tags=["Extract"])
-app.include_router(likes.router, prefix="/likes", tags=["Likes"])
+app.include_router(explore.router, prefix="/api/explores", tags=["Explores"])
+app.include_router(payments.router, prefix="/api/payments", tags=["Payments"])
+app.include_router(extract.router, prefix="/api/extract", tags=["Extract"])
+app.include_router(likes.router, prefix="/api/likes", tags=["Likes"])
+app.mount("/api/static", StaticFiles(directory="static"), name="static")

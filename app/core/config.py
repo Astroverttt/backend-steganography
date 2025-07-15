@@ -20,4 +20,4 @@ class Settings(BaseSettings):
     MAIL_STARTTLS: bool = Field(True, env="MAIL_STARTTLS")
     MAIL_SSL_TLS: bool = Field(False, env="MAIL_SSL_TLS")
 
-settings = Settings()  # ← ini cukup dideklarasikan di akhir, tanpa diimpor lagi
+settings = Settings() 
