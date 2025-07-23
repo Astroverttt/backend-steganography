@@ -16,4 +16,3 @@ class User(Base):
     artworks = relationship("Artwork", back_populates="owner") 
     receipts = relationship("Receipt", back_populates="buyer")
     likes = relationship("Like", back_populates="user", cascade="all, delete")
-    

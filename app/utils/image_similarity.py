@@ -58,7 +58,7 @@ def is_similar_by_ssim(pil_image: Image.Image, image_path: str, threshold: float
     except:
         return False
 
-def is_similar_by_orb(pil_image: Image.Image, image_path: str, threshold: int = 25) -> bool:
+def is_similar_by_orb(pil_image: Image.Image, image_path: str, threshold: float = 0.3) -> bool:
     try:
         orb = cv2.ORB_create()
         img1 = cv2.cvtColor(np.array(pil_image.resize((256, 256))), cv2.COLOR_RGB2GRAY)
@@ -68,15 +68,21 @@ def is_similar_by_orb(pil_image: Image.Image, image_path: str, threshold: int = 
         kp1, des1 = orb.detectAndCompute(img1, None)
         kp2, des2 = orb.detectAndCompute(img2, None)
 
-        if des1 is None or des2 is None:
+        if des1 is None or des2 is None or len(kp1) == 0 or len(kp2) == 0:
             return False
 
         bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
         matches = bf.match(des1, des2)
+        matches = sorted(matches, key=lambda x: x.distance)
 
-        return len(matches) > threshold
-    except:
+        good_matches = [m for m in matches if m.distance < 60]
+        similarity = len(good_matches) / max(len(kp1), len(kp2))
+
+        return similarity > threshold
+    except Exception as e:
+        logger.warning(f"ORB error: {e}")
         return False
+
 
     bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
     matches = bf.match(des1, des2)
@@ -88,7 +94,6 @@ def is_similar_by_orb(pil_image: Image.Image, image_path: str, threshold: int = 
     return similarity > threshold
 
 def is_similar_image(uploaded_hashes: dict, pil_image: Image.Image, artwork_db) -> bool:
-    # Deteksi hash mirip (minimal 2 dari 4 hash serupa)
     thresholds = {"ahash": 2, "phash": 2, "dhash": 2, "whash": 2}
     similar_hash_count = 0
 
@@ -104,7 +109,7 @@ def is_similar_image(uploaded_hashes: dict, pil_image: Image.Image, artwork_db) 
         return True
 
     # Deteksi visual (SSIM atau ORB)
-    db_img_path = os.path.join("public", artwork_db.image_url.lstrip("/"))
+    db_img_path = os.path.join("static", artwork_db.image_url.lstrip("/static/"))
     if os.path.exists(db_img_path):
         if is_similar_by_ssim(pil_image, db_img_path):
             logger.info(f"Deteksi duplikat via SSIM: {artwork_db.title}")

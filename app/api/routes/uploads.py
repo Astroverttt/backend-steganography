@@ -36,8 +36,9 @@ async def upload_artwork(
     try:
         merged_user = db.merge(current_user)
         user_id_str = str(merged_user.id)
-        unique_key = generate_unique_key(user_id_str, image.filename)
-        file_extension = image.filename.split(".")[-1]
+        unique_key = generate_unique_key(user_id_str, title,image.filename)
+        _, file_extension = os.path.splitext(image.filename)
+        file_extension = file_extension.lstrip(".").lower()
         temp_file_name = f"{uuid.uuid4().hex}.{file_extension}"
         temp_file_path = os.path.join(UPLOAD_DIR, temp_file_name)
 
@@ -76,7 +77,7 @@ async def upload_artwork(
         if os.path.exists(temp_file_path):
             os.remove(temp_file_path)
 
-        final_image_name = f"{unique_key}_stego.{file_extension}"
+        final_image_name = f"{unique_key}.{file_extension}"
         final_image_path = os.path.join(WATERMARKED_DIR, final_image_name)
         os.rename(watermarked_image_path, final_image_path)
         BASE_URL = "http://localhost:8000"
