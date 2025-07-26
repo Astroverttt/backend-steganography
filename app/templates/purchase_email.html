@@ -31,16 +31,29 @@
         Download Karya
       </a>
     </p>
+
     <p>
-      🔍 <<a
-        href="{{ watermark_api }}?image_url={{ download_url }}&buyer_secret_code={{ buyer_secret_code }}"
+      🔍
+      <a
+        href="http://localhost:3000/receipt/{{ receipt_id }}"
+        {#
+        <--
+        Ini
+        link
+        ke
+        halaman
+        web
+        aplikasi
+        Anda
+        #}
         style="
           padding: 10px 15px;
           background-color: #28a745;
           color: white;
           text-decoration: none;
+          border: none;
+          cursor: pointer;
         "
-        target="_blank"
       >
         Lihat Watermark
       </a>

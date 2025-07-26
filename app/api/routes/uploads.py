@@ -2,7 +2,7 @@ from fastapi import APIRouter, File, UploadFile, Form, Depends, HTTPException, s
 from sqlalchemy.orm import Session
 from app.db.database import get_db
 from app.models.user import User
-from app.models.artwork import Artwork, generate_unique_key
+from app.models.artwork import Artwork, generate_unique_key # Asumsi generate_unique_key ada di artwork.py
 from app.api.deps import get_current_user
 from app.steganography import embed_message_lsb, xor_encrypt_decrypt
 from app.utils.image_similarity import compute_all_hashes, is_similar_image
@@ -28,7 +28,6 @@ async def upload_artwork(
     watermark_creator_message: str = Form(None),
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user)
-
 ):
     temp_file_path = None
     watermarked_image_path = None
@@ -36,7 +35,7 @@ async def upload_artwork(
     try:
         merged_user = db.merge(current_user)
         user_id_str = str(merged_user.id)
-        unique_key = generate_unique_key(user_id_str, title,image.filename)
+        unique_key = generate_unique_key(user_id_str, title, image.filename)
         _, file_extension = os.path.splitext(image.filename)
         file_extension = file_extension.lstrip(".").lower()
         temp_file_name = f"{uuid.uuid4().hex}.{file_extension}"
@@ -57,19 +56,21 @@ async def upload_artwork(
         uploaded_hashes = compute_all_hashes(pil_image)
 
         existing_artworks = db.query(Artwork).all()
-        for artwork in existing_artworks:
-            if is_similar_image(uploaded_hashes, pil_image, artwork):
+        for artwork_item in existing_artworks: 
+            if is_similar_image(uploaded_hashes, pil_image, artwork_item):
                 raise HTTPException(status_code=400, detail="Gambar terlalu mirip (duplikat atau visual).")
 
         with open(temp_file_path, "wb") as f:
             f.write(content)
 
         watermark_hak_cipta = hashlib.sha256(unique_key.encode()).hexdigest()
-        buyer_secret_code = uuid.uuid4().hex[:8]
+        
+        artwork_secret_code_for_watermark = None
         pesan_gabungan = f"COPYRIGHT:{watermark_hak_cipta}"
 
         if watermark_creator_message:
-            encrypted = xor_encrypt_decrypt(watermark_creator_message, buyer_secret_code)
+            artwork_secret_code_for_watermark = uuid.uuid4().hex[:8] 
+            encrypted = xor_encrypt_decrypt(watermark_creator_message, artwork_secret_code_for_watermark)
             pesan_gabungan += f"<USER_MESSAGE>{encrypted}"
 
         watermarked_image_path = embed_message_lsb(temp_file_path, pesan_gabungan)
@@ -80,6 +81,7 @@ async def upload_artwork(
         final_image_name = f"{unique_key}.{file_extension}"
         final_image_path = os.path.join(WATERMARKED_DIR, final_image_name)
         os.rename(watermarked_image_path, final_image_path)
+        
         BASE_URL = "http://localhost:8000"
         image_url_db = f"/static/watermarked/{final_image_name}"
         image_url_full = f"http://localhost:8000{image_url_db}"
@@ -97,7 +99,8 @@ async def upload_artwork(
             hash=uploaded_hashes["ahash"],
             hash_phash=uploaded_hashes["phash"],
             hash_dhash=uploaded_hashes["dhash"],
-            hash_whash=uploaded_hashes["whash"]
+            hash_whash=uploaded_hashes["whash"],
+            artwork_secret_code=artwork_secret_code_for_watermark
         )
         db.add(artwork)
         db.commit()
@@ -110,7 +113,7 @@ async def upload_artwork(
                 "category": category or "-",
                 "description": description or "-",
                 "unique_key": unique_key,
-                "buyer_code": buyer_secret_code,
+                "buyer_code": artwork_secret_code_for_watermark if artwork_secret_code_for_watermark else "N/A", # Kirim kode yang benar
                 "image_url": image_url_full
             }
         )
@@ -121,13 +124,18 @@ async def upload_artwork(
             "image_url": image_url_db,
             "unique_key": unique_key,
             "copyright_hash": watermark_hak_cipta,
-            "buyer_secret_code": buyer_secret_code
+            "buyer_secret_code": artwork_secret_code_for_watermark
         }
 
+    except HTTPException as e:
+        if temp_file_path and os.path.exists(temp_file_path):
+            os.remove(temp_file_path)
+        if watermarked_image_path and os.path.exists(watermarked_image_path):
+            os.remove(watermarked_image_path)
+        raise e
     except Exception as e:
         if temp_file_path and os.path.exists(temp_file_path):
             os.remove(temp_file_path)
         if watermarked_image_path and os.path.exists(watermarked_image_path):
             os.remove(watermarked_image_path)
         raise HTTPException(status_code=500, detail=f"Upload gagal: {str(e)}")
-    

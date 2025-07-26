@@ -20,6 +20,7 @@ def generate_unique_key(title, username, filename):
 
     return f"{unique_id}_{title_clean}_{username_clean}{ext}"
 
+
 class Artwork(Base):
     __tablename__ = "artworks"
 
@@ -30,6 +31,8 @@ class Artwork(Base):
 
     owner_id = Column(pgUUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
     created_at = Column(DateTime, server_default=func.now())
+
+    artwork_secret_code = Column(String(8), unique=False, nullable=True, index=True)
 
     category = Column(String(255), nullable=True)
     license_type = Column(

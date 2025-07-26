@@ -35,6 +35,7 @@ logger.info("Server FastAPI dimulai...")
 origins = [
     "http://localhost:3000",
     "http://192.168.56.1:3000",
+    "null"
 ]
 
 app.add_middleware(
