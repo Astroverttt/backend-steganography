@@ -33,6 +33,7 @@ class ArtworkResponse(BaseModel):
     image_url: str
     unique_key: str
     hash: str
+    is_sold: Optional[bool] = False
 
     model_config = {
         "from_attributes": True

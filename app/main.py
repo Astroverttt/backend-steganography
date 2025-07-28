@@ -6,7 +6,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from app.db.database import Base, engine
 from app.api.routes import users, auth, uploads, explore, payments, extract, likes 
-from app.api.routes.artworks import router as artworks_router   
+from app.api.routes.artworks import router as artworks_router
+from app.api.routes import purchase
 
 load_dotenv()
 
@@ -54,4 +55,5 @@ app.include_router(explore.router, prefix="/api/explores", tags=["Explores"])
 app.include_router(payments.router, prefix="/api/payments", tags=["Payments"])
 app.include_router(extract.router, prefix="/api/extract", tags=["Extract"])
 app.include_router(likes.router, prefix="/api/likes", tags=["Likes"])
+app.include_router(purchase.router, prefix="/api/my", tags=["Purchase"]) 
 app.mount("/static", StaticFiles(directory="static"), name="static")

@@ -469,3 +469,1085 @@ uFMLCT'
 2025-07-26 22:09:37,705 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: '9fd56045'
 2025-07-26 22:09:37,705 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
 2025-07-26 22:09:37,706 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpcc36_utl.png
+2025-07-27 17:12:26,121 | INFO | app.main | Server FastAPI dimulai...
+2025-07-27 17:15:37,590 | INFO | app.api.routes.payments | Input: payment_notif_test_G663931957_9f0da268-e4b9-4abc-87d1-027ae1ebf566+200+105000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-27 17:15:37,591 | INFO | app.api.routes.payments | Expected: 5c8b95767952f89a0596ae61c03c77b0a0dbfda1bf42f97674bee7090aaffe3d24fc5ef5a66dc89645f6adc9540e3b92261b0a2ff4dca9e6de0a1fcdf53a6954
+2025-07-27 17:15:37,591 | INFO | app.api.routes.payments | Received: 5c8b95767952f89a0596ae61c03c77b0a0dbfda1bf42f97674bee7090aaffe3d24fc5ef5a66dc89645f6adc9540e3b92261b0a2ff4dca9e6de0a1fcdf53a6954
+2025-07-27 17:16:24,942 | INFO | app.api.routes.artworks | Backend received request for artwork ID: dd20f346-cc23-4810-a76a-d1718355a758
+2025-07-27 17:16:24,956 | INFO | app.api.routes.artworks | Backend: Artwork dd20f346-cc23-4810-a76a-d1718355a758 found: Testing image 6
+2025-07-27 17:16:24,994 | INFO | app.api.routes.artworks | Backend received request for artwork ID: dd20f346-cc23-4810-a76a-d1718355a758
+2025-07-27 17:16:24,999 | INFO | app.api.routes.artworks | Backend: Artwork dd20f346-cc23-4810-a76a-d1718355a758 found: Testing image 6
+2025-07-27 17:16:32,469 | INFO | app.api.routes.artworks | Backend received request for artwork ID: dd20f346-cc23-4810-a76a-d1718355a758
+2025-07-27 17:16:32,474 | INFO | app.api.routes.artworks | Backend: Artwork dd20f346-cc23-4810-a76a-d1718355a758 found: Testing image 6
+2025-07-27 17:16:52,841 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/2c226a88_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_6.png.png
+2025-07-27 17:16:52,842 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: '9fd56045'
+2025-07-27 17:16:54,974 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmppi02fpqr.png
+2025-07-27 17:16:55,417 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:6987a92e2605ad590f5136d58204614db2a3150fbbc37554b1001a31651cf3e7<USER_MESSAGE>nPD]UGR wO
+uFMLCT' (took 0.4436s)
+2025-07-27 17:16:55,419 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: 'nPD]UGR wO
+uFMLCT'
+2025-07-27 17:16:55,419 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: '9fd56045'
+2025-07-27 17:16:55,420 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:16:55,421 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmppi02fpqr.png
+2025-07-27 17:19:32,951 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '40adb72a-7cca-410b-b682-e16ef1236ea6'
+2025-07-27 17:19:32,954 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '40adb72a-7cca-410b-b682-e16ef1236ea6', artwork_secret_code from DB: 'fddc2eab'
+2025-07-27 17:19:32,959 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: 'fddc2eab' (from artwork.artwork_secret_code)
+2025-07-27 17:19:33,114 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '884b7419-8dd7-45dd-a4ba-c9554b97e7fc', buyer_secret_code: 'fddc2eab'
+2025-07-27 17:19:33,125 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: 'fddc2eab'
+2025-07-27 17:19:40,836 | INFO | app.api.routes.payments | Input: ORDER-c52b45b7-d90d-46eb-82db-2470e42ca28f+201+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-27 17:19:40,836 | INFO | app.api.routes.payments | Expected: cfc90d71bc0af75a3ca0c19bc950645970fa3e5e5e59d7b5fae1efdcaf193cab6ab283b689058d5871bd338b1207cd93f2610d05b563845983c0efbad4a8ae0b
+2025-07-27 17:19:40,836 | INFO | app.api.routes.payments | Received: cfc90d71bc0af75a3ca0c19bc950645970fa3e5e5e59d7b5fae1efdcaf193cab6ab283b689058d5871bd338b1207cd93f2610d05b563845983c0efbad4a8ae0b
+2025-07-27 17:19:55,813 | INFO | app.api.routes.payments | Input: ORDER-c52b45b7-d90d-46eb-82db-2470e42ca28f+200+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-27 17:19:55,813 | INFO | app.api.routes.payments | Expected: e1bd429ec1c85002e0fa347c93d904ead7bcc39d81ce3dd6b361779bfdb0a6f27326040925af8b8e883387ae7bfdc633f005e89822ee1e033c63a6b8ec946d55
+2025-07-27 17:19:55,813 | INFO | app.api.routes.payments | Received: e1bd429ec1c85002e0fa347c93d904ead7bcc39d81ce3dd6b361779bfdb0a6f27326040925af8b8e883387ae7bfdc633f005e89822ee1e033c63a6b8ec946d55
+2025-07-27 17:20:59,913 | INFO | app.api.routes.payments | Input: ORDER-c52b45b7-d90d-46eb-82db-2470e42ca28f+200+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-27 17:20:59,915 | INFO | app.api.routes.payments | Expected: e1bd429ec1c85002e0fa347c93d904ead7bcc39d81ce3dd6b361779bfdb0a6f27326040925af8b8e883387ae7bfdc633f005e89822ee1e033c63a6b8ec946d55
+2025-07-27 17:20:59,915 | INFO | app.api.routes.payments | Received: e1bd429ec1c85002e0fa347c93d904ead7bcc39d81ce3dd6b361779bfdb0a6f27326040925af8b8e883387ae7bfdc633f005e89822ee1e033c63a6b8ec946d55
+2025-07-27 17:20:59,962 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Retrieved receipt 884b7419-8dd7-45dd-a4ba-c9554b97e7fc with buyer_secret_code: fddc2eab
+2025-07-27 17:21:03,404 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Email sent with buyer_secret_code: fddc2eab
+2025-07-27 17:21:10,698 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:21:10,698 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:21:12,759 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmp5sysaal3.png
+2025-07-27 17:21:12,973 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.2121s)
+2025-07-27 17:21:12,973 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:21:12,973 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:21:12,974 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:21:12,975 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmp5sysaal3.png
+2025-07-27 17:22:50,205 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:22:50,210 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:22:52,309 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpz2q0371z.png
+2025-07-27 17:22:52,513 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.2025s)
+2025-07-27 17:22:52,514 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:22:52,515 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:22:52,515 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:22:52,516 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpz2q0371z.png
+2025-07-27 17:22:56,551 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:22:56,551 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:22:58,613 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpf5li4wcv.png
+2025-07-27 17:22:58,856 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.2421s)
+2025-07-27 17:22:58,857 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:22:58,857 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:22:58,857 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:22:58,858 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpf5li4wcv.png
+2025-07-27 17:24:15,985 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:24:15,986 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:24:18,090 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpak_oqqky.png
+2025-07-27 17:24:18,279 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.1883s)
+2025-07-27 17:24:18,279 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:24:18,281 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:24:18,281 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:24:18,282 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpak_oqqky.png
+2025-07-27 17:24:34,092 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:24:34,092 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:24:36,152 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpjk5v5epx.png
+2025-07-27 17:24:36,342 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.1897s)
+2025-07-27 17:24:36,343 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:24:36,343 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:24:36,343 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:24:36,345 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpjk5v5epx.png
+2025-07-27 17:24:51,282 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:24:51,282 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:24:53,329 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpn63tkk17.png
+2025-07-27 17:24:53,487 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.1573s)
+2025-07-27 17:24:53,487 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:24:53,487 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:24:53,488 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:24:53,488 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpn63tkk17.png
+2025-07-27 17:25:26,909 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:25:26,910 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:25:28,973 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpwcvvsrhk.png
+2025-07-27 17:25:29,145 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.1714s)
+2025-07-27 17:25:29,145 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:25:29,145 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:25:29,145 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:25:29,146 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpwcvvsrhk.png
+2025-07-27 17:25:37,410 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:25:37,412 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:25:39,448 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpthuubuxk.png
+2025-07-27 17:25:39,626 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.1773s)
+2025-07-27 17:25:39,626 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:25:39,627 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:25:39,627 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:25:39,628 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpthuubuxk.png
+2025-07-27 17:25:55,448 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:25:55,449 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:25:57,509 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpv6ky29np.png
+2025-07-27 17:25:57,695 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.1867s)
+2025-07-27 17:25:57,696 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:25:57,696 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:25:57,696 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:25:57,697 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpv6ky29np.png
+2025-07-27 17:26:02,156 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:26:02,157 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:26:04,218 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpgwlrrrb5.png
+2025-07-27 17:26:06,147 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 1.9288s)
+2025-07-27 17:26:06,147 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:26:06,148 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:26:06,148 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:26:06,148 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpgwlrrrb5.png
+2025-07-27 17:26:39,715 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:26:39,715 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:26:41,792 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpzf8111a1.png
+2025-07-27 17:26:41,973 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.1814s)
+2025-07-27 17:26:41,973 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:26:41,974 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:26:41,974 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:26:41,974 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpzf8111a1.png
+2025-07-27 17:28:12,457 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:28:12,464 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:28:14,602 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmp1po92bfq.png
+2025-07-27 17:28:14,788 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.1858s)
+2025-07-27 17:28:14,789 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:28:14,789 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:28:14,789 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:28:14,790 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmp1po92bfq.png
+2025-07-27 17:30:19,392 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 884b7419-8dd7-45dd-a4ba-c9554b97e7fc
+2025-07-27 17:30:19,506 | WARNING | app.api.routes.artworks | Backend: Artwork with ID 884b7419-8dd7-45dd-a4ba-c9554b97e7fc NOT FOUND in database.
+2025-07-27 17:30:24,056 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 884b7419-8dd7-45dd-a4ba-c9554b97e7fc
+2025-07-27 17:30:24,069 | WARNING | app.api.routes.artworks | Backend: Artwork with ID 884b7419-8dd7-45dd-a4ba-c9554b97e7fc NOT FOUND in database.
+2025-07-27 17:30:38,683 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 884b7419-8dd7-45dd-a4ba-c9554b97e7fc
+2025-07-27 17:30:38,689 | WARNING | app.api.routes.artworks | Backend: Artwork with ID 884b7419-8dd7-45dd-a4ba-c9554b97e7fc NOT FOUND in database.
+2025-07-27 17:31:07,858 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:31:07,859 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:31:10,087 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmp6e7smvik.png
+2025-07-27 17:31:10,319 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.2307s)
+2025-07-27 17:31:10,319 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:31:10,319 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:31:10,320 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:31:10,321 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmp6e7smvik.png
+2025-07-27 17:31:35,868 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 5ee8a3ec-5da5-42d0-9950-5f4bc1de638c
+2025-07-27 17:31:35,870 | INFO | app.api.routes.artworks | Backend: Artwork 5ee8a3ec-5da5-42d0-9950-5f4bc1de638c found: Mobil Porsche 
+2025-07-27 17:31:35,900 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 5ee8a3ec-5da5-42d0-9950-5f4bc1de638c
+2025-07-27 17:31:35,903 | INFO | app.api.routes.artworks | Backend: Artwork 5ee8a3ec-5da5-42d0-9950-5f4bc1de638c found: Mobil Porsche 
+2025-07-27 17:31:40,054 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-27 17:31:40,058 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-27 17:31:40,072 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-27 17:31:40,076 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-27 17:31:45,069 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 120da695-b21a-4003-94a0-976f84d20209
+2025-07-27 17:31:45,075 | INFO | app.api.routes.artworks | Backend: Artwork 120da695-b21a-4003-94a0-976f84d20209 found: Testing image 4
+2025-07-27 17:31:45,086 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 120da695-b21a-4003-94a0-976f84d20209
+2025-07-27 17:31:45,091 | INFO | app.api.routes.artworks | Backend: Artwork 120da695-b21a-4003-94a0-976f84d20209 found: Testing image 4
+2025-07-27 17:31:49,384 | INFO | app.api.routes.artworks | Backend received request for artwork ID: a8788410-68d4-4ef0-9e5f-f133433271d4
+2025-07-27 17:31:49,385 | INFO | app.api.routes.artworks | Backend: Artwork a8788410-68d4-4ef0-9e5f-f133433271d4 found: Testing image 5
+2025-07-27 17:31:49,405 | INFO | app.api.routes.artworks | Backend received request for artwork ID: a8788410-68d4-4ef0-9e5f-f133433271d4
+2025-07-27 17:31:49,409 | INFO | app.api.routes.artworks | Backend: Artwork a8788410-68d4-4ef0-9e5f-f133433271d4 found: Testing image 5
+2025-07-27 17:33:04,779 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:33:04,781 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:33:06,893 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpgsq4jx4q.png
+2025-07-27 17:33:07,134 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.2401s)
+2025-07-27 17:33:07,135 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:33:07,135 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:33:07,136 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:33:07,137 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpgsq4jx4q.png
+2025-07-27 17:35:46,566 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:35:46,570 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:35:48,698 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpuznh62c0.png
+2025-07-27 17:35:48,874 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.1754s)
+2025-07-27 17:35:48,874 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:35:48,874 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:35:48,875 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:35:48,876 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpuznh62c0.png
+2025-07-27 17:35:55,557 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:35:55,558 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:35:57,613 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpz5fc1_gp.png
+2025-07-27 17:35:57,763 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.1493s)
+2025-07-27 17:35:57,763 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:35:57,763 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:35:57,763 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:35:57,764 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpz5fc1_gp.png
+2025-07-27 17:37:48,918 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:37:48,923 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:37:51,101 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmp3iv71n7q.png
+2025-07-27 17:37:51,393 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.2904s)
+2025-07-27 17:37:51,395 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:37:51,395 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:37:51,396 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:37:51,397 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmp3iv71n7q.png
+2025-07-27 17:38:02,197 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:38:02,198 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:38:04,246 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmp7l96pscd.png
+2025-07-27 17:38:04,418 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.1728s)
+2025-07-27 17:38:04,419 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:38:04,419 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:38:04,419 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:38:04,420 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmp7l96pscd.png
+2025-07-27 17:38:15,544 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:38:15,545 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:38:17,612 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpq81g2eln.png
+2025-07-27 17:38:17,765 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.1512s)
+2025-07-27 17:38:17,765 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:38:17,765 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:38:17,766 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:38:17,766 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpq81g2eln.png
+2025-07-27 17:38:24,828 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:38:24,829 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:38:26,887 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpxzt2q8ri.png
+2025-07-27 17:38:27,129 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.2400s)
+2025-07-27 17:38:27,129 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:38:27,129 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:38:27,130 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:38:27,131 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpxzt2q8ri.png
+2025-07-27 17:44:52,895 | INFO | app.main | Server FastAPI dimulai...
+2025-07-27 17:48:23,747 | INFO | app.main | Server FastAPI dimulai...
+2025-07-27 17:48:50,298 | INFO | app.main | Server FastAPI dimulai...
+2025-07-27 17:52:43,866 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:52:43,868 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:52:45,963 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpl3gcyyx0.png
+2025-07-27 17:52:46,250 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.2867s)
+2025-07-27 17:52:46,251 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:52:46,251 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:52:46,251 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:52:46,252 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpl3gcyyx0.png
+2025-07-27 17:53:58,609 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-27 17:53:58,613 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-27 17:54:00,729 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpo56incqa.png
+2025-07-27 17:54:00,919 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.1882s)
+2025-07-27 17:54:00,920 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-27 17:54:00,920 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-27 17:54:00,921 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-27 17:54:00,922 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpo56incqa.png
+2025-07-27 17:57:29,865 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ab8ccb47-bee8-42a0-ae12-6925fa13d477
+2025-07-27 17:57:29,922 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ab8ccb47-bee8-42a0-ae12-6925fa13d477
+2025-07-27 17:57:29,969 | INFO | app.api.routes.artworks | Backend: Artwork ab8ccb47-bee8-42a0-ae12-6925fa13d477 found: Karya 2
+2025-07-27 17:57:29,972 | INFO | app.api.routes.artworks | Backend: Artwork ab8ccb47-bee8-42a0-ae12-6925fa13d477 found: Karya 2
+2025-07-27 17:57:35,753 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ab8ccb47-bee8-42a0-ae12-6925fa13d477
+2025-07-27 17:57:35,756 | INFO | app.api.routes.artworks | Backend: Artwork ab8ccb47-bee8-42a0-ae12-6925fa13d477 found: Karya 2
+2025-07-27 17:57:39,480 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-27 17:57:39,483 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-27 17:57:39,497 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-27 17:57:39,504 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-27 17:57:45,945 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 120da695-b21a-4003-94a0-976f84d20209
+2025-07-27 17:57:45,948 | INFO | app.api.routes.artworks | Backend: Artwork 120da695-b21a-4003-94a0-976f84d20209 found: Testing image 4
+2025-07-27 17:57:46,026 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 120da695-b21a-4003-94a0-976f84d20209
+2025-07-27 17:57:46,031 | INFO | app.api.routes.artworks | Backend: Artwork 120da695-b21a-4003-94a0-976f84d20209 found: Testing image 4
+2025-07-27 17:57:50,238 | INFO | app.api.routes.artworks | Backend received request for artwork ID: a8788410-68d4-4ef0-9e5f-f133433271d4
+2025-07-27 17:57:50,242 | INFO | app.api.routes.artworks | Backend: Artwork a8788410-68d4-4ef0-9e5f-f133433271d4 found: Testing image 5
+2025-07-27 17:57:50,255 | INFO | app.api.routes.artworks | Backend received request for artwork ID: a8788410-68d4-4ef0-9e5f-f133433271d4
+2025-07-27 17:57:50,258 | INFO | app.api.routes.artworks | Backend: Artwork a8788410-68d4-4ef0-9e5f-f133433271d4 found: Testing image 5
+2025-07-27 18:12:12,197 | INFO | app.api.routes.artworks | Backend received request for artwork ID: a8788410-68d4-4ef0-9e5f-f133433271d4
+2025-07-27 18:12:12,377 | INFO | app.api.routes.artworks | Backend: Artwork a8788410-68d4-4ef0-9e5f-f133433271d4 found: Testing image 5
+2025-07-27 18:14:16,709 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 09:58:51,458 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 09:59:08,521 | INFO | app.api.routes.artworks | Backend received request for artwork ID: a8788410-68d4-4ef0-9e5f-f133433271d4
+2025-07-28 09:59:08,572 | INFO | app.api.routes.artworks | Backend: Artwork a8788410-68d4-4ef0-9e5f-f133433271d4 found: Testing image 5
+2025-07-28 09:59:46,650 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/9941e271_84004ac0-aec3-4bab-a4fa-5e571a14e542_Testing_image_7.png.png
+2025-07-28 09:59:46,651 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'fddc2eab'
+2025-07-28 09:59:48,760 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpqpbs9te8.png
+2025-07-28 09:59:49,009 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:d6fc3f0373eb4e78b8f2e1e3db1b1779f6018bc349bb289bce88003bb84ffded<USER_MESSAGE>1@  !K_ G' (took 0.2468s)
+2025-07-28 09:59:49,010 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '1@  !K_ G'
+2025-07-28 09:59:49,010 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'fddc2eab'
+2025-07-28 09:59:49,010 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-28 09:59:49,011 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpqpbs9te8.png
+2025-07-28 09:59:51,707 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ab8ccb47-bee8-42a0-ae12-6925fa13d477
+2025-07-28 09:59:51,711 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ab8ccb47-bee8-42a0-ae12-6925fa13d477
+2025-07-28 09:59:51,713 | INFO | app.api.routes.artworks | Backend: Artwork ab8ccb47-bee8-42a0-ae12-6925fa13d477 found: Karya 2
+2025-07-28 09:59:51,720 | INFO | app.api.routes.artworks | Backend: Artwork ab8ccb47-bee8-42a0-ae12-6925fa13d477 found: Karya 2
+2025-07-28 10:00:25,826 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ab8ccb47-bee8-42a0-ae12-6925fa13d477
+2025-07-28 10:00:25,830 | INFO | app.api.routes.artworks | Backend: Artwork ab8ccb47-bee8-42a0-ae12-6925fa13d477 found: Karya 2
+2025-07-28 10:00:32,235 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ab8ccb47-bee8-42a0-ae12-6925fa13d477
+2025-07-28 10:00:32,247 | INFO | app.api.routes.artworks | Backend: Artwork ab8ccb47-bee8-42a0-ae12-6925fa13d477 found: Karya 2
+2025-07-28 10:00:36,653 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ab8ccb47-bee8-42a0-ae12-6925fa13d477
+2025-07-28 10:00:36,660 | INFO | app.api.routes.artworks | Backend: Artwork ab8ccb47-bee8-42a0-ae12-6925fa13d477 found: Karya 2
+2025-07-28 10:01:33,800 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ab8ccb47-bee8-42a0-ae12-6925fa13d477
+2025-07-28 10:01:33,869 | INFO | app.api.routes.artworks | Backend: Artwork ab8ccb47-bee8-42a0-ae12-6925fa13d477 found: Karya 2
+2025-07-28 10:01:38,428 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 10:01:38,438 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 10:01:38,492 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 10:01:38,498 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 10:01:41,339 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 10:01:41,344 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 10:01:45,677 | INFO | app.api.routes.artworks | Backend received request for artwork ID: a8788410-68d4-4ef0-9e5f-f133433271d4
+2025-07-28 10:01:45,682 | INFO | app.api.routes.artworks | Backend: Artwork a8788410-68d4-4ef0-9e5f-f133433271d4 found: Testing image 5
+2025-07-28 10:01:45,712 | INFO | app.api.routes.artworks | Backend received request for artwork ID: a8788410-68d4-4ef0-9e5f-f133433271d4
+2025-07-28 10:01:45,715 | INFO | app.api.routes.artworks | Backend: Artwork a8788410-68d4-4ef0-9e5f-f133433271d4 found: Testing image 5
+2025-07-28 10:01:49,398 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 120da695-b21a-4003-94a0-976f84d20209
+2025-07-28 10:01:49,401 | INFO | app.api.routes.artworks | Backend: Artwork 120da695-b21a-4003-94a0-976f84d20209 found: Testing image 4
+2025-07-28 10:01:49,429 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 120da695-b21a-4003-94a0-976f84d20209
+2025-07-28 10:01:49,436 | INFO | app.api.routes.artworks | Backend: Artwork 120da695-b21a-4003-94a0-976f84d20209 found: Testing image 4
+2025-07-28 10:02:25,954 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0732391c-5334-405c-971e-da9dc1eedf48
+2025-07-28 10:02:25,964 | INFO | app.api.routes.artworks | Backend: Artwork 0732391c-5334-405c-971e-da9dc1eedf48 found: Mobil Porsche 1
+2025-07-28 10:02:26,040 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0732391c-5334-405c-971e-da9dc1eedf48
+2025-07-28 10:02:26,050 | INFO | app.api.routes.artworks | Backend: Artwork 0732391c-5334-405c-971e-da9dc1eedf48 found: Mobil Porsche 1
+2025-07-28 10:02:29,803 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 120da695-b21a-4003-94a0-976f84d20209
+2025-07-28 10:02:29,806 | INFO | app.api.routes.artworks | Backend: Artwork 120da695-b21a-4003-94a0-976f84d20209 found: Testing image 4
+2025-07-28 10:02:29,822 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 120da695-b21a-4003-94a0-976f84d20209
+2025-07-28 10:02:29,825 | INFO | app.api.routes.artworks | Backend: Artwork 120da695-b21a-4003-94a0-976f84d20209 found: Testing image 4
+2025-07-28 10:06:53,346 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 120da695-b21a-4003-94a0-976f84d20209
+2025-07-28 10:06:53,603 | INFO | app.api.routes.artworks | Backend: Artwork 120da695-b21a-4003-94a0-976f84d20209 found: Testing image 4
+2025-07-28 10:07:08,707 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 10:07:09,155 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 120da695-b21a-4003-94a0-976f84d20209
+2025-07-28 10:07:09,196 | INFO | app.api.routes.artworks | Backend: Artwork 120da695-b21a-4003-94a0-976f84d20209 found: Testing image 4
+2025-07-28 10:07:29,741 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 120da695-b21a-4003-94a0-976f84d20209
+2025-07-28 10:07:29,747 | INFO | app.api.routes.artworks | Backend: Artwork 120da695-b21a-4003-94a0-976f84d20209 found: Testing image 4
+2025-07-28 10:09:17,897 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 120da695-b21a-4003-94a0-976f84d20209
+2025-07-28 10:09:18,067 | INFO | app.api.routes.artworks | Backend: Artwork 120da695-b21a-4003-94a0-976f84d20209 found: Testing image 4
+2025-07-28 10:09:37,698 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 10:09:37,707 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 10:09:37,749 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 10:09:37,754 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 10:09:41,850 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 10:09:41,854 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 10:09:47,103 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 120da695-b21a-4003-94a0-976f84d20209
+2025-07-28 10:09:47,107 | INFO | app.api.routes.artworks | Backend: Artwork 120da695-b21a-4003-94a0-976f84d20209 found: Testing image 4
+2025-07-28 10:09:47,133 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 120da695-b21a-4003-94a0-976f84d20209
+2025-07-28 10:09:47,138 | INFO | app.api.routes.artworks | Backend: Artwork 120da695-b21a-4003-94a0-976f84d20209 found: Testing image 4
+2025-07-28 10:11:00,151 | INFO | app.api.routes.artworks | Backend received request for artwork ID: d37c9b23-0f16-4b41-a8e2-21d309880042
+2025-07-28 10:11:00,158 | INFO | app.api.routes.artworks | Backend: Artwork d37c9b23-0f16-4b41-a8e2-21d309880042 found: Testing image 7
+2025-07-28 10:11:00,174 | INFO | app.api.routes.artworks | Backend received request for artwork ID: d37c9b23-0f16-4b41-a8e2-21d309880042
+2025-07-28 10:11:00,181 | INFO | app.api.routes.artworks | Backend: Artwork d37c9b23-0f16-4b41-a8e2-21d309880042 found: Testing image 7
+2025-07-28 10:13:24,786 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 10:13:24,814 | INFO | app.api.routes.artworks | Backend received request for artwork ID: bcb08c2a-4c50-4cfa-9b47-4d28a385059d
+2025-07-28 10:13:24,815 | INFO | app.api.routes.artworks | Backend received request for artwork ID: bcb08c2a-4c50-4cfa-9b47-4d28a385059d
+2025-07-28 10:13:24,835 | INFO | app.api.routes.artworks | Backend: Artwork bcb08c2a-4c50-4cfa-9b47-4d28a385059d found: Testing image 2
+2025-07-28 10:13:24,889 | INFO | app.api.routes.artworks | Backend: Artwork bcb08c2a-4c50-4cfa-9b47-4d28a385059d found: Testing image 2
+2025-07-28 10:15:38,424 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 10:18:36,639 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 10:20:41,304 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 10:22:17,760 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 10:22:24,237 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 10:23:06,874 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 10:23:22,401 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 10:23:22,411 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 10:23:22,443 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 10:23:22,447 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 10:27:41,663 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 10:29:43,382 | INFO | app.api.routes.artworks | Backend received request for artwork ID: d37c9b23-0f16-4b41-a8e2-21d309880042
+2025-07-28 10:29:43,412 | INFO | app.api.routes.artworks | Backend: Artwork d37c9b23-0f16-4b41-a8e2-21d309880042 found: Testing image 7
+2025-07-28 10:29:43,448 | INFO | app.api.routes.artworks | Backend received request for artwork ID: d37c9b23-0f16-4b41-a8e2-21d309880042
+2025-07-28 10:29:43,634 | INFO | app.api.routes.artworks | Backend: Artwork d37c9b23-0f16-4b41-a8e2-21d309880042 found: Testing image 7
+2025-07-28 10:29:46,017 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 5ee8a3ec-5da5-42d0-9950-5f4bc1de638c
+2025-07-28 10:29:46,021 | INFO | app.api.routes.artworks | Backend: Artwork 5ee8a3ec-5da5-42d0-9950-5f4bc1de638c found: Mobil Porsche 
+2025-07-28 10:29:46,032 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 5ee8a3ec-5da5-42d0-9950-5f4bc1de638c
+2025-07-28 10:29:46,036 | INFO | app.api.routes.artworks | Backend: Artwork 5ee8a3ec-5da5-42d0-9950-5f4bc1de638c found: Mobil Porsche 
+2025-07-28 10:32:26,373 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 10:32:26,378 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 10:32:26,403 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 10:32:26,409 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 10:32:34,397 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 10:32:34,404 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 10:32:34,409 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 10:32:34,415 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 10:35:30,039 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 10:35:30,227 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 10:35:49,298 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 10:35:49,323 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 10:36:03,449 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 10:36:03,507 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 10:36:08,716 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 10:36:08,725 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 10:39:27,100 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 10:39:27,140 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 10:39:27,177 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 10:39:27,184 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 10:39:31,197 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 10:39:31,200 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 10:39:31,211 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 10:39:31,215 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 10:39:34,587 | INFO | app.api.routes.artworks | Backend received request for artwork ID: d37c9b23-0f16-4b41-a8e2-21d309880042
+2025-07-28 10:39:34,590 | INFO | app.api.routes.artworks | Backend: Artwork d37c9b23-0f16-4b41-a8e2-21d309880042 found: Testing image 7
+2025-07-28 10:39:34,603 | INFO | app.api.routes.artworks | Backend received request for artwork ID: d37c9b23-0f16-4b41-a8e2-21d309880042
+2025-07-28 10:39:34,608 | INFO | app.api.routes.artworks | Backend: Artwork d37c9b23-0f16-4b41-a8e2-21d309880042 found: Testing image 7
+2025-07-28 10:43:35,819 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 10:43:57,062 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 10:43:57,067 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 10:43:57,091 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 10:43:57,095 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 10:44:13,836 | INFO | app.api.routes.artworks | Backend received request for artwork ID: d37c9b23-0f16-4b41-a8e2-21d309880042
+2025-07-28 10:44:13,841 | INFO | app.api.routes.artworks | Backend: Artwork d37c9b23-0f16-4b41-a8e2-21d309880042 found: Testing image 7
+2025-07-28 10:44:13,850 | INFO | app.api.routes.artworks | Backend received request for artwork ID: d37c9b23-0f16-4b41-a8e2-21d309880042
+2025-07-28 10:44:13,853 | INFO | app.api.routes.artworks | Backend: Artwork d37c9b23-0f16-4b41-a8e2-21d309880042 found: Testing image 7
+2025-07-28 10:44:15,574 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: 'd37c9b23-0f16-4b41-a8e2-21d309880042'
+2025-07-28 10:44:15,647 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: 'd37c9b23-0f16-4b41-a8e2-21d309880042', artwork_secret_code from DB: 'cdc119b1'
+2025-07-28 10:44:15,656 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: 'cdc119b1' (from artwork.artwork_secret_code)
+2025-07-28 10:44:15,860 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '9631073f-b5f3-4b26-b210-590920ab5941', buyer_secret_code: 'cdc119b1'
+2025-07-28 10:44:15,890 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: 'cdc119b1'
+2025-07-28 10:44:33,847 | INFO | app.api.routes.payments | Input: ORDER-96466e4e-df47-45cf-a0c4-973c8a8f8ee0+201+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 10:44:33,847 | INFO | app.api.routes.payments | Expected: d31c459610326296b58e6f8e68894abdb1753273b0db433e362c92b8302a9bba4f5205134def0f9f581db2bf943e8bc8d98585cb9c19848fbe514409d12bf9ea
+2025-07-28 10:44:33,847 | INFO | app.api.routes.payments | Received: d31c459610326296b58e6f8e68894abdb1753273b0db433e362c92b8302a9bba4f5205134def0f9f581db2bf943e8bc8d98585cb9c19848fbe514409d12bf9ea
+2025-07-28 10:44:43,704 | INFO | app.api.routes.payments | Input: ORDER-96466e4e-df47-45cf-a0c4-973c8a8f8ee0+200+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 10:44:43,704 | INFO | app.api.routes.payments | Expected: 6e9ecf19b57497a67832c8838c3bc4572628dd14df6ebffdb414106041568b02e419296303daaa170175c2b812aa9d12d5de07fb677f4f21a7bb914efe52ea96
+2025-07-28 10:44:43,704 | INFO | app.api.routes.payments | Received: 6e9ecf19b57497a67832c8838c3bc4572628dd14df6ebffdb414106041568b02e419296303daaa170175c2b812aa9d12d5de07fb677f4f21a7bb914efe52ea96
+2025-07-28 10:45:47,714 | INFO | app.api.routes.artworks | Backend received request for artwork ID: d37c9b23-0f16-4b41-a8e2-21d309880042
+2025-07-28 10:45:47,727 | INFO | app.api.routes.artworks | Backend: Artwork d37c9b23-0f16-4b41-a8e2-21d309880042 found: Testing image 7
+2025-07-28 10:45:47,778 | INFO | app.api.routes.artworks | Backend received request for artwork ID: d37c9b23-0f16-4b41-a8e2-21d309880042
+2025-07-28 10:45:47,782 | INFO | app.api.routes.artworks | Backend: Artwork d37c9b23-0f16-4b41-a8e2-21d309880042 found: Testing image 7
+2025-07-28 10:45:51,365 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ab8ccb47-bee8-42a0-ae12-6925fa13d477
+2025-07-28 10:45:51,368 | INFO | app.api.routes.artworks | Backend: Artwork ab8ccb47-bee8-42a0-ae12-6925fa13d477 found: Karya 2
+2025-07-28 10:45:51,378 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ab8ccb47-bee8-42a0-ae12-6925fa13d477
+2025-07-28 10:45:51,382 | INFO | app.api.routes.artworks | Backend: Artwork ab8ccb47-bee8-42a0-ae12-6925fa13d477 found: Karya 2
+2025-07-28 10:45:54,626 | INFO | app.api.routes.artworks | Backend received request for artwork ID: db2c1feb-773d-420a-83d5-133b08a61a07
+2025-07-28 10:45:54,628 | INFO | app.api.routes.artworks | Backend: Artwork db2c1feb-773d-420a-83d5-133b08a61a07 found: Mobil Porsche 13
+2025-07-28 10:45:54,641 | INFO | app.api.routes.artworks | Backend received request for artwork ID: db2c1feb-773d-420a-83d5-133b08a61a07
+2025-07-28 10:45:54,643 | INFO | app.api.routes.artworks | Backend: Artwork db2c1feb-773d-420a-83d5-133b08a61a07 found: Mobil Porsche 13
+2025-07-28 10:49:57,247 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 10:55:35,283 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 10:59:29,134 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 11:03:07,599 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 11:03:17,664 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 11:04:34,555 | INFO | app.api.routes.artworks | Backend received request for artwork ID: db2c1feb-773d-420a-83d5-133b08a61a07
+2025-07-28 11:04:34,843 | INFO | app.api.routes.artworks | Backend: Artwork db2c1feb-773d-420a-83d5-133b08a61a07 found: Mobil Porsche 13
+2025-07-28 11:04:48,257 | INFO | app.api.routes.artworks | Backend received request for artwork ID: db2c1feb-773d-420a-83d5-133b08a61a07
+2025-07-28 11:04:48,259 | INFO | app.api.routes.artworks | Backend: Artwork db2c1feb-773d-420a-83d5-133b08a61a07 found: Mobil Porsche 13
+2025-07-28 11:05:16,453 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 11:05:16,475 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 11:05:16,523 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 11:05:16,526 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 11:05:18,445 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '40adb72a-7cca-410b-b682-e16ef1236ea6'
+2025-07-28 11:05:18,536 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '40adb72a-7cca-410b-b682-e16ef1236ea6', artwork_secret_code from DB: 'fddc2eab'
+2025-07-28 11:05:18,545 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: 'fddc2eab' (from artwork.artwork_secret_code)
+2025-07-28 11:05:18,754 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '7dc869eb-5566-4ebf-9644-ae5339800b9c', buyer_secret_code: 'fddc2eab'
+2025-07-28 11:05:18,785 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: 'fddc2eab'
+2025-07-28 11:05:22,447 | INFO | app.api.routes.payments | Input: ORDER-42658180-9baa-4e2e-827e-dbfa6f6e22a7+201+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:05:22,447 | INFO | app.api.routes.payments | Expected: e60b2b9577530750c607773fbcbd9e8db7869d9a1ed89397490f6e2860276c2a7e9d00c1ae5936d3a1734594f543a92cbb22ea2269f5ef9692bffe7e79361434
+2025-07-28 11:05:22,447 | INFO | app.api.routes.payments | Received: e60b2b9577530750c607773fbcbd9e8db7869d9a1ed89397490f6e2860276c2a7e9d00c1ae5936d3a1734594f543a92cbb22ea2269f5ef9692bffe7e79361434
+2025-07-28 11:05:36,389 | INFO | app.api.routes.payments | Input: ORDER-42658180-9baa-4e2e-827e-dbfa6f6e22a7+200+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:05:36,389 | INFO | app.api.routes.payments | Expected: e4a705fa01b622cd95d34d3f5e323f93034c98cee91ff0adc29c8f20f082072f4e2237111ee0a9e4b41b9af6131c8f56a50dbe595c6cde1284891d5dffdac42d
+2025-07-28 11:05:36,389 | INFO | app.api.routes.payments | Received: e4a705fa01b622cd95d34d3f5e323f93034c98cee91ff0adc29c8f20f082072f4e2237111ee0a9e4b41b9af6131c8f56a50dbe595c6cde1284891d5dffdac42d
+2025-07-28 11:07:53,084 | INFO | app.api.routes.artworks | Backend received request for artwork ID: d37c9b23-0f16-4b41-a8e2-21d309880042
+2025-07-28 11:07:53,099 | INFO | app.api.routes.artworks | Backend received request for artwork ID: d37c9b23-0f16-4b41-a8e2-21d309880042
+2025-07-28 11:07:53,107 | INFO | app.api.routes.artworks | Backend: Artwork d37c9b23-0f16-4b41-a8e2-21d309880042 found: Testing image 7
+2025-07-28 11:07:53,108 | INFO | app.api.routes.artworks | Backend: Artwork d37c9b23-0f16-4b41-a8e2-21d309880042 found: Testing image 7
+2025-07-28 11:07:56,597 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 11:07:56,601 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 11:07:56,618 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 11:07:56,624 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 11:08:00,320 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 11:08:00,323 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 11:08:00,335 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 11:08:00,339 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 11:09:25,575 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 11:09:25,839 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 11:11:58,967 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 11:11:59,269 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 11:13:18,128 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 11:13:18,209 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 11:14:02,354 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 11:14:02,378 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 11:14:15,908 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 11:14:15,914 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 11:14:17,771 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '1da61b93-f90e-4fd6-a33e-decc6196026b'
+2025-07-28 11:14:17,774 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '1da61b93-f90e-4fd6-a33e-decc6196026b', artwork_secret_code from DB: '3d35789a'
+2025-07-28 11:14:17,783 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: '3d35789a' (from artwork.artwork_secret_code)
+2025-07-28 11:14:18,021 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '85dbd7ca-4e63-4ee8-9900-a2d9feb5067f', buyer_secret_code: '3d35789a'
+2025-07-28 11:14:18,065 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: '3d35789a'
+2025-07-28 11:14:21,691 | INFO | app.api.routes.payments | Input: ORDER-8dca45a3-7871-45c3-8cab-d3535f96ac20+201+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:14:21,691 | INFO | app.api.routes.payments | Expected: cb75698fab87cf7637db886801bb7405431dec00ce8ddc8cee31ae96922e9fbc0105865acb1d107e3850a0e2e6112773d68bbbccabd0095e5706017fe810aa75
+2025-07-28 11:14:21,693 | INFO | app.api.routes.payments | Received: cb75698fab87cf7637db886801bb7405431dec00ce8ddc8cee31ae96922e9fbc0105865acb1d107e3850a0e2e6112773d68bbbccabd0095e5706017fe810aa75
+2025-07-28 11:14:31,770 | INFO | app.api.routes.payments | Input: ORDER-8dca45a3-7871-45c3-8cab-d3535f96ac20+200+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:14:31,770 | INFO | app.api.routes.payments | Expected: 42dc8e0d6680c1abc56a4c5913ee67d83dbcee472a351ddffc66941ba425665310aebdb23f9ba96539ac86a09ef0c0e9a469b3c8e8c212ea89cb982f2aa81fcd
+2025-07-28 11:14:31,770 | INFO | app.api.routes.payments | Received: 42dc8e0d6680c1abc56a4c5913ee67d83dbcee472a351ddffc66941ba425665310aebdb23f9ba96539ac86a09ef0c0e9a469b3c8e8c212ea89cb982f2aa81fcd
+2025-07-28 11:14:39,495 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 11:14:39,512 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 11:17:33,374 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 11:17:33,499 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 11:17:42,926 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 11:17:42,937 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 11:17:53,714 | INFO | app.api.routes.artworks | Backend received request for artwork ID: dd20f346-cc23-4810-a76a-d1718355a758
+2025-07-28 11:17:53,720 | INFO | app.api.routes.artworks | Backend: Artwork dd20f346-cc23-4810-a76a-d1718355a758 found: Testing image 6
+2025-07-28 11:17:53,745 | INFO | app.api.routes.artworks | Backend received request for artwork ID: dd20f346-cc23-4810-a76a-d1718355a758
+2025-07-28 11:17:53,750 | INFO | app.api.routes.artworks | Backend: Artwork dd20f346-cc23-4810-a76a-d1718355a758 found: Testing image 6
+2025-07-28 11:18:15,194 | INFO | app.api.routes.artworks | Backend received request for artwork ID: d37c9b23-0f16-4b41-a8e2-21d309880042
+2025-07-28 11:18:15,198 | INFO | app.api.routes.artworks | Backend: Artwork d37c9b23-0f16-4b41-a8e2-21d309880042 found: Testing image 7
+2025-07-28 11:18:15,212 | INFO | app.api.routes.artworks | Backend received request for artwork ID: d37c9b23-0f16-4b41-a8e2-21d309880042
+2025-07-28 11:18:15,217 | INFO | app.api.routes.artworks | Backend: Artwork d37c9b23-0f16-4b41-a8e2-21d309880042 found: Testing image 7
+2025-07-28 11:18:22,990 | INFO | app.api.routes.artworks | Backend received request for artwork ID: dd20f346-cc23-4810-a76a-d1718355a758
+2025-07-28 11:18:22,995 | INFO | app.api.routes.artworks | Backend: Artwork dd20f346-cc23-4810-a76a-d1718355a758 found: Testing image 6
+2025-07-28 11:18:23,005 | INFO | app.api.routes.artworks | Backend received request for artwork ID: dd20f346-cc23-4810-a76a-d1718355a758
+2025-07-28 11:18:23,011 | INFO | app.api.routes.artworks | Backend: Artwork dd20f346-cc23-4810-a76a-d1718355a758 found: Testing image 6
+2025-07-28 11:25:45,358 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 11:25:45,388 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 11:25:45,392 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 11:25:45,408 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 11:26:02,725 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 11:26:02,729 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 11:26:02,741 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1da61b93-f90e-4fd6-a33e-decc6196026b
+2025-07-28 11:26:02,744 | INFO | app.api.routes.artworks | Backend: Artwork 1da61b93-f90e-4fd6-a33e-decc6196026b found: Testing image 9
+2025-07-28 11:26:04,024 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '1da61b93-f90e-4fd6-a33e-decc6196026b'
+2025-07-28 11:26:04,025 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '1da61b93-f90e-4fd6-a33e-decc6196026b', artwork_secret_code from DB: '3d35789a'
+2025-07-28 11:26:10,375 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 11:26:10,378 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 11:26:10,394 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 11:26:10,397 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 11:26:11,826 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '40adb72a-7cca-410b-b682-e16ef1236ea6'
+2025-07-28 11:26:11,828 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '40adb72a-7cca-410b-b682-e16ef1236ea6', artwork_secret_code from DB: 'fddc2eab'
+2025-07-28 11:31:11,115 | INFO | app.api.routes.artworks | Backend received request for artwork ID: add3ceb5-9b65-43d5-8325-250f56228c47
+2025-07-28 11:31:11,127 | INFO | app.api.routes.artworks | Backend: Artwork add3ceb5-9b65-43d5-8325-250f56228c47 found: Testing image 10
+2025-07-28 11:31:11,159 | INFO | app.api.routes.artworks | Backend received request for artwork ID: add3ceb5-9b65-43d5-8325-250f56228c47
+2025-07-28 11:31:11,162 | INFO | app.api.routes.artworks | Backend: Artwork add3ceb5-9b65-43d5-8325-250f56228c47 found: Testing image 10
+2025-07-28 11:31:12,286 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: 'add3ceb5-9b65-43d5-8325-250f56228c47'
+2025-07-28 11:31:12,288 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: 'add3ceb5-9b65-43d5-8325-250f56228c47', artwork_secret_code from DB: 'de8f4896'
+2025-07-28 11:31:12,293 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: 'de8f4896' (from artwork.artwork_secret_code)
+2025-07-28 11:31:12,498 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: 'dadf1869-05dd-43ce-85c2-e627b9789825', buyer_secret_code: 'de8f4896'
+2025-07-28 11:31:12,531 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: 'de8f4896'
+2025-07-28 11:31:15,960 | INFO | app.api.routes.payments | Input: ORDER-d99b594c-c80f-458b-930b-c13e66921a2e+201+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:31:15,960 | INFO | app.api.routes.payments | Expected: 4b10b4eddf13c2a195ae183ed1d3d707e3bde9aa19cbb9f2d75480c2bdcb82e10862e2d5da2f0640a7b59d4edb9a0510d62d5c2b1721cc1d02a446acf4b53660
+2025-07-28 11:31:15,960 | INFO | app.api.routes.payments | Received: 4b10b4eddf13c2a195ae183ed1d3d707e3bde9aa19cbb9f2d75480c2bdcb82e10862e2d5da2f0640a7b59d4edb9a0510d62d5c2b1721cc1d02a446acf4b53660
+2025-07-28 11:31:29,113 | INFO | app.api.routes.payments | Input: ORDER-d99b594c-c80f-458b-930b-c13e66921a2e+200+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:31:29,113 | INFO | app.api.routes.payments | Expected: 9a73688bb34ceb16d6ed796b11c224cb2d9f3543296c8e8288422f3f9de77327eddbfd3a03a2a405e6e0ded7273dd57c16b02a84212e3954ceba991f41b0bdae
+2025-07-28 11:31:29,113 | INFO | app.api.routes.payments | Received: 9a73688bb34ceb16d6ed796b11c224cb2d9f3543296c8e8288422f3f9de77327eddbfd3a03a2a405e6e0ded7273dd57c16b02a84212e3954ceba991f41b0bdae
+2025-07-28 11:31:37,098 | INFO | app.api.routes.artworks | Backend received request for artwork ID: add3ceb5-9b65-43d5-8325-250f56228c47
+2025-07-28 11:31:37,100 | INFO | app.api.routes.artworks | Backend: Artwork add3ceb5-9b65-43d5-8325-250f56228c47 found: Testing image 10
+2025-07-28 11:31:48,193 | INFO | app.api.routes.artworks | Backend received request for artwork ID: add3ceb5-9b65-43d5-8325-250f56228c47
+2025-07-28 11:31:48,204 | INFO | app.api.routes.artworks | Backend: Artwork add3ceb5-9b65-43d5-8325-250f56228c47 found: Testing image 10
+2025-07-28 11:32:21,598 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: 'add3ceb5-9b65-43d5-8325-250f56228c47'
+2025-07-28 11:32:21,607 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: 'add3ceb5-9b65-43d5-8325-250f56228c47', artwork_secret_code from DB: 'de8f4896'
+2025-07-28 11:32:27,117 | INFO | app.api.routes.artworks | Backend received request for artwork ID: add3ceb5-9b65-43d5-8325-250f56228c47
+2025-07-28 11:32:27,121 | INFO | app.api.routes.artworks | Backend: Artwork add3ceb5-9b65-43d5-8325-250f56228c47 found: Testing image 10
+2025-07-28 11:34:47,024 | INFO | app.api.routes.artworks | Backend received request for artwork ID: add3ceb5-9b65-43d5-8325-250f56228c47
+2025-07-28 11:34:47,030 | INFO | app.api.routes.artworks | Backend: Artwork add3ceb5-9b65-43d5-8325-250f56228c47 found: Testing image 10
+2025-07-28 11:34:54,955 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 539adb47-ed8a-40a7-a3e6-751be5bb4ee4
+2025-07-28 11:34:54,960 | INFO | app.api.routes.artworks | Backend: Artwork 539adb47-ed8a-40a7-a3e6-751be5bb4ee4 found: Testing image 11
+2025-07-28 11:34:54,988 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 539adb47-ed8a-40a7-a3e6-751be5bb4ee4
+2025-07-28 11:34:54,994 | INFO | app.api.routes.artworks | Backend: Artwork 539adb47-ed8a-40a7-a3e6-751be5bb4ee4 found: Testing image 11
+2025-07-28 11:35:19,991 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 539adb47-ed8a-40a7-a3e6-751be5bb4ee4
+2025-07-28 11:35:20,032 | INFO | app.api.routes.artworks | Backend: Artwork 539adb47-ed8a-40a7-a3e6-751be5bb4ee4 found: Testing image 11
+2025-07-28 11:35:20,081 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 539adb47-ed8a-40a7-a3e6-751be5bb4ee4
+2025-07-28 11:35:20,088 | INFO | app.api.routes.artworks | Backend: Artwork 539adb47-ed8a-40a7-a3e6-751be5bb4ee4 found: Testing image 11
+2025-07-28 11:35:21,903 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '539adb47-ed8a-40a7-a3e6-751be5bb4ee4'
+2025-07-28 11:35:21,908 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '539adb47-ed8a-40a7-a3e6-751be5bb4ee4', artwork_secret_code from DB: '99ab24dd'
+2025-07-28 11:35:21,925 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: '99ab24dd' (from artwork.artwork_secret_code)
+2025-07-28 11:35:22,217 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '266a4848-ee11-4832-99ef-4fa9bf1e2612', buyer_secret_code: '99ab24dd'
+2025-07-28 11:35:22,269 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: '99ab24dd'
+2025-07-28 11:35:27,600 | INFO | app.api.routes.payments | Input: ORDER-e2d790e8-d2c9-491e-ad36-7e2017095c8a+201+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:35:27,600 | INFO | app.api.routes.payments | Expected: 5f61708206d1122a25d78754d059d2c88f64da3bc140489e79099eaf4095ef97959d13f94e13b74ca9f4e601292f9a1975eb7c87b5d179ff77d6485c3e24fbb5
+2025-07-28 11:35:27,600 | INFO | app.api.routes.payments | Received: 5f61708206d1122a25d78754d059d2c88f64da3bc140489e79099eaf4095ef97959d13f94e13b74ca9f4e601292f9a1975eb7c87b5d179ff77d6485c3e24fbb5
+2025-07-28 11:35:41,094 | INFO | app.api.routes.payments | Input: ORDER-e2d790e8-d2c9-491e-ad36-7e2017095c8a+200+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:35:41,094 | INFO | app.api.routes.payments | Expected: c385f4eb8a01759e0bc78bd7a375bbdb25afc6dfae32e46fe6ea241908313ec88be5e2f1a55925334d960fe31699f6654661bd2a52995cc1591ce229cc7630cd
+2025-07-28 11:35:41,094 | INFO | app.api.routes.payments | Received: c385f4eb8a01759e0bc78bd7a375bbdb25afc6dfae32e46fe6ea241908313ec88be5e2f1a55925334d960fe31699f6654661bd2a52995cc1591ce229cc7630cd
+2025-07-28 11:35:45,908 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 539adb47-ed8a-40a7-a3e6-751be5bb4ee4
+2025-07-28 11:35:45,931 | INFO | app.api.routes.artworks | Backend: Artwork 539adb47-ed8a-40a7-a3e6-751be5bb4ee4 found: Testing image 11
+2025-07-28 11:39:45,094 | INFO | app.api.routes.payments | Input: ORDER-e2d790e8-d2c9-491e-ad36-7e2017095c8a+200+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:39:45,095 | INFO | app.api.routes.payments | Expected: c385f4eb8a01759e0bc78bd7a375bbdb25afc6dfae32e46fe6ea241908313ec88be5e2f1a55925334d960fe31699f6654661bd2a52995cc1591ce229cc7630cd
+2025-07-28 11:39:45,095 | INFO | app.api.routes.payments | Received: c385f4eb8a01759e0bc78bd7a375bbdb25afc6dfae32e46fe6ea241908313ec88be5e2f1a55925334d960fe31699f6654661bd2a52995cc1591ce229cc7630cd
+2025-07-28 11:39:45,278 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Retrieved receipt 266a4848-ee11-4832-99ef-4fa9bf1e2612 with buyer_secret_code: 99ab24dd
+2025-07-28 11:39:45,345 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Artwork 539adb47-ed8a-40a7-a3e6-751be5bb4ee4 marked as sold.
+2025-07-28 11:39:49,597 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Email sent with buyer_secret_code: 99ab24dd
+2025-07-28 11:40:37,641 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/da31ed57_75f7c551-d07c-4e56-b4f5-e89a94f8ac01_Testing_image_11.png.png
+2025-07-28 11:40:37,644 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: '99ab24dd'
+2025-07-28 11:40:39,766 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpzsue3cnk.png
+2025-07-28 11:40:40,741 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:c475ff2d023a73c09e986bf32323b4b59ebfb36a4e32f8f66555a95ee6e2bf60<USER_MESSAGE>nX@YR\ K%MKGP' (took 0.9748s)
+2025-07-28 11:40:40,743 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: 'nX@YR\ K%MKGP'
+2025-07-28 11:40:40,743 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: '99ab24dd'
+2025-07-28 11:40:40,744 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-28 11:40:40,745 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpzsue3cnk.png
+2025-07-28 11:46:19,503 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 11:49:02,984 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f8ae9696-a56f-4413-8cd0-4e7022a56fa5
+2025-07-28 11:49:02,990 | INFO | app.api.routes.artworks | Backend: Artwork f8ae9696-a56f-4413-8cd0-4e7022a56fa5 found: Testing image 12
+2025-07-28 11:49:03,031 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f8ae9696-a56f-4413-8cd0-4e7022a56fa5
+2025-07-28 11:49:03,034 | INFO | app.api.routes.artworks | Backend: Artwork f8ae9696-a56f-4413-8cd0-4e7022a56fa5 found: Testing image 12
+2025-07-28 11:49:05,624 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: 'f8ae9696-a56f-4413-8cd0-4e7022a56fa5'
+2025-07-28 11:49:05,626 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: 'f8ae9696-a56f-4413-8cd0-4e7022a56fa5', artwork_secret_code from DB: '668007f1'
+2025-07-28 11:49:05,634 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: '668007f1' (from artwork.artwork_secret_code)
+2025-07-28 11:49:05,805 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '27916f99-7e2d-41c6-be53-12dfcbac4f1c', buyer_secret_code: '668007f1'
+2025-07-28 11:49:05,813 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: '668007f1'
+2025-07-28 11:49:09,529 | INFO | app.api.routes.payments | Input: ORDER-a1726998-849e-477e-a8b1-46e665af0fcd+201+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:49:09,529 | INFO | app.api.routes.payments | Expected: d2e4130b1baa9406145471992d7ec20876370a10b6374fb52e7f7c264f4e473381b5ba98248cd30b0305728a4d3e32fb74463ed14d88c4cab58bf3481fb75d19
+2025-07-28 11:49:09,530 | INFO | app.api.routes.payments | Received: d2e4130b1baa9406145471992d7ec20876370a10b6374fb52e7f7c264f4e473381b5ba98248cd30b0305728a4d3e32fb74463ed14d88c4cab58bf3481fb75d19
+2025-07-28 11:49:19,449 | INFO | app.api.routes.payments | Input: ORDER-a1726998-849e-477e-a8b1-46e665af0fcd+200+800000.00+SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:49:19,450 | INFO | app.api.routes.payments | Expected: 67441910a17d203330009f9ef5563f1a079d2b76d79500b2f9ce48daeb1da338e3a5dc858802c345d1308325a42dc2fd8391f505ab8cb9ac1179163eb804381f
+2025-07-28 11:49:19,450 | INFO | app.api.routes.payments | Received: 67441910a17d203330009f9ef5563f1a079d2b76d79500b2f9ce48daeb1da338e3a5dc858802c345d1308325a42dc2fd8391f505ab8cb9ac1179163eb804381f
+2025-07-28 11:49:23,136 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f8ae9696-a56f-4413-8cd0-4e7022a56fa5
+2025-07-28 11:49:23,139 | INFO | app.api.routes.artworks | Backend: Artwork f8ae9696-a56f-4413-8cd0-4e7022a56fa5 found: Testing image 12
+2025-07-28 11:51:23,189 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 11:52:55,511 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 11:53:18,526 | INFO | app.utils.image_similarity | Deteksi duplikat via HASH: Mobil Porsche 1
+2025-07-28 11:54:03,483 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f8ae9696-a56f-4413-8cd0-4e7022a56fa5
+2025-07-28 11:54:03,497 | INFO | app.api.routes.artworks | Backend: Artwork f8ae9696-a56f-4413-8cd0-4e7022a56fa5 found: Testing image 12
+2025-07-28 11:54:09,630 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 4170dd31-6be2-423f-9ff9-bfc5c7da97d7
+2025-07-28 11:54:09,635 | INFO | app.api.routes.artworks | Backend: Artwork 4170dd31-6be2-423f-9ff9-bfc5c7da97d7 found: Testing image 13
+2025-07-28 11:54:09,751 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 4170dd31-6be2-423f-9ff9-bfc5c7da97d7
+2025-07-28 11:54:09,756 | INFO | app.api.routes.artworks | Backend: Artwork 4170dd31-6be2-423f-9ff9-bfc5c7da97d7 found: Testing image 13
+2025-07-28 11:54:10,884 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '4170dd31-6be2-423f-9ff9-bfc5c7da97d7'
+2025-07-28 11:54:10,886 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '4170dd31-6be2-423f-9ff9-bfc5c7da97d7', artwork_secret_code from DB: '885e97d5'
+2025-07-28 11:54:10,898 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: '885e97d5' (from artwork.artwork_secret_code)
+2025-07-28 11:54:11,100 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '0266ac50-5ee4-4b49-8245-475f3c89452e', buyer_secret_code: '885e97d5'
+2025-07-28 11:54:11,111 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: '885e97d5'
+2025-07-28 11:54:14,931 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "off-us",
+  "transaction_time": "2025-07-28 11:54:16",
+  "transaction_status": "pending",
+  "transaction_id": "69b54bda-725d-4cc5-98f6-04eb42633084",
+  "status_message": "midtrans payment notification",
+  "status_code": "201",
+  "signature_key": "683df323a8adb3facba6b4d82f15a18d18dd46f26f85a4215560ad37ce8174fa4968052ee9f693620299bde1f7e25cb4e91d2f7fc51c43e3ac86f8e5828f9e75",
+  "payment_type": "qris",
+  "order_id": "ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1",
+  "merchant_id": "G663931957",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-28 12:09:16",
+  "currency": "IDR"
+}
+2025-07-28 11:54:14,932 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1, Status Code: 201, Gross Amount: 800000.00, Transaction Status: pending
+2025-07-28 11:54:14,932 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-28 11:54:14,932 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1201800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:54:14,932 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 683df323a8adb3facba6b4d82f15a18d18dd46f26f85a4215560ad37ce8174fa4968052ee9f693620299bde1f7e25cb4e91d2f7fc51c43e3ac86f8e5828f9e75
+2025-07-28 11:54:14,932 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 683df323a8adb3facba6b4d82f15a18d18dd46f26f85a4215560ad37ce8174fa4968052ee9f693620299bde1f7e25cb4e91d2f7fc51c43e3ac86f8e5828f9e75
+2025-07-28 11:54:14,932 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1.
+2025-07-28 11:54:14,932 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Transaction status is 'pending' for Order ID: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1.
+2025-07-28 11:54:27,964 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "on-us",
+  "transaction_time": "2025-07-28 11:54:16",
+  "transaction_status": "settlement",
+  "transaction_id": "69b54bda-725d-4cc5-98f6-04eb42633084",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "f4e71c47e628fa73aeb5089cf9a591e9a5532c38cedfc620389a4a9377774108e3dce904f52cdf414d6d7ab15762aa454a88562a982b0e6c59c2f5e12f0ec880",
+  "settlement_time": "2025-07-28 11:54:29",
+  "payment_type": "qris",
+  "order_id": "ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1",
+  "merchant_id": "G663931957",
+  "merchant_cross_reference_id": "5c306999-5a31-4b0d-a6ed-32b2b3aff6ec",
+  "issuer": "gopay",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-28 12:09:16",
+  "currency": "IDR",
+  "acquirer": "gopay"
+}
+2025-07-28 11:54:27,965 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1, Status Code: 200, Gross Amount: 800000.00, Transaction Status: settlement
+2025-07-28 11:54:27,965 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-28 11:54:27,965 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1200800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:54:27,965 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: f4e71c47e628fa73aeb5089cf9a591e9a5532c38cedfc620389a4a9377774108e3dce904f52cdf414d6d7ab15762aa454a88562a982b0e6c59c2f5e12f0ec880
+2025-07-28 11:54:27,965 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: f4e71c47e628fa73aeb5089cf9a591e9a5532c38cedfc620389a4a9377774108e3dce904f52cdf414d6d7ab15762aa454a88562a982b0e6c59c2f5e12f0ec880
+2025-07-28 11:54:27,966 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1.
+2025-07-28 11:54:27,966 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Transaction status is 'settlement' for Order ID: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1. Proceeding with update logic.
+2025-07-28 11:54:27,966 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: No item_details found in callback for Order ID: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1.
+2025-07-28 11:54:31,088 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 4170dd31-6be2-423f-9ff9-bfc5c7da97d7
+2025-07-28 11:54:31,094 | INFO | app.api.routes.artworks | Backend: Artwork 4170dd31-6be2-423f-9ff9-bfc5c7da97d7 found: Testing image 13
+2025-07-28 11:55:45,040 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "on-us",
+  "transaction_time": "2025-07-28 11:54:16",
+  "transaction_status": "settlement",
+  "transaction_id": "69b54bda-725d-4cc5-98f6-04eb42633084",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "f4e71c47e628fa73aeb5089cf9a591e9a5532c38cedfc620389a4a9377774108e3dce904f52cdf414d6d7ab15762aa454a88562a982b0e6c59c2f5e12f0ec880",
+  "settlement_time": "2025-07-28 11:54:29",
+  "payment_type": "qris",
+  "order_id": "ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1",
+  "merchant_id": "G663931957",
+  "merchant_cross_reference_id": "5c306999-5a31-4b0d-a6ed-32b2b3aff6ec",
+  "issuer": "gopay",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-28 12:09:16",
+  "currency": "IDR",
+  "acquirer": "gopay"
+}
+2025-07-28 11:55:45,044 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1, Status Code: 200, Gross Amount: 800000.00, Transaction Status: settlement
+2025-07-28 11:55:45,049 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-28 11:55:45,049 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1200800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:55:45,050 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: f4e71c47e628fa73aeb5089cf9a591e9a5532c38cedfc620389a4a9377774108e3dce904f52cdf414d6d7ab15762aa454a88562a982b0e6c59c2f5e12f0ec880
+2025-07-28 11:55:45,050 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: f4e71c47e628fa73aeb5089cf9a591e9a5532c38cedfc620389a4a9377774108e3dce904f52cdf414d6d7ab15762aa454a88562a982b0e6c59c2f5e12f0ec880
+2025-07-28 11:55:45,050 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1.
+2025-07-28 11:55:45,050 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Transaction status is 'settlement' for Order ID: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1. Proceeding with update logic.
+2025-07-28 11:55:45,050 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: No item_details found in callback for Order ID: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1.
+2025-07-28 11:56:59,722 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 11:58:19,043 | INFO | app.api.routes.artworks | Backend received request for artwork ID: a61cd001-7588-4f21-9cc2-3f85c478c8a6
+2025-07-28 11:58:19,085 | INFO | app.api.routes.artworks | Backend: Artwork a61cd001-7588-4f21-9cc2-3f85c478c8a6 found: Testing image 14
+2025-07-28 11:58:19,128 | INFO | app.api.routes.artworks | Backend received request for artwork ID: a61cd001-7588-4f21-9cc2-3f85c478c8a6
+2025-07-28 11:58:19,137 | INFO | app.api.routes.artworks | Backend: Artwork a61cd001-7588-4f21-9cc2-3f85c478c8a6 found: Testing image 14
+2025-07-28 11:58:20,639 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: 'a61cd001-7588-4f21-9cc2-3f85c478c8a6'
+2025-07-28 11:58:20,641 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: 'a61cd001-7588-4f21-9cc2-3f85c478c8a6', artwork_secret_code from DB: '2b04df38'
+2025-07-28 11:58:20,736 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: '2b04df38' (from artwork.artwork_secret_code)
+2025-07-28 11:58:21,017 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '1ee4ef99-2159-4ff6-8261-21c149c529c7', buyer_secret_code: '2b04df38'
+2025-07-28 11:58:21,064 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: '2b04df38'
+2025-07-28 11:58:24,645 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "off-us",
+  "transaction_time": "2025-07-28 11:58:26",
+  "transaction_status": "pending",
+  "transaction_id": "c95eb6ba-4f1e-4bb1-a60c-3c20f51069d8",
+  "status_message": "midtrans payment notification",
+  "status_code": "201",
+  "signature_key": "17d4e192954b92e161ed526ca639efa630658f77808330db8a57347c46e57b7102977a7b45dcfdd0fd04113b67bd409c4e7a0c34cffc8ebdfd2abbf3a6f2761b",
+  "payment_type": "qris",
+  "order_id": "ORDER-03520594-21c5-4051-8389-2141e70a0618",
+  "merchant_id": "G663931957",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-28 12:13:26",
+  "currency": "IDR"
+}
+2025-07-28 11:58:24,647 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-03520594-21c5-4051-8389-2141e70a0618, Status Code: 201, Gross Amount: 800000.00, Transaction Status: pending
+2025-07-28 11:58:24,647 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-28 11:58:24,647 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-03520594-21c5-4051-8389-2141e70a0618201800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:58:24,648 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 17d4e192954b92e161ed526ca639efa630658f77808330db8a57347c46e57b7102977a7b45dcfdd0fd04113b67bd409c4e7a0c34cffc8ebdfd2abbf3a6f2761b
+2025-07-28 11:58:24,648 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 17d4e192954b92e161ed526ca639efa630658f77808330db8a57347c46e57b7102977a7b45dcfdd0fd04113b67bd409c4e7a0c34cffc8ebdfd2abbf3a6f2761b
+2025-07-28 11:58:24,648 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-03520594-21c5-4051-8389-2141e70a0618.
+2025-07-28 11:58:34,617 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "on-us",
+  "transaction_time": "2025-07-28 11:58:26",
+  "transaction_status": "settlement",
+  "transaction_id": "c95eb6ba-4f1e-4bb1-a60c-3c20f51069d8",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "8a1d22b8b9b6b51711907c96d90fbfac12da6e5a85e82ae506b5e8807f166c34d98d0297923398c58af335f3cb6167cb2f5f6ad1e0bdf724ac9b840a7513e0cc",
+  "settlement_time": "2025-07-28 11:58:36",
+  "payment_type": "qris",
+  "order_id": "ORDER-03520594-21c5-4051-8389-2141e70a0618",
+  "merchant_id": "G663931957",
+  "merchant_cross_reference_id": "5c306999-5a31-4b0d-a6ed-32b2b3aff6ec",
+  "issuer": "gopay",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-28 12:13:26",
+  "currency": "IDR",
+  "acquirer": "gopay"
+}
+2025-07-28 11:58:34,617 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-03520594-21c5-4051-8389-2141e70a0618, Status Code: 200, Gross Amount: 800000.00, Transaction Status: settlement
+2025-07-28 11:58:34,617 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-28 11:58:34,617 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-03520594-21c5-4051-8389-2141e70a0618200800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:58:34,617 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 8a1d22b8b9b6b51711907c96d90fbfac12da6e5a85e82ae506b5e8807f166c34d98d0297923398c58af335f3cb6167cb2f5f6ad1e0bdf724ac9b840a7513e0cc
+2025-07-28 11:58:34,617 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 8a1d22b8b9b6b51711907c96d90fbfac12da6e5a85e82ae506b5e8807f166c34d98d0297923398c58af335f3cb6167cb2f5f6ad1e0bdf724ac9b840a7513e0cc
+2025-07-28 11:58:34,618 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-03520594-21c5-4051-8389-2141e70a0618.
+2025-07-28 11:58:42,944 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "on-us",
+  "transaction_time": "2025-07-28 11:54:16",
+  "transaction_status": "settlement",
+  "transaction_id": "69b54bda-725d-4cc5-98f6-04eb42633084",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "f4e71c47e628fa73aeb5089cf9a591e9a5532c38cedfc620389a4a9377774108e3dce904f52cdf414d6d7ab15762aa454a88562a982b0e6c59c2f5e12f0ec880",
+  "settlement_time": "2025-07-28 11:54:29",
+  "payment_type": "qris",
+  "order_id": "ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1",
+  "merchant_id": "G663931957",
+  "merchant_cross_reference_id": "5c306999-5a31-4b0d-a6ed-32b2b3aff6ec",
+  "issuer": "gopay",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-28 12:09:16",
+  "currency": "IDR",
+  "acquirer": "gopay"
+}
+2025-07-28 11:58:42,945 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1, Status Code: 200, Gross Amount: 800000.00, Transaction Status: settlement
+2025-07-28 11:58:42,945 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-28 11:58:42,945 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1200800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:58:42,945 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: f4e71c47e628fa73aeb5089cf9a591e9a5532c38cedfc620389a4a9377774108e3dce904f52cdf414d6d7ab15762aa454a88562a982b0e6c59c2f5e12f0ec880
+2025-07-28 11:58:42,945 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: f4e71c47e628fa73aeb5089cf9a591e9a5532c38cedfc620389a4a9377774108e3dce904f52cdf414d6d7ab15762aa454a88562a982b0e6c59c2f5e12f0ec880
+2025-07-28 11:58:42,946 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-ec4548b7-712c-4f90-9f3f-b195765602e1.
+2025-07-28 11:58:47,792 | INFO | app.api.routes.artworks | Backend received request for artwork ID: a61cd001-7588-4f21-9cc2-3f85c478c8a6
+2025-07-28 11:58:47,795 | INFO | app.api.routes.artworks | Backend: Artwork a61cd001-7588-4f21-9cc2-3f85c478c8a6 found: Testing image 14
+2025-07-28 11:59:12,983 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "off-us",
+  "transaction_time": "2025-07-28 11:58:26",
+  "transaction_status": "pending",
+  "transaction_id": "c95eb6ba-4f1e-4bb1-a60c-3c20f51069d8",
+  "status_message": "midtrans payment notification",
+  "status_code": "201",
+  "signature_key": "17d4e192954b92e161ed526ca639efa630658f77808330db8a57347c46e57b7102977a7b45dcfdd0fd04113b67bd409c4e7a0c34cffc8ebdfd2abbf3a6f2761b",
+  "payment_type": "qris",
+  "order_id": "ORDER-03520594-21c5-4051-8389-2141e70a0618",
+  "merchant_id": "G663931957",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-28 12:13:26",
+  "currency": "IDR"
+}
+2025-07-28 11:59:12,985 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-03520594-21c5-4051-8389-2141e70a0618, Status Code: 201, Gross Amount: 800000.00, Transaction Status: pending
+2025-07-28 11:59:12,985 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-28 11:59:12,985 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-03520594-21c5-4051-8389-2141e70a0618201800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 11:59:12,985 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 17d4e192954b92e161ed526ca639efa630658f77808330db8a57347c46e57b7102977a7b45dcfdd0fd04113b67bd409c4e7a0c34cffc8ebdfd2abbf3a6f2761b
+2025-07-28 11:59:12,985 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 17d4e192954b92e161ed526ca639efa630658f77808330db8a57347c46e57b7102977a7b45dcfdd0fd04113b67bd409c4e7a0c34cffc8ebdfd2abbf3a6f2761b
+2025-07-28 11:59:12,985 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-03520594-21c5-4051-8389-2141e70a0618.
+2025-07-28 12:00:09,893 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "on-us",
+  "transaction_time": "2025-07-28 11:58:26",
+  "transaction_status": "settlement",
+  "transaction_id": "c95eb6ba-4f1e-4bb1-a60c-3c20f51069d8",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "8a1d22b8b9b6b51711907c96d90fbfac12da6e5a85e82ae506b5e8807f166c34d98d0297923398c58af335f3cb6167cb2f5f6ad1e0bdf724ac9b840a7513e0cc",
+  "settlement_time": "2025-07-28 11:58:36",
+  "payment_type": "qris",
+  "order_id": "ORDER-03520594-21c5-4051-8389-2141e70a0618",
+  "merchant_id": "G663931957",
+  "merchant_cross_reference_id": "5c306999-5a31-4b0d-a6ed-32b2b3aff6ec",
+  "issuer": "gopay",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-28 12:13:26",
+  "currency": "IDR",
+  "acquirer": "gopay"
+}
+2025-07-28 12:00:09,898 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-03520594-21c5-4051-8389-2141e70a0618, Status Code: 200, Gross Amount: 800000.00, Transaction Status: settlement
+2025-07-28 12:00:09,902 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-28 12:00:09,903 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-03520594-21c5-4051-8389-2141e70a0618200800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 12:00:09,903 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 8a1d22b8b9b6b51711907c96d90fbfac12da6e5a85e82ae506b5e8807f166c34d98d0297923398c58af335f3cb6167cb2f5f6ad1e0bdf724ac9b840a7513e0cc
+2025-07-28 12:00:09,903 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 8a1d22b8b9b6b51711907c96d90fbfac12da6e5a85e82ae506b5e8807f166c34d98d0297923398c58af335f3cb6167cb2f5f6ad1e0bdf724ac9b840a7513e0cc
+2025-07-28 12:00:09,903 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-03520594-21c5-4051-8389-2141e70a0618.
+2025-07-28 12:03:09,590 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 12:08:15,706 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 12:08:22,608 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 12:09:07,563 | INFO | app.main | Server FastAPI dimulai...
+2025-07-28 12:10:03,111 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ef87af29-5c63-4a3c-93da-6fa844e836ce
+2025-07-28 12:10:03,124 | INFO | app.api.routes.artworks | Backend: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce found: Testing image 15
+2025-07-28 12:10:03,160 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ef87af29-5c63-4a3c-93da-6fa844e836ce
+2025-07-28 12:10:03,163 | INFO | app.api.routes.artworks | Backend: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce found: Testing image 15
+2025-07-28 12:10:05,884 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: 'ef87af29-5c63-4a3c-93da-6fa844e836ce'
+2025-07-28 12:10:05,886 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: 'ef87af29-5c63-4a3c-93da-6fa844e836ce', artwork_secret_code from DB: '4de8144f'
+2025-07-28 12:10:06,588 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: '4de8144f' (from artwork.artwork_secret_code)
+2025-07-28 12:10:09,329 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: 'b87af5de-b1f0-4059-b70f-3b82b62d8763', buyer_secret_code: '4de8144f'
+2025-07-28 12:10:09,357 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: '4de8144f'
+2025-07-28 12:10:09,368 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: 'ef87af29-5c63-4a3c-93da-6fa844e836ce'
+2025-07-28 12:10:09,369 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: 'ef87af29-5c63-4a3c-93da-6fa844e836ce', artwork_secret_code from DB: '4de8144f'
+2025-07-28 12:10:13,644 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "off-us",
+  "transaction_time": "2025-07-28 12:10:14",
+  "transaction_status": "pending",
+  "transaction_id": "25320a62-25c3-4332-9aa9-e232425ae70a",
+  "status_message": "midtrans payment notification",
+  "status_code": "201",
+  "signature_key": "9d6fb7ed859f3c001b825ee96f2620829ec592436b7dfa4f79fbcd74af0a280487093f160feb8f79165308e839d9176fcb202efd1316099b8f448215475a27d8",
+  "payment_type": "qris",
+  "order_id": "ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213",
+  "merchant_id": "G663931957",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-28 12:25:14",
+  "currency": "IDR"
+}
+2025-07-28 12:10:13,645 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213, Status Code: 201, Gross Amount: 800000.00, Transaction Status: pending
+2025-07-28 12:10:13,645 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-28 12:10:13,646 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213201800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 12:10:13,646 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 9d6fb7ed859f3c001b825ee96f2620829ec592436b7dfa4f79fbcd74af0a280487093f160feb8f79165308e839d9176fcb202efd1316099b8f448215475a27d8
+2025-07-28 12:10:13,646 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 9d6fb7ed859f3c001b825ee96f2620829ec592436b7dfa4f79fbcd74af0a280487093f160feb8f79165308e839d9176fcb202efd1316099b8f448215475a27d8
+2025-07-28 12:10:13,646 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213.
+2025-07-28 12:10:13,650 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Found existing receipt b87af5de-b1f0-4059-b70f-3b82b62d8763 for Order ID: ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213. Current status: ReceiptStatusEnum.pending.
+2025-07-28 12:10:13,650 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Transaction status is 'pending' for Order ID: ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213. Updating receipt status to 'pending'.
+2025-07-28 12:10:13,666 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt b87af5de-b1f0-4059-b70f-3b82b62d8763 (Order ID: ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213) successfully updated in DB. New status: ReceiptStatusEnum.pending.
+2025-07-28 12:10:23,588 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "on-us",
+  "transaction_time": "2025-07-28 12:10:14",
+  "transaction_status": "settlement",
+  "transaction_id": "25320a62-25c3-4332-9aa9-e232425ae70a",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "05c421ceadfd50e7d4227d11e4ec23d454fa74882b5cb8d14bc3644384f12ff3faf5695c8d6f3e5bb8f27a0ddda7fb764b0de37aabf40ffec71cb49ba9a45562",
+  "settlement_time": "2025-07-28 12:10:25",
+  "payment_type": "qris",
+  "order_id": "ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213",
+  "merchant_id": "G663931957",
+  "merchant_cross_reference_id": "5c306999-5a31-4b0d-a6ed-32b2b3aff6ec",
+  "issuer": "gopay",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-28 12:25:14",
+  "currency": "IDR",
+  "acquirer": "gopay"
+}
+2025-07-28 12:10:23,588 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213, Status Code: 200, Gross Amount: 800000.00, Transaction Status: settlement
+2025-07-28 12:10:23,588 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-28 12:10:23,588 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213200800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 12:10:23,589 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 05c421ceadfd50e7d4227d11e4ec23d454fa74882b5cb8d14bc3644384f12ff3faf5695c8d6f3e5bb8f27a0ddda7fb764b0de37aabf40ffec71cb49ba9a45562
+2025-07-28 12:10:23,589 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 05c421ceadfd50e7d4227d11e4ec23d454fa74882b5cb8d14bc3644384f12ff3faf5695c8d6f3e5bb8f27a0ddda7fb764b0de37aabf40ffec71cb49ba9a45562
+2025-07-28 12:10:23,589 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213.
+2025-07-28 12:10:23,590 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Found existing receipt b87af5de-b1f0-4059-b70f-3b82b62d8763 for Order ID: ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213. Current status: ReceiptStatusEnum.pending.
+2025-07-28 12:10:23,591 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Transaction status is 'settlement' for Order ID: ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213. Updating receipt status to 'paid'.
+2025-07-28 12:10:23,594 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt b87af5de-b1f0-4059-b70f-3b82b62d8763 (Order ID: ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213) successfully updated in DB. New status: ReceiptStatusEnum.paid.
+2025-07-28 12:10:23,595 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Found Artwork 'Testing image 15' and Buyer 'muhammadfarelas1@gmail.com' for Order ID: ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213.
+2025-07-28 12:10:23,598 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce marked as sold for Order ID: ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213.
+2025-07-28 12:10:26,964 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Purchase email successfully sent to muhammadfarelas1@gmail.com for Order ID: ORDER-5fbc9b6e-d65b-43a2-b85b-5b56be9ad213.
+2025-07-28 12:10:27,690 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ef87af29-5c63-4a3c-93da-6fa844e836ce
+2025-07-28 12:10:27,694 | INFO | app.api.routes.artworks | Backend: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce found: Testing image 15
+2025-07-28 12:10:46,765 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/547ff3e9_75f7c551-d07c-4e56-b4f5-e89a94f8ac01_Testing_image_15.png.png
+2025-07-28 12:10:46,765 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: '4de8144f'
+2025-07-28 12:10:48,852 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmp3t032rwv.png
+2025-07-28 12:10:50,172 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:809505150160061c0dcb2e8b6f05850df096f3682a3ecfc50e68391b6426292a<USER_MESSAGE>c]CYU_zHu@
+ADP' (took 1.3197s)
+2025-07-28 12:10:50,174 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: 'c]CYU_zHu@
+ADP'
+2025-07-28 12:10:50,175 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: '4de8144f'
+2025-07-28 12:10:50,175 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-28 12:10:50,176 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmp3t032rwv.png
+2025-07-28 12:26:15,125 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/547ff3e9_75f7c551-d07c-4e56-b4f5-e89a94f8ac01_Testing_image_15.png.png
+2025-07-28 12:26:15,128 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: '4de8144f'
+2025-07-28 12:26:17,233 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmprgb45e4m.png
+2025-07-28 12:26:18,602 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:809505150160061c0dcb2e8b6f05850df096f3682a3ecfc50e68391b6426292a<USER_MESSAGE>c]CYU_zHu@
+ADP' (took 1.3687s)
+2025-07-28 12:26:18,603 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: 'c]CYU_zHu@
+ADP'
+2025-07-28 12:26:18,603 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: '4de8144f'
+2025-07-28 12:26:18,604 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'WatermarkedBy:Astroyud'
+2025-07-28 12:26:18,604 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmprgb45e4m.png
+2025-07-28 12:27:29,399 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0ec29e46-2d47-4abb-8093-c2d82b9b446c
+2025-07-28 12:27:29,413 | INFO | app.api.routes.artworks | Backend: Artwork 0ec29e46-2d47-4abb-8093-c2d82b9b446c found: Testing image 16
+2025-07-28 12:27:29,434 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0ec29e46-2d47-4abb-8093-c2d82b9b446c
+2025-07-28 12:27:29,438 | INFO | app.api.routes.artworks | Backend: Artwork 0ec29e46-2d47-4abb-8093-c2d82b9b446c found: Testing image 16
+2025-07-28 12:27:30,472 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '0ec29e46-2d47-4abb-8093-c2d82b9b446c'
+2025-07-28 12:27:30,473 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '0ec29e46-2d47-4abb-8093-c2d82b9b446c', artwork_secret_code from DB: 'bb12484f'
+2025-07-28 12:27:30,477 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: 'bb12484f' (from artwork.artwork_secret_code)
+2025-07-28 12:27:30,625 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '4529c9ef-4ba7-4172-819e-ceb89f36f33c', buyer_secret_code: 'bb12484f'
+2025-07-28 12:27:30,648 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: 'bb12484f'
+2025-07-28 12:27:34,213 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "off-us",
+  "transaction_time": "2025-07-28 12:27:35",
+  "transaction_status": "pending",
+  "transaction_id": "4fa01443-9702-4673-bb36-6a560dad3153",
+  "status_message": "midtrans payment notification",
+  "status_code": "201",
+  "signature_key": "137d8946bb221b9c167c3e20915823a004c8a1c869393c85b80c169eb10e7a6108935b27b04a060867974b617b6b022d6b18128fcc7eec17a9dd2c4f0fdc95d4",
+  "payment_type": "qris",
+  "order_id": "ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a",
+  "merchant_id": "G663931957",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-28 12:42:35",
+  "currency": "IDR"
+}
+2025-07-28 12:27:34,214 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a, Status Code: 201, Gross Amount: 800000.00, Transaction Status: pending
+2025-07-28 12:27:34,214 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-28 12:27:34,214 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a201800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 12:27:34,215 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 137d8946bb221b9c167c3e20915823a004c8a1c869393c85b80c169eb10e7a6108935b27b04a060867974b617b6b022d6b18128fcc7eec17a9dd2c4f0fdc95d4
+2025-07-28 12:27:34,215 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 137d8946bb221b9c167c3e20915823a004c8a1c869393c85b80c169eb10e7a6108935b27b04a060867974b617b6b022d6b18128fcc7eec17a9dd2c4f0fdc95d4
+2025-07-28 12:27:34,215 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a.
+2025-07-28 12:27:34,217 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Found existing receipt 4529c9ef-4ba7-4172-819e-ceb89f36f33c for Order ID: ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a. Current status: ReceiptStatusEnum.pending.
+2025-07-28 12:27:34,217 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Transaction status is 'pending' for Order ID: ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a. Updating receipt status to 'pending'.
+2025-07-28 12:27:34,222 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt 4529c9ef-4ba7-4172-819e-ceb89f36f33c (Order ID: ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a) successfully updated in DB. New status: ReceiptStatusEnum.pending.
+2025-07-28 12:27:47,245 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "on-us",
+  "transaction_time": "2025-07-28 12:27:35",
+  "transaction_status": "settlement",
+  "transaction_id": "4fa01443-9702-4673-bb36-6a560dad3153",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "9307fa07019ca829c743edfecf13a34e656d08901f226f3f1788e8f4575a25d78829aaf406964710b8d437f83b26bfd06ebf2048089b7dea28f94e89e4c4f52c",
+  "settlement_time": "2025-07-28 12:27:49",
+  "payment_type": "qris",
+  "order_id": "ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a",
+  "merchant_id": "G663931957",
+  "merchant_cross_reference_id": "5c306999-5a31-4b0d-a6ed-32b2b3aff6ec",
+  "issuer": "gopay",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-28 12:42:35",
+  "currency": "IDR",
+  "acquirer": "gopay"
+}
+2025-07-28 12:27:47,245 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a, Status Code: 200, Gross Amount: 800000.00, Transaction Status: settlement
+2025-07-28 12:27:47,246 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-28 12:27:47,246 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a200800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 12:27:47,246 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 9307fa07019ca829c743edfecf13a34e656d08901f226f3f1788e8f4575a25d78829aaf406964710b8d437f83b26bfd06ebf2048089b7dea28f94e89e4c4f52c
+2025-07-28 12:27:47,246 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 9307fa07019ca829c743edfecf13a34e656d08901f226f3f1788e8f4575a25d78829aaf406964710b8d437f83b26bfd06ebf2048089b7dea28f94e89e4c4f52c
+2025-07-28 12:27:47,246 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a.
+2025-07-28 12:27:47,248 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Found existing receipt 4529c9ef-4ba7-4172-819e-ceb89f36f33c for Order ID: ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a. Current status: ReceiptStatusEnum.pending.
+2025-07-28 12:27:47,248 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Transaction status is 'settlement' for Order ID: ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a. Updating receipt status to 'paid'.
+2025-07-28 12:27:47,253 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt 4529c9ef-4ba7-4172-819e-ceb89f36f33c (Order ID: ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a) successfully updated in DB. New status: ReceiptStatusEnum.paid.
+2025-07-28 12:27:47,258 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Found Artwork 'Testing image 16' and Buyer 'muhammadfarelas1@gmail.com' for Order ID: ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a.
+2025-07-28 12:27:47,266 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Artwork 0ec29e46-2d47-4abb-8093-c2d82b9b446c marked as sold for Order ID: ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a.
+2025-07-28 12:27:50,631 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Purchase email successfully sent to muhammadfarelas1@gmail.com for Order ID: ORDER-a81d79c8-6f65-431b-87ab-7423570c3f1a.
+2025-07-28 12:27:53,348 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0ec29e46-2d47-4abb-8093-c2d82b9b446c
+2025-07-28 12:27:53,351 | INFO | app.api.routes.artworks | Backend: Artwork 0ec29e46-2d47-4abb-8093-c2d82b9b446c found: Testing image 16
+2025-07-28 12:28:10,327 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0ec29e46-2d47-4abb-8093-c2d82b9b446c
+2025-07-28 12:28:10,332 | INFO | app.api.routes.artworks | Backend: Artwork 0ec29e46-2d47-4abb-8093-c2d82b9b446c found: Testing image 16
+2025-07-28 12:28:10,362 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0ec29e46-2d47-4abb-8093-c2d82b9b446c
+2025-07-28 12:28:10,367 | INFO | app.api.routes.artworks | Backend: Artwork 0ec29e46-2d47-4abb-8093-c2d82b9b446c found: Testing image 16
+2025-07-28 12:28:13,106 | INFO | app.api.routes.artworks | Backend received request for artwork ID: a61cd001-7588-4f21-9cc2-3f85c478c8a6
+2025-07-28 12:28:13,110 | INFO | app.api.routes.artworks | Backend: Artwork a61cd001-7588-4f21-9cc2-3f85c478c8a6 found: Testing image 14
+2025-07-28 12:28:13,127 | INFO | app.api.routes.artworks | Backend received request for artwork ID: a61cd001-7588-4f21-9cc2-3f85c478c8a6
+2025-07-28 12:28:13,132 | INFO | app.api.routes.artworks | Backend: Artwork a61cd001-7588-4f21-9cc2-3f85c478c8a6 found: Testing image 14
+2025-07-28 12:28:17,175 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ef87af29-5c63-4a3c-93da-6fa844e836ce
+2025-07-28 12:28:17,178 | INFO | app.api.routes.artworks | Backend: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce found: Testing image 15
+2025-07-28 12:28:17,207 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ef87af29-5c63-4a3c-93da-6fa844e836ce
+2025-07-28 12:28:17,209 | INFO | app.api.routes.artworks | Backend: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce found: Testing image 15
+2025-07-28 12:28:21,861 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 12:28:21,865 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 12:28:21,889 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 40adb72a-7cca-410b-b682-e16ef1236ea6
+2025-07-28 12:28:21,892 | INFO | app.api.routes.artworks | Backend: Artwork 40adb72a-7cca-410b-b682-e16ef1236ea6 found: Testing image 7
+2025-07-28 12:28:24,771 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ef87af29-5c63-4a3c-93da-6fa844e836ce
+2025-07-28 12:28:24,775 | INFO | app.api.routes.artworks | Backend: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce found: Testing image 15
+2025-07-28 12:28:24,786 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ef87af29-5c63-4a3c-93da-6fa844e836ce
+2025-07-28 12:28:24,790 | INFO | app.api.routes.artworks | Backend: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce found: Testing image 15
+2025-07-28 12:28:38,828 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/05e9abd1_75f7c551-d07c-4e56-b4f5-e89a94f8ac01_Testing_image_16.png.png
+2025-07-28 12:28:38,829 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'bb12484f'
+2025-07-28 12:28:40,949 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmp_yrvu0kx.png
+2025-07-28 12:28:41,299 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:e55626c1a2574086ff144fa036074c4aa8b706231ef5bea88c87e0aa8e29736e<USER_MESSAGE>+XD]GBCS\YGB[SZ_UBP_DY]F R]F_BP\SYZFT@]SU' (took 0.3491s)
+2025-07-28 12:28:41,300 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '+XD]GBCS\YGB[SZ_UBP_DY]F R]F_BP\SYZFT@]SU'
+2025-07-28 12:28:41,300 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'bb12484f'
+2025-07-28 12:28:41,301 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'Ini pesan rahasia jangan sampai bocor ke tangan amerika'
+2025-07-28 12:28:41,302 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmp_yrvu0kx.png
+2025-07-28 12:30:35,764 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-28 12:30:35,903 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-28 12:30:35,952 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-28 12:30:35,952 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-28 12:30:42,574 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-28 12:30:42,581 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-28 12:30:42,610 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-28 12:30:42,618 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-28 12:30:44,475 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: 'f37cad45-c41a-4cfc-a0b4-56164c270784'
+2025-07-28 12:30:44,476 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: 'f37cad45-c41a-4cfc-a0b4-56164c270784', artwork_secret_code from DB: '8e9ccdeb'
+2025-07-28 12:30:44,486 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: '8e9ccdeb' (from artwork.artwork_secret_code)
+2025-07-28 12:30:44,701 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '20e44680-1e35-408a-8816-b88ed6a5f2e0', buyer_secret_code: '8e9ccdeb'
+2025-07-28 12:30:44,734 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: '8e9ccdeb'
+2025-07-28 12:30:47,705 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "off-us",
+  "transaction_time": "2025-07-28 12:30:49",
+  "transaction_status": "pending",
+  "transaction_id": "b4c4d147-b0f2-4e1d-afdc-5ed739de08e1",
+  "status_message": "midtrans payment notification",
+  "status_code": "201",
+  "signature_key": "98059bafdb7414dc48ad1717fc23ed9bb349b239663f569dd5d63288c2bb860333c2cb1f175d997ef8e7b21adaaf7d2ca3ed5f0c33d91633f21f2a4a638d8201",
+  "payment_type": "qris",
+  "order_id": "ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5",
+  "merchant_id": "G663931957",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-28 12:45:49",
+  "currency": "IDR"
+}
+2025-07-28 12:30:47,708 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5, Status Code: 201, Gross Amount: 800000.00, Transaction Status: pending
+2025-07-28 12:30:47,709 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-28 12:30:47,709 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5201800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 12:30:47,709 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 98059bafdb7414dc48ad1717fc23ed9bb349b239663f569dd5d63288c2bb860333c2cb1f175d997ef8e7b21adaaf7d2ca3ed5f0c33d91633f21f2a4a638d8201
+2025-07-28 12:30:47,709 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 98059bafdb7414dc48ad1717fc23ed9bb349b239663f569dd5d63288c2bb860333c2cb1f175d997ef8e7b21adaaf7d2ca3ed5f0c33d91633f21f2a4a638d8201
+2025-07-28 12:30:47,710 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5.
+2025-07-28 12:30:47,715 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Found existing receipt 20e44680-1e35-408a-8816-b88ed6a5f2e0 for Order ID: ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5. Current status: ReceiptStatusEnum.pending.
+2025-07-28 12:30:47,716 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Transaction status is 'pending' for Order ID: ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5. Updating receipt status to 'pending'.
+2025-07-28 12:30:47,729 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt 20e44680-1e35-408a-8816-b88ed6a5f2e0 (Order ID: ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5) successfully updated in DB. New status: ReceiptStatusEnum.pending.
+2025-07-28 12:31:01,712 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "on-us",
+  "transaction_time": "2025-07-28 12:30:49",
+  "transaction_status": "settlement",
+  "transaction_id": "b4c4d147-b0f2-4e1d-afdc-5ed739de08e1",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "85d568f263ee37053e9239e477a2ccb23a423a7700c69f19e1f3210ffaf3d7e178d1f819fca4120db0e702824798b75382f4e7916bb95b9d5b6ebbf464a6cdd6",
+  "settlement_time": "2025-07-28 12:31:03",
+  "payment_type": "qris",
+  "order_id": "ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5",
+  "merchant_id": "G663931957",
+  "merchant_cross_reference_id": "5c306999-5a31-4b0d-a6ed-32b2b3aff6ec",
+  "issuer": "gopay",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-28 12:45:49",
+  "currency": "IDR",
+  "acquirer": "gopay"
+}
+2025-07-28 12:31:01,713 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5, Status Code: 200, Gross Amount: 800000.00, Transaction Status: settlement
+2025-07-28 12:31:01,713 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-28 12:31:01,714 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5200800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-28 12:31:01,714 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 85d568f263ee37053e9239e477a2ccb23a423a7700c69f19e1f3210ffaf3d7e178d1f819fca4120db0e702824798b75382f4e7916bb95b9d5b6ebbf464a6cdd6
+2025-07-28 12:31:01,714 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 85d568f263ee37053e9239e477a2ccb23a423a7700c69f19e1f3210ffaf3d7e178d1f819fca4120db0e702824798b75382f4e7916bb95b9d5b6ebbf464a6cdd6
+2025-07-28 12:31:01,714 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5.
+2025-07-28 12:31:01,716 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Found existing receipt 20e44680-1e35-408a-8816-b88ed6a5f2e0 for Order ID: ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5. Current status: ReceiptStatusEnum.pending.
+2025-07-28 12:31:01,717 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Transaction status is 'settlement' for Order ID: ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5. Updating receipt status to 'paid'.
+2025-07-28 12:31:01,720 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt 20e44680-1e35-408a-8816-b88ed6a5f2e0 (Order ID: ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5) successfully updated in DB. New status: ReceiptStatusEnum.paid.
+2025-07-28 12:31:01,722 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Found Artwork 'Testing image 17' and Buyer 'muhammadfarelas1@gmail.com' for Order ID: ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5.
+2025-07-28 12:31:01,732 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 marked as sold for Order ID: ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5.
+2025-07-28 12:31:05,139 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Purchase email successfully sent to muhammadfarelas1@gmail.com for Order ID: ORDER-b5b9048b-8cd9-42fe-8a43-5c4d71dcc3f5.
+2025-07-28 12:31:08,302 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-28 12:31:08,306 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-28 12:31:22,011 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/f8f3d331_75f7c551-d07c-4e56-b4f5-e89a94f8ac01_Testing_image_17.png.png
+2025-07-28 12:31:22,011 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: '8e9ccdeb'
+2025-07-28 12:31:24,112 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmp2turekzx.png
+2025-07-28 12:31:26,253 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:4cfb9134399a0cc4c62e6ea97b35de71bfd3433f497231fe11db4824fa165ab0<USER_MESSAGE>qPCVEKYESXBZ
+ZDXBY\
+' (took 2.1418s)
+2025-07-28 12:31:26,255 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: 'qPCVEKYESXBZ
+ZDXBY\
+'
+2025-07-28 12:31:26,255 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: '8e9ccdeb'
+2025-07-28 12:31:26,256 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'Ini pesan rahasia jangan sampai bocor ke tangan amerika'
+2025-07-28 12:31:26,257 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmp2turekzx.png

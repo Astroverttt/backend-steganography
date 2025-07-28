@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from uuid import UUID
 from app.db.database import get_db
-from app.models.artwork import Artwork
+from app.models.artwork import Artwork # Pastikan model Artwork memiliki price dan is_sold
 import logging
 
 router = APIRouter()
@@ -25,5 +25,7 @@ def get_artwork_detail(artwork_id: UUID, db: Session = Depends(get_db)):
         "image_url": artwork.image_url, 
         "username": artwork.owner.username,
         "name": artwork.owner.name,
-        "profile_picture": artwork.owner.profile_picture
+        "profile_picture": artwork.owner.profile_picture,
+        "price": artwork.price,    
+        "is_sold": artwork.is_sold 
     }

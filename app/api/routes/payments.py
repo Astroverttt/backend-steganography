@@ -28,6 +28,7 @@ MIDTRANS_URL = "https://app.sandbox.midtrans.com/snap/v1/transactions"
 
 class PurchaseRequest(BaseModel):
     artwork_id: str
+    success_redirect_url: str
 
 
 @router.post("/initiate-payment")
@@ -68,6 +69,8 @@ async def initiate_payment(
         "Authorization": f"Basic {auth_header}"
     }
 
+    artwork_detail_url_base = purchase_request.success_redirect_url.split('?')[0]
+
     payload = {
         "transaction_details": {
             "order_id": order_id,
@@ -84,7 +87,13 @@ async def initiate_payment(
                 "quantity": 1,
                 "name": artwork.title
             }
-        ]
+        ],
+        "callbacks": { 
+            "finish": purchase_request.success_redirect_url, 
+            "error": artwork_detail_url_base,           
+            "pending": artwork_detail_url_base          
+        }
+        
     }
 
     try:
@@ -126,70 +135,113 @@ async def initiate_payment(
 async def payment_callback(request: Request, db: Session = Depends(get_db)):
     payload = await request.body()
     callback_data = json.loads(payload)
+    logger.info(f"PAYMENTS/CALLBACK: Received raw callback data: {json.dumps(callback_data, indent=2)}")
 
     order_id = callback_data.get("order_id")
     status_code = callback_data.get("status_code")
     gross_amount = callback_data.get("gross_amount")
     received_signature = callback_data.get("signature_key")
+    transaction_status = callback_data.get("transaction_status") 
+
+    logger.info(f"PAYMENTS/CALLBACK: Extracted data - Order ID: {order_id}, Status Code: {status_code}, Gross Amount: {gross_amount}, Transaction Status: {transaction_status}")
+
 
     server_key = os.getenv("MIDTRANS_SERVER_KEY")
     if not server_key:
+        logger.error("PAYMENTS/CALLBACK: Server key not found in environment variables.")
         raise HTTPException(status_code=500, detail="Server key tidak ditemukan di environment")
 
-    input_string = order_id + status_code + gross_amount + server_key
+    input_string = f"{order_id}{status_code}{gross_amount}{server_key}" 
     expected_signature = hashlib.sha512(input_string.encode()).hexdigest()
 
-    logger.info("✅ COMPARING SIGNATURES:")
-    logger.info(f"Input: {order_id}+{status_code}+{gross_amount}+{server_key}")
-    logger.info(f"Expected: {expected_signature}")
-    logger.info(f"Received: {received_signature}")
+    logger.info("PAYMENTS/CALLBACK: COMPARING SIGNATURES:")
+    logger.info(f"PAYMENTS/CALLBACK: Input for signature: {input_string}")
+    logger.info(f"PAYMENTS/CALLBACK: Expected Signature: {expected_signature}")
+    logger.info(f"PAYMENTS/CALLBACK: Received Signature: {received_signature}")
 
     if received_signature != expected_signature:
+        logger.warning(f"PAYMENTS/CALLBACK: Signature mismatch for Order ID: {order_id}. Received: {received_signature}, Expected: {expected_signature}")
         raise HTTPException(status_code=403, detail="Signature tidak valid")
+    
+    logger.info(f"PAYMENTS/CALLBACK: Signature successfully verified for Order ID: {order_id}.")
 
-    transaction_status = callback_data.get("transaction_status")
+    # --- Start of critical changes ---
+    # Always try to fetch the receipt first using order_id
+    receipt = db.query(Receipt).filter_by(order_id=order_id).first()
+    if not receipt:
+        logger.error(f"PAYMENTS/CALLBACK: Receipt for order_id {order_id} not found in database. This indicates a prior issue or an invalid callback.")
+        raise HTTPException(status_code=404, detail=f"Receipt for order_id {order_id} not found.")
+
+    logger.info(f"PAYMENTS/CALLBACK: Found existing receipt {receipt.id} for Order ID: {order_id}. Current status: {receipt.status}.")
+
+    # Update receipt details from callback regardless of status, then handle specific statuses
+    receipt.transaction_id = callback_data.get("transaction_id")
+    receipt.payment_type = callback_data.get("payment_type")
+    
+    # Update status based on Midtrans transaction_status
     if transaction_status == "settlement":
-        item_details = callback_data.get("item_details", [])
-        if item_details:
-            artwork_id = item_details[0].get("id")
-            buyer_email = callback_data.get("customer_details", {}).get("email")
+        receipt.status = "paid"
+        logger.info(f"PAYMENTS/CALLBACK: Transaction status is 'settlement' for Order ID: {order_id}. Updating receipt status to 'paid'.")
+    elif transaction_status == "pending":
+        receipt.status = "pending"
+        logger.info(f"PAYMENTS/CALLBACK: Transaction status is 'pending' for Order ID: {order_id}. Updating receipt status to 'pending'.")
+    elif transaction_status in ["expire", "cancel", "deny"]:
+        receipt.status = "failed" # Or "cancelled" based on your enum
+        logger.warning(f"PAYMENTS/CALLBACK: Transaction status is '{transaction_status}' for Order ID: {order_id}. Updating receipt status to '{receipt.status}'.")
+    else:
+        logger.info(f"PAYMENTS/CALLBACK: Unhandled transaction status: {transaction_status} for Order ID: {order_id}. Receipt status remains '{receipt.status}'.")
 
-            buyer = db.query(User).filter_by(email=buyer_email).first()
-            if not buyer:
-                raise HTTPException(status_code=404, detail="Pembeli tidak ditemukan")
+    db.add(receipt) # Add updated receipt to session
+    db.commit()
+    db.refresh(receipt)
+    logger.info(f"PAYMENTS/CALLBACK: Receipt {receipt.id} (Order ID: {order_id}) successfully updated in DB. New status: {receipt.status}.")
 
-            receipt = db.query(Receipt).filter_by(order_id=order_id).first()
 
-            if not receipt:
-                logger.error(f"PAYMENTS/CALLBACK: Receipt for order_id {order_id} not found after settlement. This indicates an issue in the payment initiation flow.")
-                raise HTTPException(status_code=404, detail=f"Receipt for order_id {order_id} not found. This indicates an issue in the payment initiation flow.")
+    if transaction_status == "settlement":
+        # Now that we have the receipt, we can get artwork_id and buyer_id from it
+        artwork = db.query(Artwork).filter_by(id=receipt.artwork_id).first()
+        buyer = db.query(User).filter_by(id=receipt.buyer_id).first()
+
+        if not artwork:
+            logger.error(f"PAYMENTS/CALLBACK: Artwork {receipt.artwork_id} not found for receipt {receipt.id} (Order ID: {order_id}). Cannot update artwork or send email.")
+            # Do not raise HTTPException, as the payment is settled. Just log.
+        elif not buyer:
+            logger.error(f"PAYMENTS/CALLBACK: Buyer {receipt.buyer_id} not found for receipt {receipt.id} (Order ID: {order_id}). Cannot send email.")
+            # Do not raise HTTPException, as the payment is settled. Just log.
+        else:
+            logger.info(f"PAYMENTS/CALLBACK: Found Artwork '{artwork.title}' and Buyer '{buyer.email}' for Order ID: {order_id}.")
             
-            receipt.transaction_id = callback_data.get("transaction_id")
-            receipt.payment_type = callback_data.get("payment_type")
-            
-            if status_code == "200":
-                receipt.status = "paid"
+            # Update artwork status if not already sold
+            if not artwork.is_sold:
+                artwork.is_sold = True
+                db.add(artwork)
+                db.commit()
+                db.refresh(artwork)
+                logger.info(f"PAYMENTS/CALLBACK: Artwork {artwork.id} marked as sold for Order ID: {order_id}.")
+            else:
+                logger.info(f"PAYMENTS/CALLBACK: Artwork {artwork.id} was already marked as sold for Order ID: {order_id}. No update needed.")
 
-            db.commit()
-            db.refresh(receipt)
-            logger.info(f"PAYMENTS/CALLBACK: Retrieved receipt {receipt.id} with buyer_secret_code: {receipt.buyer_secret_code}")
+            # Attempt to send email
+            try:
+                await send_purchase_email(
+                    to_email=buyer.email,
+                    context={
+                        "artwork_title": artwork.title,
+                        "purchase_date": receipt.purchase_date.strftime("%d %B %Y"),
+                        "price": float(receipt.amount),
+                        "buyer_secret_code": receipt.buyer_secret_code, 
+                        "download_url": f"http://localhost:8000{artwork.image_url}",
+                        "image_url": artwork.image_url,
+                        "watermark_api": "http://localhost:8000/api/extract/extract-watermark",
+                        "receipt_id": str(receipt.id)
+                    }
+                )
+                logger.info(f"PAYMENTS/CALLBACK: Purchase email successfully sent to {buyer.email} for Order ID: {order_id}.")
+            except Exception as e:
+                logger.error(f"PAYMENTS/CALLBACK: ERROR sending purchase email for Order ID {order_id} to {buyer.email}: {e}", exc_info=True)
+                # Keep 200 OK response to Midtrans even if email fails, as the payment is settled.
 
-
-            await send_purchase_email(
-                to_email=buyer.email,
-                context={
-                    "artwork_title": receipt.artwork.title,
-                    "purchase_date": receipt.purchase_date.strftime("%d %B %Y"),
-                    "price": float(receipt.amount),
-                    "buyer_secret_code": receipt.buyer_secret_code, 
-                    "download_url": f"http://localhost:8000{receipt.artwork.image_url}",
-                    "image_url": receipt.artwork.image_url,
-                    "watermark_api": "http://localhost:8000/api/extract/extract-watermark",
-                    "receipt_id": str(receipt.id)
-                }
-            )
-            logger.info(f"PAYMENTS/CALLBACK: Email sent with buyer_secret_code: {receipt.buyer_secret_code}")
-
+    # --- End of critical changes ---
 
     return {"message": "Callback Midtrans diterima"}
 

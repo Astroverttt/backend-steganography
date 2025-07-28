@@ -2,6 +2,7 @@ from sqlalchemy import (
     Column, UUID, String, Numeric, DateTime, func, ForeignKey, Text, CheckConstraint
 )
 from sqlalchemy.orm import relationship
+from sqlalchemy import Boolean
 from sqlalchemy.dialects.postgresql import UUID as pgUUID
 from app.db.database import Base 
 import uuid
@@ -40,7 +41,7 @@ class Artwork(Base):
         CheckConstraint("license_type IN ('FREE', 'BUY')"),
         nullable=True
     )
-
+    is_sold = Column(Boolean, nullable=False, default=False, server_default='false')
     image_url = Column(Text, nullable=False)
     unique_key = Column(String(255), unique=True, nullable=False)
 
@@ -52,3 +53,4 @@ class Artwork(Base):
     owner = relationship("User", back_populates="artworks")
     receipts = relationship("Receipt", back_populates="artwork")
     likes = relationship("Like", back_populates="artwork", cascade="all, delete")
+    purchases = relationship("Purchase", back_populates="artwork")
