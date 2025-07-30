@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 from fastapi.responses import StreamingResponse
 from app.schemas.user_schema import UserResponse, UserLogin, UserUpdate
 from app.models.user import User
-from app.api.deps import get_db
+from app.api.deps import get_db, get_current_user
 from passlib.hash import bcrypt
 import uuid
 import os
@@ -14,7 +14,7 @@ import shutil
 router = APIRouter()    
 
 UPLOAD_DIR = "static/profile_pictures"
-BASE_URL = "/static/profile_pictures"  
+BASE_URL = "/static/profile_pictures"   
 
 
 @router.post("/register", response_model=UserResponse)
@@ -41,7 +41,7 @@ async def register_user(
         with open(file_path, "wb") as buffer:
             shutil.copyfileobj(file.file, buffer)
 
-        profile_picture_url = f"{request.base_url}{BASE_URL}/{filename}"
+        profile_picture_url = f"{request.url.scheme}://{request.url.netloc}{BASE_URL}/{filename}"
 
     new_user = User(
         id=user_id,
@@ -57,6 +57,7 @@ async def register_user(
 
     return UserResponse.model_validate(new_user)
 
+
 @router.post("/login", response_model=UserResponse)
 def login_user(user: UserLogin, db: Session = Depends(get_db)):
     db_user = db.query(User).filter(User.email == user.email).first()
@@ -69,37 +70,9 @@ def login_user(user: UserLogin, db: Session = Depends(get_db)):
 
     return UserResponse.model_validate(db_user)
 
-
-@router.patch("/{user_id}/profile-picture", response_model=UserResponse)
-async def update_profile_picture(
-    user_id: uuid.UUID,
-    request: Request,
-    file: UploadFile = File(...),
-    db: Session = Depends(get_db)
-):
-    user = db.query(User).filter(User.id == user_id).first()
-    if not user:
-        raise HTTPException(status_code=404, detail="User not found")
-
-    os.makedirs(UPLOAD_DIR, exist_ok=True)
-
-    if user.profile_picture:
-        old_filename = user.profile_picture.split("/")[-1]
-        old_path = os.path.join(UPLOAD_DIR, old_filename)
-        if os.path.exists(old_path):
-            os.remove(old_path)
-
-    new_filename = f"{user_id}_{file.filename}"
-    file_path = os.path.join(UPLOAD_DIR, new_filename)
-    with open(file_path, "wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
-
-    user.profile_picture = f"{request.base_url}{BASE_URL}/{new_filename}"
-    db.commit()
-    db.refresh(user)
-
-    return UserResponse.model_validate(user)
-
+@router.get("/me", response_model=UserResponse)
+def read_current_user(current_user: User = Depends(get_current_user)):
+    return UserResponse.model_validate(current_user)
 
 @router.get("/{user_id}", response_model=UserResponse)
 def get_user(user_id: uuid.UUID, db: Session = Depends(get_db)):
@@ -109,20 +82,41 @@ def get_user(user_id: uuid.UUID, db: Session = Depends(get_db)):
 
     return UserResponse.model_validate(db_user)
 
-@router.put("/{user_id}")
+
+@router.put("/{user_id}", response_model=UserResponse) # Tambahkan response_model
 def update_user(user_id: uuid.UUID, update: UserUpdate, db: Session = Depends(get_db)):
     db_user = db.query(User).filter(User.id == user_id).first()
     if not db_user:
         raise HTTPException(status_code=404, detail="User not found")
 
-    db_user.username = db_user.username
-    if update.username:
-        db_user.username = update.username
-
+    update_data = update.model_dump(exclude_unset=True) # Menggunakan model_dump untuk pydantic v2
+    for key, value in update_data.items():
+        setattr(db_user, key, value)
+    
     db.commit()
     db.refresh(db_user)
 
-    return db_user
+    return UserResponse.model_validate(db_user) # Pastikan mengembalikan model yang divalidasi
+
+
+@router.delete("/{user_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_user(user_id: uuid.UUID, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    db_user = db.query(User).filter(User.id == user_id).first()
+    if not db_user:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    if str(db_user.id) != str(current_user.id): # Membandingkan UUID sebagai string untuk keamanan
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized to delete this user")
+
+    if db_user.profile_picture:
+        filename = os.path.basename(db_user.profile_picture)
+        file_path = os.path.join(UPLOAD_DIR, filename)
+        if os.path.exists(file_path):
+            os.remove(file_path)
+
+    db.delete(db_user)
+    db.commit()
+    return {"message": "User deleted successfully"}
 
 
 @router.get("/", response_model=list[UserResponse])

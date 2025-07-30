@@ -3295,3 +3295,55 @@ ZDXBY\
 2025-07-30 10:36:16,801 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'f6fd64c5'
 2025-07-30 10:36:16,801 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'Ini pesan rahasia jangan sampai bocor ketangan amerika'
 2025-07-30 10:36:16,801 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpvrjckaha.png
+2025-07-30 10:39:58,760 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 10:41:05,474 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c
+2025-07-30 10:41:05,482 | INFO | app.api.routes.artworks | Backend: Artwork 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c found: Testing image 25
+2025-07-30 10:41:19,520 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 76cd5199-da36-44b6-893e-7e797252463f
+2025-07-30 10:41:19,525 | INFO | app.api.routes.artworks | Backend: Artwork 76cd5199-da36-44b6-893e-7e797252463f found: Testing image 14
+2025-07-30 10:41:19,542 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 76cd5199-da36-44b6-893e-7e797252463f
+2025-07-30 10:41:19,548 | INFO | app.api.routes.artworks | Backend: Artwork 76cd5199-da36-44b6-893e-7e797252463f found: Testing image 14
+2025-07-30 10:41:40,996 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 76cd5199-da36-44b6-893e-7e797252463f
+2025-07-30 10:41:40,999 | INFO | app.api.routes.artworks | Backend: Artwork 76cd5199-da36-44b6-893e-7e797252463f found: Testing image 14
+2025-07-30 10:41:47,745 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/b6caec17_c2970245-2c28-4de8-80fa-087957ac3ba6_Testing_image_14.png
+2025-07-30 10:41:47,745 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: '0a5e6600'
+2025-07-30 10:41:49,784 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmppsx8w1vb.png
+2025-07-30 10:41:51,840 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:66b92733c834190ea526cb260e5ca24735f8bcb42fdf5491e19fff2c881d90d0<USER_MESSAGE>y\EFSCQ^AG^WCYQA_XQQ^TFWYRV
+D[UD [WXQ]G]W' (took 2.0556s)
+2025-07-30 10:41:51,842 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: 'y\EFSCQ^AG^WCYQA_XQQ^TFWYRV
+D[UD [WXQ]G]W'
+2025-07-30 10:41:51,842 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: '0a5e6600'
+2025-07-30 10:41:51,843 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'Ini pesan rahasia jangan sampai bocor ketangan amerika'
+2025-07-30 10:41:51,843 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmppsx8w1vb.png
+2025-07-30 14:40:30,230 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/b6caec17_c2970245-2c28-4de8-80fa-087957ac3ba6_Testing_image_14.png
+2025-07-30 14:40:30,232 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: '0a5e6600'
+2025-07-30 14:40:32,341 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmp8hh8kg1n.png
+2025-07-30 14:40:34,312 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:66b92733c834190ea526cb260e5ca24735f8bcb42fdf5491e19fff2c881d90d0<USER_MESSAGE>y\EFSCQ^AG^WCYQA_XQQ^TFWYRV
+D[UD [WXQ]G]W' (took 1.9695s)
+2025-07-30 14:40:34,315 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: 'y\EFSCQ^AG^WCYQA_XQQ^TFWYRV
+D[UD [WXQ]G]W'
+2025-07-30 14:40:34,315 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: '0a5e6600'
+2025-07-30 14:40:34,316 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'Ini pesan rahasia jangan sampai bocor ketangan amerika'
+2025-07-30 14:40:34,317 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmp8hh8kg1n.png
+2025-07-30 14:41:23,800 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 76cd5199-da36-44b6-893e-7e797252463f
+2025-07-30 14:41:23,839 | INFO | app.api.routes.artworks | Backend: Artwork 76cd5199-da36-44b6-893e-7e797252463f found: Testing image 14
+2025-07-30 14:46:57,998 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 14:52:05,496 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 14:55:00,814 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 14:58:53,606 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 15:00:58,070 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 16:37:34,958 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 76cd5199-da36-44b6-893e-7e797252463f
+2025-07-30 16:37:35,061 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 76cd5199-da36-44b6-893e-7e797252463f
+2025-07-30 16:37:35,086 | INFO | app.api.routes.artworks | Backend: Artwork 76cd5199-da36-44b6-893e-7e797252463f found: Testing image 14
+2025-07-30 16:37:35,114 | INFO | app.api.routes.artworks | Backend: Artwork 76cd5199-da36-44b6-893e-7e797252463f found: Testing image 14
+2025-07-30 16:37:58,831 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-30 16:37:58,835 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-30 16:37:58,846 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-30 16:37:58,850 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-30 16:39:00,607 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0c39bbde-d9ad-43c9-a8d5-8ff15bf2f684
+2025-07-30 16:39:00,618 | INFO | app.api.routes.artworks | Backend: Artwork 0c39bbde-d9ad-43c9-a8d5-8ff15bf2f684 found: Testing image 1
+2025-07-30 16:39:00,638 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0c39bbde-d9ad-43c9-a8d5-8ff15bf2f684
+2025-07-30 16:39:00,642 | INFO | app.api.routes.artworks | Backend: Artwork 0c39bbde-d9ad-43c9-a8d5-8ff15bf2f684 found: Testing image 1
+2025-07-30 16:39:22,342 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0c39bbde-d9ad-43c9-a8d5-8ff15bf2f684
+2025-07-30 16:39:22,356 | INFO | app.api.routes.artworks | Backend: Artwork 0c39bbde-d9ad-43c9-a8d5-8ff15bf2f684 found: Testing image 1
+2025-07-30 16:40:02,145 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0c39bbde-d9ad-43c9-a8d5-8ff15bf2f684
+2025-07-30 16:40:02,321 | INFO | app.api.routes.artworks | Backend: Artwork 0c39bbde-d9ad-43c9-a8d5-8ff15bf2f684 found: Testing image 1
