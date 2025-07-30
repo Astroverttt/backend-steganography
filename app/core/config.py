@@ -10,7 +10,8 @@ class Settings(BaseSettings):
     DATABASE_URL: str = Field(..., env="DBTAURL")
     SECRET_KEY: str = Field(..., env="SECRET_KEY")
     ALGORITHM: str = Field("HS256", env="ALGORITHM")
-    ACCESS_TOKEN_EXPIRE_MINUTES: int = Field(60 * 24, env="ACCESS_TOKEN_EXPIRE_MINUTES")
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = Field(60 * 24 * 7, env="ACCESS_TOKEN_EXPIRE_MINUTES")
+
 
     MAIL_USERNAME: str = Field(..., env="MAIL_USERNAME")
     MAIL_PASSWORD: str = Field(..., env="MAIL_PASSWORD")

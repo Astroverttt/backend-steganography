@@ -9,6 +9,7 @@ from app.utils.image_similarity import compute_all_hashes, is_similar_image
 import os, uuid, hashlib, io
 from PIL import Image
 from app.utils.send_email import send_certificate_email
+import os
 
 router = APIRouter()
 
@@ -78,13 +79,16 @@ async def upload_artwork(
         if os.path.exists(temp_file_path):
             os.remove(temp_file_path)
 
-        final_image_name = f"{unique_key}.{file_extension}"
+        filename_without_ext, _ = os.path.splitext(unique_key)
+
+        final_image_name = f"{filename_without_ext}.{file_extension}"
         final_image_path = os.path.join(WATERMARKED_DIR, final_image_name)
         os.rename(watermarked_image_path, final_image_path)
-        
+
         BASE_URL = "http://localhost:8000"
         image_url_db = f"/static/watermarked/{final_image_name}"
-        image_url_full = f"http://localhost:8000{image_url_db}"
+        image_url_full = f"{BASE_URL}{image_url_db}"
+
 
         artwork = Artwork(
             id=uuid.uuid4(),

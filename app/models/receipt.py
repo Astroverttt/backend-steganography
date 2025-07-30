@@ -34,4 +34,4 @@ class Receipt(Base):
     artwork = relationship("Artwork", back_populates="receipts")
 
     def __repr__(self):
-        return f"<Receipt {self.id} (Order: {self.order_id}, Status: {self.status.value})>" # Menggunakan .value untuk menampilkan string dari Enum
+        return f"<Receipt {self.id} (Order: {self.order_id}, Status: {self.status.value})>" 

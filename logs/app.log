@@ -1551,3 +1551,1747 @@ ZDXBY\
 2025-07-28 12:31:26,255 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: '8e9ccdeb'
 2025-07-28 12:31:26,256 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'Ini pesan rahasia jangan sampai bocor ke tangan amerika'
 2025-07-28 12:31:26,257 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmp2turekzx.png
+2025-07-29 11:29:22,110 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 11:32:46,751 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "874b6353e5df5f3ab464b43fcd63826f90425279d356b8600859040de931a3e37a925e6190ecb19ce5dc34104620eb3971c544f64a86e9c56f7bd641e3be0bef",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_1fe6e301-f0f6-416c-b92e-42049a02c0e6",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 11:32:46,754 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_1fe6e301-f0f6-416c-b92e-42049a02c0e6, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 11:32:46,758 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 11:32:46,758 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_1fe6e301-f0f6-416c-b92e-42049a02c0e6200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 11:32:46,758 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 874b6353e5df5f3ab464b43fcd63826f90425279d356b8600859040de931a3e37a925e6190ecb19ce5dc34104620eb3971c544f64a86e9c56f7bd641e3be0bef
+2025-07-29 11:32:46,758 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 874b6353e5df5f3ab464b43fcd63826f90425279d356b8600859040de931a3e37a925e6190ecb19ce5dc34104620eb3971c544f64a86e9c56f7bd641e3be0bef
+2025-07-29 11:32:46,759 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_1fe6e301-f0f6-416c-b92e-42049a02c0e6.
+2025-07-29 11:32:46,919 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_1fe6e301-f0f6-416c-b92e-42049a02c0e6 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 11:33:28,566 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "d4016c36cf6a1c08de68e4d1379efd6f047d9f6dc76d14f4e850836273d3068eaa31cd3b1f38065825b419df2db520be7d0fe502beab347daebf3f72f07c1c3e",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_fd6cfb3a-cb12-47c3-903b-cc931f0f0f3a",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 11:33:28,566 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_fd6cfb3a-cb12-47c3-903b-cc931f0f0f3a, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 11:33:28,566 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 11:33:28,566 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_fd6cfb3a-cb12-47c3-903b-cc931f0f0f3a200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 11:33:28,567 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: d4016c36cf6a1c08de68e4d1379efd6f047d9f6dc76d14f4e850836273d3068eaa31cd3b1f38065825b419df2db520be7d0fe502beab347daebf3f72f07c1c3e
+2025-07-29 11:33:28,567 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: d4016c36cf6a1c08de68e4d1379efd6f047d9f6dc76d14f4e850836273d3068eaa31cd3b1f38065825b419df2db520be7d0fe502beab347daebf3f72f07c1c3e
+2025-07-29 11:33:28,567 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_fd6cfb3a-cb12-47c3-903b-cc931f0f0f3a.
+2025-07-29 11:33:28,569 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_fd6cfb3a-cb12-47c3-903b-cc931f0f0f3a not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 11:33:57,278 | INFO | app.utils.image_similarity | Deteksi duplikat via HASH: Testing image 17
+2025-07-29 11:33:59,752 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "d4016c36cf6a1c08de68e4d1379efd6f047d9f6dc76d14f4e850836273d3068eaa31cd3b1f38065825b419df2db520be7d0fe502beab347daebf3f72f07c1c3e",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_fd6cfb3a-cb12-47c3-903b-cc931f0f0f3a",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 11:33:59,752 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_fd6cfb3a-cb12-47c3-903b-cc931f0f0f3a, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 11:33:59,752 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 11:33:59,753 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_fd6cfb3a-cb12-47c3-903b-cc931f0f0f3a200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 11:33:59,753 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: d4016c36cf6a1c08de68e4d1379efd6f047d9f6dc76d14f4e850836273d3068eaa31cd3b1f38065825b419df2db520be7d0fe502beab347daebf3f72f07c1c3e
+2025-07-29 11:33:59,753 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: d4016c36cf6a1c08de68e4d1379efd6f047d9f6dc76d14f4e850836273d3068eaa31cd3b1f38065825b419df2db520be7d0fe502beab347daebf3f72f07c1c3e
+2025-07-29 11:33:59,753 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_fd6cfb3a-cb12-47c3-903b-cc931f0f0f3a.
+2025-07-29 11:33:59,755 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_fd6cfb3a-cb12-47c3-903b-cc931f0f0f3a not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 11:34:30,017 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "874b6353e5df5f3ab464b43fcd63826f90425279d356b8600859040de931a3e37a925e6190ecb19ce5dc34104620eb3971c544f64a86e9c56f7bd641e3be0bef",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_1fe6e301-f0f6-416c-b92e-42049a02c0e6",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 11:34:30,018 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_1fe6e301-f0f6-416c-b92e-42049a02c0e6, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 11:34:30,018 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 11:34:30,018 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_1fe6e301-f0f6-416c-b92e-42049a02c0e6200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 11:34:30,018 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 874b6353e5df5f3ab464b43fcd63826f90425279d356b8600859040de931a3e37a925e6190ecb19ce5dc34104620eb3971c544f64a86e9c56f7bd641e3be0bef
+2025-07-29 11:34:30,018 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 874b6353e5df5f3ab464b43fcd63826f90425279d356b8600859040de931a3e37a925e6190ecb19ce5dc34104620eb3971c544f64a86e9c56f7bd641e3be0bef
+2025-07-29 11:34:30,018 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_1fe6e301-f0f6-416c-b92e-42049a02c0e6.
+2025-07-29 11:34:30,022 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_1fe6e301-f0f6-416c-b92e-42049a02c0e6 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 11:36:23,982 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "195731a85cc974a3be0522bd93f7a5e3e57258e93e0333ee500b986e8b828596d66189fd17990d7515a76e449c0106e7dc487401cfe225a8d37b36f08665acda",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_208bc9e2-44e0-46f2-9c21-a29cc948d712",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 11:36:23,983 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_208bc9e2-44e0-46f2-9c21-a29cc948d712, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 11:36:23,983 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 11:36:23,983 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_208bc9e2-44e0-46f2-9c21-a29cc948d712200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 11:36:23,983 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 195731a85cc974a3be0522bd93f7a5e3e57258e93e0333ee500b986e8b828596d66189fd17990d7515a76e449c0106e7dc487401cfe225a8d37b36f08665acda
+2025-07-29 11:36:23,983 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 195731a85cc974a3be0522bd93f7a5e3e57258e93e0333ee500b986e8b828596d66189fd17990d7515a76e449c0106e7dc487401cfe225a8d37b36f08665acda
+2025-07-29 11:36:23,983 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_208bc9e2-44e0-46f2-9c21-a29cc948d712.
+2025-07-29 11:36:23,991 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_208bc9e2-44e0-46f2-9c21-a29cc948d712 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 11:36:52,336 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "195731a85cc974a3be0522bd93f7a5e3e57258e93e0333ee500b986e8b828596d66189fd17990d7515a76e449c0106e7dc487401cfe225a8d37b36f08665acda",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_208bc9e2-44e0-46f2-9c21-a29cc948d712",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 11:36:52,337 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_208bc9e2-44e0-46f2-9c21-a29cc948d712, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 11:36:52,337 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 11:36:52,337 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_208bc9e2-44e0-46f2-9c21-a29cc948d712200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 11:36:52,337 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 195731a85cc974a3be0522bd93f7a5e3e57258e93e0333ee500b986e8b828596d66189fd17990d7515a76e449c0106e7dc487401cfe225a8d37b36f08665acda
+2025-07-29 11:36:52,337 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 195731a85cc974a3be0522bd93f7a5e3e57258e93e0333ee500b986e8b828596d66189fd17990d7515a76e449c0106e7dc487401cfe225a8d37b36f08665acda
+2025-07-29 11:36:52,337 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_208bc9e2-44e0-46f2-9c21-a29cc948d712.
+2025-07-29 11:36:52,339 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_208bc9e2-44e0-46f2-9c21-a29cc948d712 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 11:37:28,421 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 11:37:28,430 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 11:37:28,478 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 11:37:28,489 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 11:37:32,141 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: 'fb0dac63-91b4-459b-aad9-4d73122cfe58'
+2025-07-29 11:37:32,145 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: 'fb0dac63-91b4-459b-aad9-4d73122cfe58', artwork_secret_code from DB: '925c7708'
+2025-07-29 11:37:32,149 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: '925c7708' (from artwork.artwork_secret_code)
+2025-07-29 11:37:32,417 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '4281428b-7d07-4413-ab8e-f75970400ec9', buyer_secret_code: '925c7708'
+2025-07-29 11:37:32,444 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: '925c7708'
+2025-07-29 11:37:56,839 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 11:37:56,843 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 11:38:27,226 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "820679983f59822dd1226a4cf37c54e098b98998578214e9a4994de456f0a677a55d4a468fa79391967d10f58b85a85af72e496d33eb0541f20acdb66ece1291",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_53560151-0bff-4c70-b9a1-048fe7f392f6",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 11:38:27,226 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_53560151-0bff-4c70-b9a1-048fe7f392f6, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 11:38:27,232 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 11:38:27,232 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_53560151-0bff-4c70-b9a1-048fe7f392f6200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 11:38:27,232 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 820679983f59822dd1226a4cf37c54e098b98998578214e9a4994de456f0a677a55d4a468fa79391967d10f58b85a85af72e496d33eb0541f20acdb66ece1291
+2025-07-29 11:38:27,232 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 820679983f59822dd1226a4cf37c54e098b98998578214e9a4994de456f0a677a55d4a468fa79391967d10f58b85a85af72e496d33eb0541f20acdb66ece1291
+2025-07-29 11:38:27,232 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_53560151-0bff-4c70-b9a1-048fe7f392f6.
+2025-07-29 11:38:27,236 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_53560151-0bff-4c70-b9a1-048fe7f392f6 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 11:38:41,803 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "3792467a83e635f48398c93845945dc50592b44f369f6bbf37939dea5a7bd94ee06898880143b5111ec790f931933598385ca5c36e9d6e578a8b88f6ed29bf5a",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_e398dbab-4eda-490c-8850-3664cce7718a",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 11:38:41,803 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_e398dbab-4eda-490c-8850-3664cce7718a, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 11:38:41,803 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 11:38:41,803 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_e398dbab-4eda-490c-8850-3664cce7718a200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 11:38:41,803 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 3792467a83e635f48398c93845945dc50592b44f369f6bbf37939dea5a7bd94ee06898880143b5111ec790f931933598385ca5c36e9d6e578a8b88f6ed29bf5a
+2025-07-29 11:38:41,803 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 3792467a83e635f48398c93845945dc50592b44f369f6bbf37939dea5a7bd94ee06898880143b5111ec790f931933598385ca5c36e9d6e578a8b88f6ed29bf5a
+2025-07-29 11:38:41,803 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_e398dbab-4eda-490c-8850-3664cce7718a.
+2025-07-29 11:38:41,803 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_e398dbab-4eda-490c-8850-3664cce7718a not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 11:39:24,050 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "3792467a83e635f48398c93845945dc50592b44f369f6bbf37939dea5a7bd94ee06898880143b5111ec790f931933598385ca5c36e9d6e578a8b88f6ed29bf5a",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_e398dbab-4eda-490c-8850-3664cce7718a",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 11:39:24,050 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_e398dbab-4eda-490c-8850-3664cce7718a, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 11:39:24,050 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 11:39:24,050 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_e398dbab-4eda-490c-8850-3664cce7718a200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 11:39:24,050 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 3792467a83e635f48398c93845945dc50592b44f369f6bbf37939dea5a7bd94ee06898880143b5111ec790f931933598385ca5c36e9d6e578a8b88f6ed29bf5a
+2025-07-29 11:39:24,050 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 3792467a83e635f48398c93845945dc50592b44f369f6bbf37939dea5a7bd94ee06898880143b5111ec790f931933598385ca5c36e9d6e578a8b88f6ed29bf5a
+2025-07-29 11:39:24,050 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_e398dbab-4eda-490c-8850-3664cce7718a.
+2025-07-29 11:39:24,060 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_e398dbab-4eda-490c-8850-3664cce7718a not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 11:40:48,623 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 11:40:56,424 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "f663df81e0205e6be46849bc55f95be094b07b02c414ab423c6ceef9609bf85dc8c349d1c97e6a57aebc118319b027c5a2fecaec4532748fe2ee924ab714ec43",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_7972193a-2084-440a-afe7-17743b1915c9",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 11:40:56,424 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_7972193a-2084-440a-afe7-17743b1915c9, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 11:40:56,424 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 11:40:56,424 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_7972193a-2084-440a-afe7-17743b1915c9200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 11:40:56,424 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: f663df81e0205e6be46849bc55f95be094b07b02c414ab423c6ceef9609bf85dc8c349d1c97e6a57aebc118319b027c5a2fecaec4532748fe2ee924ab714ec43
+2025-07-29 11:40:56,424 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: f663df81e0205e6be46849bc55f95be094b07b02c414ab423c6ceef9609bf85dc8c349d1c97e6a57aebc118319b027c5a2fecaec4532748fe2ee924ab714ec43
+2025-07-29 11:40:56,424 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_7972193a-2084-440a-afe7-17743b1915c9.
+2025-07-29 11:40:56,444 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_7972193a-2084-440a-afe7-17743b1915c9 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 11:41:19,317 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "f663df81e0205e6be46849bc55f95be094b07b02c414ab423c6ceef9609bf85dc8c349d1c97e6a57aebc118319b027c5a2fecaec4532748fe2ee924ab714ec43",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_7972193a-2084-440a-afe7-17743b1915c9",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 11:41:19,317 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_7972193a-2084-440a-afe7-17743b1915c9, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 11:41:19,317 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 11:41:19,317 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_7972193a-2084-440a-afe7-17743b1915c9200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 11:41:19,317 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: f663df81e0205e6be46849bc55f95be094b07b02c414ab423c6ceef9609bf85dc8c349d1c97e6a57aebc118319b027c5a2fecaec4532748fe2ee924ab714ec43
+2025-07-29 11:41:19,317 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: f663df81e0205e6be46849bc55f95be094b07b02c414ab423c6ceef9609bf85dc8c349d1c97e6a57aebc118319b027c5a2fecaec4532748fe2ee924ab714ec43
+2025-07-29 11:41:19,317 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_7972193a-2084-440a-afe7-17743b1915c9.
+2025-07-29 11:41:19,319 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_7972193a-2084-440a-afe7-17743b1915c9 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 11:43:15,265 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "820679983f59822dd1226a4cf37c54e098b98998578214e9a4994de456f0a677a55d4a468fa79391967d10f58b85a85af72e496d33eb0541f20acdb66ece1291",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_53560151-0bff-4c70-b9a1-048fe7f392f6",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 11:43:15,267 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_53560151-0bff-4c70-b9a1-048fe7f392f6, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 11:43:15,267 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 11:43:15,269 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_53560151-0bff-4c70-b9a1-048fe7f392f6200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 11:43:15,269 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 820679983f59822dd1226a4cf37c54e098b98998578214e9a4994de456f0a677a55d4a468fa79391967d10f58b85a85af72e496d33eb0541f20acdb66ece1291
+2025-07-29 11:43:15,269 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 820679983f59822dd1226a4cf37c54e098b98998578214e9a4994de456f0a677a55d4a468fa79391967d10f58b85a85af72e496d33eb0541f20acdb66ece1291
+2025-07-29 11:43:15,269 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_53560151-0bff-4c70-b9a1-048fe7f392f6.
+2025-07-29 11:43:15,297 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_53560151-0bff-4c70-b9a1-048fe7f392f6 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 11:43:20,599 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: 'fb0dac63-91b4-459b-aad9-4d73122cfe58'
+2025-07-29 11:43:20,656 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: 'fb0dac63-91b4-459b-aad9-4d73122cfe58', artwork_secret_code from DB: '925c7708'
+2025-07-29 11:43:27,068 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 11:43:27,083 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 11:43:29,591 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: 'fb0dac63-91b4-459b-aad9-4d73122cfe58'
+2025-07-29 11:43:29,591 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: 'fb0dac63-91b4-459b-aad9-4d73122cfe58', artwork_secret_code from DB: '925c7708'
+2025-07-29 11:43:34,206 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 11:43:34,210 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 11:44:08,018 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 11:44:08,023 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 11:44:08,036 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 11:44:08,039 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 11:44:09,511 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: 'fb0dac63-91b4-459b-aad9-4d73122cfe58'
+2025-07-29 11:44:09,514 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: 'fb0dac63-91b4-459b-aad9-4d73122cfe58', artwork_secret_code from DB: '925c7708'
+2025-07-29 11:44:09,517 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: '925c7708' (from artwork.artwork_secret_code)
+2025-07-29 11:44:09,746 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '8b18f56d-2d22-4df6-9ccb-c44f44c26acb', buyer_secret_code: '925c7708'
+2025-07-29 11:44:09,793 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: '925c7708'
+2025-07-29 11:44:15,089 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "195731a85cc974a3be0522bd93f7a5e3e57258e93e0333ee500b986e8b828596d66189fd17990d7515a76e449c0106e7dc487401cfe225a8d37b36f08665acda",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_208bc9e2-44e0-46f2-9c21-a29cc948d712",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 11:44:15,090 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_208bc9e2-44e0-46f2-9c21-a29cc948d712, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 11:44:15,090 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 11:44:15,090 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_208bc9e2-44e0-46f2-9c21-a29cc948d712200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 11:44:15,090 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 195731a85cc974a3be0522bd93f7a5e3e57258e93e0333ee500b986e8b828596d66189fd17990d7515a76e449c0106e7dc487401cfe225a8d37b36f08665acda
+2025-07-29 11:44:15,090 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 195731a85cc974a3be0522bd93f7a5e3e57258e93e0333ee500b986e8b828596d66189fd17990d7515a76e449c0106e7dc487401cfe225a8d37b36f08665acda
+2025-07-29 11:44:15,090 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_208bc9e2-44e0-46f2-9c21-a29cc948d712.
+2025-07-29 11:44:15,092 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_208bc9e2-44e0-46f2-9c21-a29cc948d712 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 11:44:25,524 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "5b8d8252e13961c5f31d3943a0a519d356c23bf09fc4e9c17cd90f8921df2ebb9ed06c4395760e5fa81575fd44153180a9b2c3fa0484b2f9a9cbfbc2f5c9e24e",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_6d76b63f-2aaf-42ad-94ab-77f499797c54",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 11:44:25,524 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_6d76b63f-2aaf-42ad-94ab-77f499797c54, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 11:44:25,524 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 11:44:25,524 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_6d76b63f-2aaf-42ad-94ab-77f499797c54200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 11:44:25,524 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 5b8d8252e13961c5f31d3943a0a519d356c23bf09fc4e9c17cd90f8921df2ebb9ed06c4395760e5fa81575fd44153180a9b2c3fa0484b2f9a9cbfbc2f5c9e24e
+2025-07-29 11:44:25,525 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 5b8d8252e13961c5f31d3943a0a519d356c23bf09fc4e9c17cd90f8921df2ebb9ed06c4395760e5fa81575fd44153180a9b2c3fa0484b2f9a9cbfbc2f5c9e24e
+2025-07-29 11:44:25,525 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_6d76b63f-2aaf-42ad-94ab-77f499797c54.
+2025-07-29 11:44:25,528 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_6d76b63f-2aaf-42ad-94ab-77f499797c54 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 11:44:34,925 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "3792467a83e635f48398c93845945dc50592b44f369f6bbf37939dea5a7bd94ee06898880143b5111ec790f931933598385ca5c36e9d6e578a8b88f6ed29bf5a",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_e398dbab-4eda-490c-8850-3664cce7718a",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 11:44:34,925 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_e398dbab-4eda-490c-8850-3664cce7718a, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 11:44:34,926 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 11:44:34,926 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_e398dbab-4eda-490c-8850-3664cce7718a200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 11:44:34,926 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 3792467a83e635f48398c93845945dc50592b44f369f6bbf37939dea5a7bd94ee06898880143b5111ec790f931933598385ca5c36e9d6e578a8b88f6ed29bf5a
+2025-07-29 11:44:34,926 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 3792467a83e635f48398c93845945dc50592b44f369f6bbf37939dea5a7bd94ee06898880143b5111ec790f931933598385ca5c36e9d6e578a8b88f6ed29bf5a
+2025-07-29 11:44:34,926 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_e398dbab-4eda-490c-8850-3664cce7718a.
+2025-07-29 11:44:34,928 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_e398dbab-4eda-490c-8850-3664cce7718a not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 11:44:51,502 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 11:44:51,507 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 11:45:11,254 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/f8f3d331_75f7c551-d07c-4e56-b4f5-e89a94f8ac01_Testing_image_17.png.png
+2025-07-29 11:45:11,254 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: '8e9ccdeb'
+2025-07-29 11:45:13,365 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmp1ugbksja.png
+2025-07-29 11:45:15,641 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:4cfb9134399a0cc4c62e6ea97b35de71bfd3433f497231fe11db4824fa165ab0<USER_MESSAGE>qPCVEKYESXBZ
+ZDXBY\
+' (took 2.2755s)
+2025-07-29 11:45:15,644 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: 'qPCVEKYESXBZ
+ZDXBY\
+'
+2025-07-29 11:45:15,644 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: '8e9ccdeb'
+2025-07-29 11:45:15,644 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'Ini pesan rahasia jangan sampai bocor ke tangan amerika'
+2025-07-29 11:45:15,644 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmp1ugbksja.png
+2025-07-29 12:18:42,068 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "062f5a3e09955201d3a58b1d1829394bf4aa9943b989fff66ab43d1f31dd02ca6a52dcfc52d4a758b059da258348aedca4ea0714d25277aba515c8fbb4d5f8dc",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_8e8b4770-cfe4-48d0-bbde-00c8b26e52c0",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 12:18:42,082 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_8e8b4770-cfe4-48d0-bbde-00c8b26e52c0, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 12:18:42,088 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 12:18:42,088 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_8e8b4770-cfe4-48d0-bbde-00c8b26e52c0200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 12:18:42,089 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 062f5a3e09955201d3a58b1d1829394bf4aa9943b989fff66ab43d1f31dd02ca6a52dcfc52d4a758b059da258348aedca4ea0714d25277aba515c8fbb4d5f8dc
+2025-07-29 12:18:42,089 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 062f5a3e09955201d3a58b1d1829394bf4aa9943b989fff66ab43d1f31dd02ca6a52dcfc52d4a758b059da258348aedca4ea0714d25277aba515c8fbb4d5f8dc
+2025-07-29 12:18:42,090 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_8e8b4770-cfe4-48d0-bbde-00c8b26e52c0.
+2025-07-29 12:18:42,213 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_8e8b4770-cfe4-48d0-bbde-00c8b26e52c0 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 12:19:30,940 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "062f5a3e09955201d3a58b1d1829394bf4aa9943b989fff66ab43d1f31dd02ca6a52dcfc52d4a758b059da258348aedca4ea0714d25277aba515c8fbb4d5f8dc",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_8e8b4770-cfe4-48d0-bbde-00c8b26e52c0",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 12:19:30,946 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_8e8b4770-cfe4-48d0-bbde-00c8b26e52c0, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 12:19:30,947 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 12:19:30,948 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_8e8b4770-cfe4-48d0-bbde-00c8b26e52c0200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 12:19:30,948 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 062f5a3e09955201d3a58b1d1829394bf4aa9943b989fff66ab43d1f31dd02ca6a52dcfc52d4a758b059da258348aedca4ea0714d25277aba515c8fbb4d5f8dc
+2025-07-29 12:19:30,950 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 062f5a3e09955201d3a58b1d1829394bf4aa9943b989fff66ab43d1f31dd02ca6a52dcfc52d4a758b059da258348aedca4ea0714d25277aba515c8fbb4d5f8dc
+2025-07-29 12:19:30,950 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_8e8b4770-cfe4-48d0-bbde-00c8b26e52c0.
+2025-07-29 12:19:31,006 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_8e8b4770-cfe4-48d0-bbde-00c8b26e52c0 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 12:20:00,843 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "b18a218fdd220c6232a66b3c81d8c38be7404fcf827aa58c15150a555e420740ccc54e952f7a0c3dd6f5d593522d4d56acc71746a694e06b518392ff08a3c553",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_9473c931-57bd-4f81-ba13-4ac47c6e4886",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 12:20:00,844 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_9473c931-57bd-4f81-ba13-4ac47c6e4886, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 12:20:00,845 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 12:20:00,845 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_9473c931-57bd-4f81-ba13-4ac47c6e4886200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 12:20:00,845 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: b18a218fdd220c6232a66b3c81d8c38be7404fcf827aa58c15150a555e420740ccc54e952f7a0c3dd6f5d593522d4d56acc71746a694e06b518392ff08a3c553
+2025-07-29 12:20:00,846 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: b18a218fdd220c6232a66b3c81d8c38be7404fcf827aa58c15150a555e420740ccc54e952f7a0c3dd6f5d593522d4d56acc71746a694e06b518392ff08a3c553
+2025-07-29 12:20:00,846 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_9473c931-57bd-4f81-ba13-4ac47c6e4886.
+2025-07-29 12:20:00,851 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_9473c931-57bd-4f81-ba13-4ac47c6e4886 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 12:22:05,118 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "b18a218fdd220c6232a66b3c81d8c38be7404fcf827aa58c15150a555e420740ccc54e952f7a0c3dd6f5d593522d4d56acc71746a694e06b518392ff08a3c553",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_9473c931-57bd-4f81-ba13-4ac47c6e4886",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 12:22:05,129 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_9473c931-57bd-4f81-ba13-4ac47c6e4886, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 12:22:05,134 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 12:22:05,136 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_9473c931-57bd-4f81-ba13-4ac47c6e4886200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 12:22:05,136 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: b18a218fdd220c6232a66b3c81d8c38be7404fcf827aa58c15150a555e420740ccc54e952f7a0c3dd6f5d593522d4d56acc71746a694e06b518392ff08a3c553
+2025-07-29 12:22:05,137 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: b18a218fdd220c6232a66b3c81d8c38be7404fcf827aa58c15150a555e420740ccc54e952f7a0c3dd6f5d593522d4d56acc71746a694e06b518392ff08a3c553
+2025-07-29 12:22:05,137 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_9473c931-57bd-4f81-ba13-4ac47c6e4886.
+2025-07-29 12:22:05,185 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_9473c931-57bd-4f81-ba13-4ac47c6e4886 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 12:22:47,642 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 12:22:47,683 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 12:23:09,907 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 12:23:09,911 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 12:23:09,925 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 12:23:09,931 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 12:23:16,357 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-29 12:23:16,363 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-29 12:23:16,392 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-29 12:23:16,395 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-29 12:24:27,276 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 12:24:38,131 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "72036907709422083f40ef2f7480cd97eb02773815a08a7e9fa10929b9bd52fb4235b887a89cc72665b083caa697f2949cdac7114f43c94cdea242f514df2732",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_d374c3d0-036b-4513-be60-803967cd3803",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 12:24:38,131 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_d374c3d0-036b-4513-be60-803967cd3803, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 12:24:38,132 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 12:24:38,132 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_d374c3d0-036b-4513-be60-803967cd3803200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 12:24:38,133 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 72036907709422083f40ef2f7480cd97eb02773815a08a7e9fa10929b9bd52fb4235b887a89cc72665b083caa697f2949cdac7114f43c94cdea242f514df2732
+2025-07-29 12:24:38,133 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 72036907709422083f40ef2f7480cd97eb02773815a08a7e9fa10929b9bd52fb4235b887a89cc72665b083caa697f2949cdac7114f43c94cdea242f514df2732
+2025-07-29 12:24:38,133 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_d374c3d0-036b-4513-be60-803967cd3803.
+2025-07-29 12:24:38,174 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_d374c3d0-036b-4513-be60-803967cd3803 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 12:25:15,727 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 12:25:15,769 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "72036907709422083f40ef2f7480cd97eb02773815a08a7e9fa10929b9bd52fb4235b887a89cc72665b083caa697f2949cdac7114f43c94cdea242f514df2732",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_d374c3d0-036b-4513-be60-803967cd3803",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 12:25:15,769 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_d374c3d0-036b-4513-be60-803967cd3803, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 12:25:15,771 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 12:25:15,771 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_d374c3d0-036b-4513-be60-803967cd3803200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 12:25:15,772 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 72036907709422083f40ef2f7480cd97eb02773815a08a7e9fa10929b9bd52fb4235b887a89cc72665b083caa697f2949cdac7114f43c94cdea242f514df2732
+2025-07-29 12:25:15,772 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 72036907709422083f40ef2f7480cd97eb02773815a08a7e9fa10929b9bd52fb4235b887a89cc72665b083caa697f2949cdac7114f43c94cdea242f514df2732
+2025-07-29 12:25:15,772 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_d374c3d0-036b-4513-be60-803967cd3803.
+2025-07-29 12:25:15,800 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_d374c3d0-036b-4513-be60-803967cd3803 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 12:25:19,295 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "b18a218fdd220c6232a66b3c81d8c38be7404fcf827aa58c15150a555e420740ccc54e952f7a0c3dd6f5d593522d4d56acc71746a694e06b518392ff08a3c553",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_9473c931-57bd-4f81-ba13-4ac47c6e4886",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 12:25:19,295 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_9473c931-57bd-4f81-ba13-4ac47c6e4886, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 12:25:19,296 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 12:25:19,296 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_9473c931-57bd-4f81-ba13-4ac47c6e4886200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 12:25:19,296 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: b18a218fdd220c6232a66b3c81d8c38be7404fcf827aa58c15150a555e420740ccc54e952f7a0c3dd6f5d593522d4d56acc71746a694e06b518392ff08a3c553
+2025-07-29 12:25:19,296 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: b18a218fdd220c6232a66b3c81d8c38be7404fcf827aa58c15150a555e420740ccc54e952f7a0c3dd6f5d593522d4d56acc71746a694e06b518392ff08a3c553
+2025-07-29 12:25:19,297 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_9473c931-57bd-4f81-ba13-4ac47c6e4886.
+2025-07-29 12:25:19,300 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_9473c931-57bd-4f81-ba13-4ac47c6e4886 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 12:25:43,144 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 12:25:52,117 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "37300ad6bacf179a19aa19b14f03e0bd241adf9d75128f76a17fa2e465bb085db9d396c01e33baf7be562f66d5955c5e5b82597a1ae3f0f506c4a263a0f9ef4f",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_52fba7c5-600a-4676-af82-d94568a2e239",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 12:25:52,118 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_52fba7c5-600a-4676-af82-d94568a2e239, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 12:25:52,119 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 12:25:52,119 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_52fba7c5-600a-4676-af82-d94568a2e239200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 12:25:52,119 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 37300ad6bacf179a19aa19b14f03e0bd241adf9d75128f76a17fa2e465bb085db9d396c01e33baf7be562f66d5955c5e5b82597a1ae3f0f506c4a263a0f9ef4f
+2025-07-29 12:25:52,119 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 37300ad6bacf179a19aa19b14f03e0bd241adf9d75128f76a17fa2e465bb085db9d396c01e33baf7be562f66d5955c5e5b82597a1ae3f0f506c4a263a0f9ef4f
+2025-07-29 12:25:52,119 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_52fba7c5-600a-4676-af82-d94568a2e239.
+2025-07-29 12:25:52,154 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_52fba7c5-600a-4676-af82-d94568a2e239 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 12:26:46,866 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "37300ad6bacf179a19aa19b14f03e0bd241adf9d75128f76a17fa2e465bb085db9d396c01e33baf7be562f66d5955c5e5b82597a1ae3f0f506c4a263a0f9ef4f",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_52fba7c5-600a-4676-af82-d94568a2e239",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 12:26:46,866 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_52fba7c5-600a-4676-af82-d94568a2e239, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 12:26:46,867 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 12:26:46,867 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_52fba7c5-600a-4676-af82-d94568a2e239200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 12:26:46,867 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 37300ad6bacf179a19aa19b14f03e0bd241adf9d75128f76a17fa2e465bb085db9d396c01e33baf7be562f66d5955c5e5b82597a1ae3f0f506c4a263a0f9ef4f
+2025-07-29 12:26:46,867 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 37300ad6bacf179a19aa19b14f03e0bd241adf9d75128f76a17fa2e465bb085db9d396c01e33baf7be562f66d5955c5e5b82597a1ae3f0f506c4a263a0f9ef4f
+2025-07-29 12:26:46,868 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_52fba7c5-600a-4676-af82-d94568a2e239.
+2025-07-29 12:26:46,871 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_52fba7c5-600a-4676-af82-d94568a2e239 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 12:26:59,594 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e5cef830-1cd2-47f3-b30e-e84ac5034a84
+2025-07-29 12:26:59,633 | INFO | app.api.routes.artworks | Backend: Artwork e5cef830-1cd2-47f3-b30e-e84ac5034a84 found: Testing image 19
+2025-07-29 12:26:59,662 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e5cef830-1cd2-47f3-b30e-e84ac5034a84
+2025-07-29 12:26:59,666 | INFO | app.api.routes.artworks | Backend: Artwork e5cef830-1cd2-47f3-b30e-e84ac5034a84 found: Testing image 19
+2025-07-29 12:27:01,715 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: 'e5cef830-1cd2-47f3-b30e-e84ac5034a84'
+2025-07-29 12:27:01,844 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: 'e5cef830-1cd2-47f3-b30e-e84ac5034a84', artwork_secret_code from DB: '49e9b149'
+2025-07-29 12:27:01,851 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: '49e9b149' (from artwork.artwork_secret_code)
+2025-07-29 12:27:02,162 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '95bfafb4-127e-47ce-98b2-cd77d9e235e6', buyer_secret_code: '49e9b149'
+2025-07-29 12:27:02,201 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: '49e9b149'
+2025-07-29 12:27:24,639 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e5cef830-1cd2-47f3-b30e-e84ac5034a84
+2025-07-29 12:27:24,646 | INFO | app.api.routes.artworks | Backend: Artwork e5cef830-1cd2-47f3-b30e-e84ac5034a84 found: Testing image 19
+2025-07-29 12:28:15,965 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 12:28:18,653 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "72036907709422083f40ef2f7480cd97eb02773815a08a7e9fa10929b9bd52fb4235b887a89cc72665b083caa697f2949cdac7114f43c94cdea242f514df2732",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_d374c3d0-036b-4513-be60-803967cd3803",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 12:28:18,654 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_d374c3d0-036b-4513-be60-803967cd3803, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 12:28:18,655 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 12:28:18,656 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_d374c3d0-036b-4513-be60-803967cd3803200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 12:28:18,656 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 72036907709422083f40ef2f7480cd97eb02773815a08a7e9fa10929b9bd52fb4235b887a89cc72665b083caa697f2949cdac7114f43c94cdea242f514df2732
+2025-07-29 12:28:18,657 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 72036907709422083f40ef2f7480cd97eb02773815a08a7e9fa10929b9bd52fb4235b887a89cc72665b083caa697f2949cdac7114f43c94cdea242f514df2732
+2025-07-29 12:28:18,657 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_d374c3d0-036b-4513-be60-803967cd3803.
+2025-07-29 12:28:18,688 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_d374c3d0-036b-4513-be60-803967cd3803 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 12:28:46,585 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "1ea0d97a2bbf15e15fcac5c96b19ce70051410f462aeba33ee3eecd713692ae3cbebe2bc24d6cc468e553ca0a3789ace52c2348cd27d7dc9d7503715413736bb",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_d70503ba-fb6f-4595-bf70-d0eb51ba1e16",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 12:28:46,586 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_d70503ba-fb6f-4595-bf70-d0eb51ba1e16, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 12:28:46,587 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 12:28:46,587 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_d70503ba-fb6f-4595-bf70-d0eb51ba1e16200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 12:28:46,587 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 1ea0d97a2bbf15e15fcac5c96b19ce70051410f462aeba33ee3eecd713692ae3cbebe2bc24d6cc468e553ca0a3789ace52c2348cd27d7dc9d7503715413736bb
+2025-07-29 12:28:46,587 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 1ea0d97a2bbf15e15fcac5c96b19ce70051410f462aeba33ee3eecd713692ae3cbebe2bc24d6cc468e553ca0a3789ace52c2348cd27d7dc9d7503715413736bb
+2025-07-29 12:28:46,588 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_d70503ba-fb6f-4595-bf70-d0eb51ba1e16.
+2025-07-29 12:28:46,591 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_d70503ba-fb6f-4595-bf70-d0eb51ba1e16 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 12:29:45,969 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 12:30:35,499 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "1ea0d97a2bbf15e15fcac5c96b19ce70051410f462aeba33ee3eecd713692ae3cbebe2bc24d6cc468e553ca0a3789ace52c2348cd27d7dc9d7503715413736bb",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_d70503ba-fb6f-4595-bf70-d0eb51ba1e16",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 12:30:35,500 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_d70503ba-fb6f-4595-bf70-d0eb51ba1e16, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 12:30:35,502 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 12:30:35,502 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_d70503ba-fb6f-4595-bf70-d0eb51ba1e16200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 12:30:35,502 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 1ea0d97a2bbf15e15fcac5c96b19ce70051410f462aeba33ee3eecd713692ae3cbebe2bc24d6cc468e553ca0a3789ace52c2348cd27d7dc9d7503715413736bb
+2025-07-29 12:30:35,502 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 1ea0d97a2bbf15e15fcac5c96b19ce70051410f462aeba33ee3eecd713692ae3cbebe2bc24d6cc468e553ca0a3789ace52c2348cd27d7dc9d7503715413736bb
+2025-07-29 12:30:35,503 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_d70503ba-fb6f-4595-bf70-d0eb51ba1e16.
+2025-07-29 12:30:35,511 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_d70503ba-fb6f-4595-bf70-d0eb51ba1e16 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 12:32:41,800 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 12:33:29,962 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 12:35:54,734 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "1ea0d97a2bbf15e15fcac5c96b19ce70051410f462aeba33ee3eecd713692ae3cbebe2bc24d6cc468e553ca0a3789ace52c2348cd27d7dc9d7503715413736bb",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_d70503ba-fb6f-4595-bf70-d0eb51ba1e16",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 12:35:54,743 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_d70503ba-fb6f-4595-bf70-d0eb51ba1e16, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 12:35:54,750 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 12:35:54,751 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_d70503ba-fb6f-4595-bf70-d0eb51ba1e16200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 12:35:54,751 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 1ea0d97a2bbf15e15fcac5c96b19ce70051410f462aeba33ee3eecd713692ae3cbebe2bc24d6cc468e553ca0a3789ace52c2348cd27d7dc9d7503715413736bb
+2025-07-29 12:35:54,751 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 1ea0d97a2bbf15e15fcac5c96b19ce70051410f462aeba33ee3eecd713692ae3cbebe2bc24d6cc468e553ca0a3789ace52c2348cd27d7dc9d7503715413736bb
+2025-07-29 12:35:54,751 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_d70503ba-fb6f-4595-bf70-d0eb51ba1e16.
+2025-07-29 12:35:54,814 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_d70503ba-fb6f-4595-bf70-d0eb51ba1e16 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 12:36:23,209 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 12:37:32,608 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 12:38:49,812 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 12:52:17,318 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 14:44:20,776 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 14:45:38,406 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 14:49:02,899 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 14:58:15,152 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 8c834cb5-3e7f-422e-8801-250c402856d6
+2025-07-29 14:58:15,172 | INFO | app.api.routes.artworks | Backend: Artwork 8c834cb5-3e7f-422e-8801-250c402856d6 found: Testing image 22
+2025-07-29 14:58:15,201 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 8c834cb5-3e7f-422e-8801-250c402856d6
+2025-07-29 14:58:15,205 | INFO | app.api.routes.artworks | Backend: Artwork 8c834cb5-3e7f-422e-8801-250c402856d6 found: Testing image 22
+2025-07-29 14:58:16,589 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '8c834cb5-3e7f-422e-8801-250c402856d6'
+2025-07-29 14:58:16,705 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '8c834cb5-3e7f-422e-8801-250c402856d6', artwork_secret_code from DB: '977fb561'
+2025-07-29 14:58:16,716 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: '977fb561' (from artwork.artwork_secret_code)
+2025-07-29 14:58:17,104 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '0c2153a8-cdff-483a-af5e-b6c33779e2bd', buyer_secret_code: '977fb561'
+2025-07-29 14:58:17,157 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: '977fb561'
+2025-07-29 14:58:38,587 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 8c834cb5-3e7f-422e-8801-250c402856d6
+2025-07-29 14:58:38,602 | INFO | app.api.routes.artworks | Backend: Artwork 8c834cb5-3e7f-422e-8801-250c402856d6 found: Testing image 22
+2025-07-29 14:58:42,290 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '8c834cb5-3e7f-422e-8801-250c402856d6'
+2025-07-29 14:58:42,296 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '8c834cb5-3e7f-422e-8801-250c402856d6', artwork_secret_code from DB: '977fb561'
+2025-07-29 15:01:19,449 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 15:02:01,485 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-29 15:02:01,497 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-29 15:02:01,576 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-29 15:02:01,579 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-29 15:02:08,358 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 8c834cb5-3e7f-422e-8801-250c402856d6
+2025-07-29 15:02:08,361 | INFO | app.api.routes.artworks | Backend: Artwork 8c834cb5-3e7f-422e-8801-250c402856d6 found: Testing image 22
+2025-07-29 15:02:08,372 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 8c834cb5-3e7f-422e-8801-250c402856d6
+2025-07-29 15:02:08,377 | INFO | app.api.routes.artworks | Backend: Artwork 8c834cb5-3e7f-422e-8801-250c402856d6 found: Testing image 22
+2025-07-29 15:02:09,781 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '8c834cb5-3e7f-422e-8801-250c402856d6'
+2025-07-29 15:02:09,860 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '8c834cb5-3e7f-422e-8801-250c402856d6', artwork_secret_code from DB: '977fb561'
+2025-07-29 15:02:09,874 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: '977fb561' (from artwork.artwork_secret_code)
+2025-07-29 15:02:10,028 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '8d44f7f1-b46b-4964-98aa-8cb6089200cb', order_id: 'ORDER-698b2d7e-eb5f-4f01-b056-687edf4ba1b7', status: 'pending'
+2025-07-29 15:02:10,044 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: '977fb561', status: 'pending'
+2025-07-29 15:02:28,409 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 8c834cb5-3e7f-422e-8801-250c402856d6
+2025-07-29 15:02:28,416 | INFO | app.api.routes.artworks | Backend: Artwork 8c834cb5-3e7f-422e-8801-250c402856d6 found: Testing image 22
+2025-07-29 15:03:40,635 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "b0bee557310e0302a4544da70219e21c861b63230ef2b30aa064b6f717aa09bd52916f01a83a140cff13ff95ba14a66081b67f759ddb786249bb02404c88757c",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_9a8abe53-3096-4040-a579-21fe2c490b48",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 15:03:40,635 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_9a8abe53-3096-4040-a579-21fe2c490b48, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 15:03:40,646 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 15:03:40,646 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_9a8abe53-3096-4040-a579-21fe2c490b48200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 15:03:40,646 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: b0bee557310e0302a4544da70219e21c861b63230ef2b30aa064b6f717aa09bd52916f01a83a140cff13ff95ba14a66081b67f759ddb786249bb02404c88757c
+2025-07-29 15:03:40,646 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: b0bee557310e0302a4544da70219e21c861b63230ef2b30aa064b6f717aa09bd52916f01a83a140cff13ff95ba14a66081b67f759ddb786249bb02404c88757c
+2025-07-29 15:03:40,646 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_9a8abe53-3096-4040-a579-21fe2c490b48.
+2025-07-29 15:03:40,707 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_9a8abe53-3096-4040-a579-21fe2c490b48 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 15:05:15,199 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "b0bee557310e0302a4544da70219e21c861b63230ef2b30aa064b6f717aa09bd52916f01a83a140cff13ff95ba14a66081b67f759ddb786249bb02404c88757c",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_9a8abe53-3096-4040-a579-21fe2c490b48",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 15:05:15,200 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_9a8abe53-3096-4040-a579-21fe2c490b48, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 15:05:15,200 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 15:05:15,200 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_9a8abe53-3096-4040-a579-21fe2c490b48200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 15:05:15,201 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: b0bee557310e0302a4544da70219e21c861b63230ef2b30aa064b6f717aa09bd52916f01a83a140cff13ff95ba14a66081b67f759ddb786249bb02404c88757c
+2025-07-29 15:05:15,201 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: b0bee557310e0302a4544da70219e21c861b63230ef2b30aa064b6f717aa09bd52916f01a83a140cff13ff95ba14a66081b67f759ddb786249bb02404c88757c
+2025-07-29 15:05:15,201 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_9a8abe53-3096-4040-a579-21fe2c490b48.
+2025-07-29 15:05:15,219 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_9a8abe53-3096-4040-a579-21fe2c490b48 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 15:09:41,558 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "b0bee557310e0302a4544da70219e21c861b63230ef2b30aa064b6f717aa09bd52916f01a83a140cff13ff95ba14a66081b67f759ddb786249bb02404c88757c",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_9a8abe53-3096-4040-a579-21fe2c490b48",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 15:09:41,570 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_9a8abe53-3096-4040-a579-21fe2c490b48, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 15:09:41,576 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 15:09:41,577 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_9a8abe53-3096-4040-a579-21fe2c490b48200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 15:09:41,577 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: b0bee557310e0302a4544da70219e21c861b63230ef2b30aa064b6f717aa09bd52916f01a83a140cff13ff95ba14a66081b67f759ddb786249bb02404c88757c
+2025-07-29 15:09:41,577 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: b0bee557310e0302a4544da70219e21c861b63230ef2b30aa064b6f717aa09bd52916f01a83a140cff13ff95ba14a66081b67f759ddb786249bb02404c88757c
+2025-07-29 15:09:41,578 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_9a8abe53-3096-4040-a579-21fe2c490b48.
+2025-07-29 15:09:41,625 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_9a8abe53-3096-4040-a579-21fe2c490b48 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 15:17:06,362 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 15:17:34,194 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 15:22:10,953 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "e918319950e7ccdf573fd2b501f632bce20147ab50f5cd80da0deec92dfd575db8b7c62c9886d112e2f58ee558fc4f1f6a4af22d7a9e5ad559d00dd20189203c",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_f55f7c14-a93e-48d0-a17d-b03c5e05a5e9",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 15:22:10,956 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_f55f7c14-a93e-48d0-a17d-b03c5e05a5e9, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 15:22:10,961 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 15:22:10,961 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_f55f7c14-a93e-48d0-a17d-b03c5e05a5e9200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 15:22:10,961 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: e918319950e7ccdf573fd2b501f632bce20147ab50f5cd80da0deec92dfd575db8b7c62c9886d112e2f58ee558fc4f1f6a4af22d7a9e5ad559d00dd20189203c
+2025-07-29 15:22:10,961 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: e918319950e7ccdf573fd2b501f632bce20147ab50f5cd80da0deec92dfd575db8b7c62c9886d112e2f58ee558fc4f1f6a4af22d7a9e5ad559d00dd20189203c
+2025-07-29 15:22:10,961 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_f55f7c14-a93e-48d0-a17d-b03c5e05a5e9.
+2025-07-29 15:22:11,008 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_f55f7c14-a93e-48d0-a17d-b03c5e05a5e9 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 16:30:56,423 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 16:33:49,085 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "005d790c83867c90656e83c3ddd7603df1e2abbc1ee2b4525aa0fb6d3f528d4494daf91c7b054b87d2cf66ea4fa45111c528b5cc9232c81081e632f63a83c7d3",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_8e78e51d-bbce-4565-ab8c-3465e73404c9",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 16:33:49,090 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_8e78e51d-bbce-4565-ab8c-3465e73404c9, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 16:33:49,096 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 16:33:49,096 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_8e78e51d-bbce-4565-ab8c-3465e73404c9200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 16:33:49,096 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 005d790c83867c90656e83c3ddd7603df1e2abbc1ee2b4525aa0fb6d3f528d4494daf91c7b054b87d2cf66ea4fa45111c528b5cc9232c81081e632f63a83c7d3
+2025-07-29 16:33:49,096 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 005d790c83867c90656e83c3ddd7603df1e2abbc1ee2b4525aa0fb6d3f528d4494daf91c7b054b87d2cf66ea4fa45111c528b5cc9232c81081e632f63a83c7d3
+2025-07-29 16:33:49,096 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_8e78e51d-bbce-4565-ab8c-3465e73404c9.
+2025-07-29 16:33:49,255 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_8e78e51d-bbce-4565-ab8c-3465e73404c9 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 16:35:15,738 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "005d790c83867c90656e83c3ddd7603df1e2abbc1ee2b4525aa0fb6d3f528d4494daf91c7b054b87d2cf66ea4fa45111c528b5cc9232c81081e632f63a83c7d3",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_8e78e51d-bbce-4565-ab8c-3465e73404c9",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 16:35:15,738 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_8e78e51d-bbce-4565-ab8c-3465e73404c9, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 16:35:15,739 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 16:35:15,739 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_8e78e51d-bbce-4565-ab8c-3465e73404c9200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 16:35:15,739 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 005d790c83867c90656e83c3ddd7603df1e2abbc1ee2b4525aa0fb6d3f528d4494daf91c7b054b87d2cf66ea4fa45111c528b5cc9232c81081e632f63a83c7d3
+2025-07-29 16:35:15,739 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 005d790c83867c90656e83c3ddd7603df1e2abbc1ee2b4525aa0fb6d3f528d4494daf91c7b054b87d2cf66ea4fa45111c528b5cc9232c81081e632f63a83c7d3
+2025-07-29 16:35:15,739 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_8e78e51d-bbce-4565-ab8c-3465e73404c9.
+2025-07-29 16:35:15,741 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_8e78e51d-bbce-4565-ab8c-3465e73404c9 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 16:38:26,404 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "005d790c83867c90656e83c3ddd7603df1e2abbc1ee2b4525aa0fb6d3f528d4494daf91c7b054b87d2cf66ea4fa45111c528b5cc9232c81081e632f63a83c7d3",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_8e78e51d-bbce-4565-ab8c-3465e73404c9",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 16:38:26,408 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_8e78e51d-bbce-4565-ab8c-3465e73404c9, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 16:38:26,408 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 16:38:26,408 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_8e78e51d-bbce-4565-ab8c-3465e73404c9200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 16:38:26,408 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 005d790c83867c90656e83c3ddd7603df1e2abbc1ee2b4525aa0fb6d3f528d4494daf91c7b054b87d2cf66ea4fa45111c528b5cc9232c81081e632f63a83c7d3
+2025-07-29 16:38:26,408 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 005d790c83867c90656e83c3ddd7603df1e2abbc1ee2b4525aa0fb6d3f528d4494daf91c7b054b87d2cf66ea4fa45111c528b5cc9232c81081e632f63a83c7d3
+2025-07-29 16:38:26,408 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_8e78e51d-bbce-4565-ab8c-3465e73404c9.
+2025-07-29 16:38:26,445 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_8e78e51d-bbce-4565-ab8c-3465e73404c9 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 17:10:11,904 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "c0f4fc993572195514ecde4d5fcedbb1b70d91e09df62e2a950dd7d09c4aaa62e2f639d09962146624e7a9bc1a1c04b95464fa7bb04179b130634ea7c0bb5561",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_b5f15ac3-79ba-4eb8-aba4-552915f86575",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:10:11,910 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_b5f15ac3-79ba-4eb8-aba4-552915f86575, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:10:11,915 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:10:11,915 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_b5f15ac3-79ba-4eb8-aba4-552915f86575200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:10:11,915 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: c0f4fc993572195514ecde4d5fcedbb1b70d91e09df62e2a950dd7d09c4aaa62e2f639d09962146624e7a9bc1a1c04b95464fa7bb04179b130634ea7c0bb5561
+2025-07-29 17:10:11,915 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: c0f4fc993572195514ecde4d5fcedbb1b70d91e09df62e2a950dd7d09c4aaa62e2f639d09962146624e7a9bc1a1c04b95464fa7bb04179b130634ea7c0bb5561
+2025-07-29 17:10:11,916 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_b5f15ac3-79ba-4eb8-aba4-552915f86575.
+2025-07-29 17:10:11,941 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_b5f15ac3-79ba-4eb8-aba4-552915f86575 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 17:10:49,409 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "c0f4fc993572195514ecde4d5fcedbb1b70d91e09df62e2a950dd7d09c4aaa62e2f639d09962146624e7a9bc1a1c04b95464fa7bb04179b130634ea7c0bb5561",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_b5f15ac3-79ba-4eb8-aba4-552915f86575",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:10:49,409 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_b5f15ac3-79ba-4eb8-aba4-552915f86575, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:10:49,409 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:10:49,409 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_b5f15ac3-79ba-4eb8-aba4-552915f86575200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:10:49,409 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: c0f4fc993572195514ecde4d5fcedbb1b70d91e09df62e2a950dd7d09c4aaa62e2f639d09962146624e7a9bc1a1c04b95464fa7bb04179b130634ea7c0bb5561
+2025-07-29 17:10:49,409 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: c0f4fc993572195514ecde4d5fcedbb1b70d91e09df62e2a950dd7d09c4aaa62e2f639d09962146624e7a9bc1a1c04b95464fa7bb04179b130634ea7c0bb5561
+2025-07-29 17:10:49,409 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_b5f15ac3-79ba-4eb8-aba4-552915f86575.
+2025-07-29 17:10:49,409 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_b5f15ac3-79ba-4eb8-aba4-552915f86575 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 17:18:09,016 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 17:25:19,605 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 17:25:27,726 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "d5035197d8d3adae222c160c6bfd9b3a5d2a9eea18250854c391a35834f1c65efd57cce14416103adc85da421b594f1f2250649d461389db5942a5ff6ed56f03",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_fafd4651-6fec-4f33-bf98-e2748f9c0dee",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:25:27,727 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_fafd4651-6fec-4f33-bf98-e2748f9c0dee, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:25:27,727 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:25:27,727 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_fafd4651-6fec-4f33-bf98-e2748f9c0dee200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:25:27,727 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: d5035197d8d3adae222c160c6bfd9b3a5d2a9eea18250854c391a35834f1c65efd57cce14416103adc85da421b594f1f2250649d461389db5942a5ff6ed56f03
+2025-07-29 17:25:27,727 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: d5035197d8d3adae222c160c6bfd9b3a5d2a9eea18250854c391a35834f1c65efd57cce14416103adc85da421b594f1f2250649d461389db5942a5ff6ed56f03
+2025-07-29 17:25:27,727 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_fafd4651-6fec-4f33-bf98-e2748f9c0dee.
+2025-07-29 17:25:27,749 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_fafd4651-6fec-4f33-bf98-e2748f9c0dee not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 17:26:09,865 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "d5035197d8d3adae222c160c6bfd9b3a5d2a9eea18250854c391a35834f1c65efd57cce14416103adc85da421b594f1f2250649d461389db5942a5ff6ed56f03",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_fafd4651-6fec-4f33-bf98-e2748f9c0dee",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:26:09,865 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_fafd4651-6fec-4f33-bf98-e2748f9c0dee, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:26:09,866 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:26:09,866 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_fafd4651-6fec-4f33-bf98-e2748f9c0dee200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:26:09,866 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: d5035197d8d3adae222c160c6bfd9b3a5d2a9eea18250854c391a35834f1c65efd57cce14416103adc85da421b594f1f2250649d461389db5942a5ff6ed56f03
+2025-07-29 17:26:09,866 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: d5035197d8d3adae222c160c6bfd9b3a5d2a9eea18250854c391a35834f1c65efd57cce14416103adc85da421b594f1f2250649d461389db5942a5ff6ed56f03
+2025-07-29 17:26:09,866 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_fafd4651-6fec-4f33-bf98-e2748f9c0dee.
+2025-07-29 17:26:09,868 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_fafd4651-6fec-4f33-bf98-e2748f9c0dee not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 17:27:21,285 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "feca573ada3bdd2110cc0b171e8a965a551ba1b5db0ea425bab599cfbf496c3d42975da405ab4e7ecabef74005c9436f8f025650dd6c797cce2c8bdf65e94939",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_701c376f-7b6e-4f22-846a-9ddaff28bbf5",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:27:21,286 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_701c376f-7b6e-4f22-846a-9ddaff28bbf5, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:27:21,286 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:27:21,286 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_701c376f-7b6e-4f22-846a-9ddaff28bbf5200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:27:21,286 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: feca573ada3bdd2110cc0b171e8a965a551ba1b5db0ea425bab599cfbf496c3d42975da405ab4e7ecabef74005c9436f8f025650dd6c797cce2c8bdf65e94939
+2025-07-29 17:27:21,286 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: feca573ada3bdd2110cc0b171e8a965a551ba1b5db0ea425bab599cfbf496c3d42975da405ab4e7ecabef74005c9436f8f025650dd6c797cce2c8bdf65e94939
+2025-07-29 17:27:21,286 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_701c376f-7b6e-4f22-846a-9ddaff28bbf5.
+2025-07-29 17:27:21,288 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_701c376f-7b6e-4f22-846a-9ddaff28bbf5 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 17:28:41,502 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "feca573ada3bdd2110cc0b171e8a965a551ba1b5db0ea425bab599cfbf496c3d42975da405ab4e7ecabef74005c9436f8f025650dd6c797cce2c8bdf65e94939",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_701c376f-7b6e-4f22-846a-9ddaff28bbf5",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:28:41,502 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_701c376f-7b6e-4f22-846a-9ddaff28bbf5, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:28:41,503 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:28:41,503 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_701c376f-7b6e-4f22-846a-9ddaff28bbf5200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:28:41,503 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: feca573ada3bdd2110cc0b171e8a965a551ba1b5db0ea425bab599cfbf496c3d42975da405ab4e7ecabef74005c9436f8f025650dd6c797cce2c8bdf65e94939
+2025-07-29 17:28:41,503 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: feca573ada3bdd2110cc0b171e8a965a551ba1b5db0ea425bab599cfbf496c3d42975da405ab4e7ecabef74005c9436f8f025650dd6c797cce2c8bdf65e94939
+2025-07-29 17:28:41,503 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_701c376f-7b6e-4f22-846a-9ddaff28bbf5.
+2025-07-29 17:28:41,505 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_701c376f-7b6e-4f22-846a-9ddaff28bbf5 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 17:31:28,612 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "d5035197d8d3adae222c160c6bfd9b3a5d2a9eea18250854c391a35834f1c65efd57cce14416103adc85da421b594f1f2250649d461389db5942a5ff6ed56f03",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_fafd4651-6fec-4f33-bf98-e2748f9c0dee",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:31:28,613 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_fafd4651-6fec-4f33-bf98-e2748f9c0dee, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:31:28,613 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:31:28,613 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_fafd4651-6fec-4f33-bf98-e2748f9c0dee200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:31:28,613 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: d5035197d8d3adae222c160c6bfd9b3a5d2a9eea18250854c391a35834f1c65efd57cce14416103adc85da421b594f1f2250649d461389db5942a5ff6ed56f03
+2025-07-29 17:31:28,613 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: d5035197d8d3adae222c160c6bfd9b3a5d2a9eea18250854c391a35834f1c65efd57cce14416103adc85da421b594f1f2250649d461389db5942a5ff6ed56f03
+2025-07-29 17:31:28,613 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_fafd4651-6fec-4f33-bf98-e2748f9c0dee.
+2025-07-29 17:31:28,615 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_fafd4651-6fec-4f33-bf98-e2748f9c0dee not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 17:31:54,547 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "feca573ada3bdd2110cc0b171e8a965a551ba1b5db0ea425bab599cfbf496c3d42975da405ab4e7ecabef74005c9436f8f025650dd6c797cce2c8bdf65e94939",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_701c376f-7b6e-4f22-846a-9ddaff28bbf5",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:31:54,547 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_701c376f-7b6e-4f22-846a-9ddaff28bbf5, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:31:54,547 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:31:54,547 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_701c376f-7b6e-4f22-846a-9ddaff28bbf5200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:31:54,547 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: feca573ada3bdd2110cc0b171e8a965a551ba1b5db0ea425bab599cfbf496c3d42975da405ab4e7ecabef74005c9436f8f025650dd6c797cce2c8bdf65e94939
+2025-07-29 17:31:54,548 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: feca573ada3bdd2110cc0b171e8a965a551ba1b5db0ea425bab599cfbf496c3d42975da405ab4e7ecabef74005c9436f8f025650dd6c797cce2c8bdf65e94939
+2025-07-29 17:31:54,548 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_701c376f-7b6e-4f22-846a-9ddaff28bbf5.
+2025-07-29 17:31:54,549 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_701c376f-7b6e-4f22-846a-9ddaff28bbf5 not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 17:37:07,412 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 17:39:47,837 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "4d677f1619725528cb7eedaca2279f6b7c27b1ff8b317b170037d1d021255238ffbd245bdc52c196076424f0fc5b76e38eb64db077ab0ce56e0f5649ddb00f3a",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_c28091e7-2018-46d8-ac89-d2fcdb45c7be",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:39:47,839 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_c28091e7-2018-46d8-ac89-d2fcdb45c7be, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:39:47,843 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:39:47,843 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_c28091e7-2018-46d8-ac89-d2fcdb45c7be200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:39:47,843 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 4d677f1619725528cb7eedaca2279f6b7c27b1ff8b317b170037d1d021255238ffbd245bdc52c196076424f0fc5b76e38eb64db077ab0ce56e0f5649ddb00f3a
+2025-07-29 17:39:47,843 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 4d677f1619725528cb7eedaca2279f6b7c27b1ff8b317b170037d1d021255238ffbd245bdc52c196076424f0fc5b76e38eb64db077ab0ce56e0f5649ddb00f3a
+2025-07-29 17:39:47,843 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_c28091e7-2018-46d8-ac89-d2fcdb45c7be.
+2025-07-29 17:39:47,918 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_c28091e7-2018-46d8-ac89-d2fcdb45c7be not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 17:40:29,599 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "4d677f1619725528cb7eedaca2279f6b7c27b1ff8b317b170037d1d021255238ffbd245bdc52c196076424f0fc5b76e38eb64db077ab0ce56e0f5649ddb00f3a",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_c28091e7-2018-46d8-ac89-d2fcdb45c7be",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:40:29,605 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_c28091e7-2018-46d8-ac89-d2fcdb45c7be, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:40:29,611 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:40:29,612 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_c28091e7-2018-46d8-ac89-d2fcdb45c7be200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:40:29,612 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 4d677f1619725528cb7eedaca2279f6b7c27b1ff8b317b170037d1d021255238ffbd245bdc52c196076424f0fc5b76e38eb64db077ab0ce56e0f5649ddb00f3a
+2025-07-29 17:40:29,612 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 4d677f1619725528cb7eedaca2279f6b7c27b1ff8b317b170037d1d021255238ffbd245bdc52c196076424f0fc5b76e38eb64db077ab0ce56e0f5649ddb00f3a
+2025-07-29 17:40:29,612 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_c28091e7-2018-46d8-ac89-d2fcdb45c7be.
+2025-07-29 17:40:29,680 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_c28091e7-2018-46d8-ac89-d2fcdb45c7be not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 17:43:51,467 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "4d677f1619725528cb7eedaca2279f6b7c27b1ff8b317b170037d1d021255238ffbd245bdc52c196076424f0fc5b76e38eb64db077ab0ce56e0f5649ddb00f3a",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_c28091e7-2018-46d8-ac89-d2fcdb45c7be",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:43:51,489 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_c28091e7-2018-46d8-ac89-d2fcdb45c7be, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:43:51,520 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:43:51,520 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_c28091e7-2018-46d8-ac89-d2fcdb45c7be200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:43:51,520 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 4d677f1619725528cb7eedaca2279f6b7c27b1ff8b317b170037d1d021255238ffbd245bdc52c196076424f0fc5b76e38eb64db077ab0ce56e0f5649ddb00f3a
+2025-07-29 17:43:51,521 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 4d677f1619725528cb7eedaca2279f6b7c27b1ff8b317b170037d1d021255238ffbd245bdc52c196076424f0fc5b76e38eb64db077ab0ce56e0f5649ddb00f3a
+2025-07-29 17:43:51,521 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_c28091e7-2018-46d8-ac89-d2fcdb45c7be.
+2025-07-29 17:43:51,568 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_c28091e7-2018-46d8-ac89-d2fcdb45c7be not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 17:44:57,696 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "f107f8069813a47e6184172b9a396d3f41268cc7aec672280b95bc15575c7cb47912e6e41ae3f1411635710749692604b492a9b83dc6279ac24b562869545086",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_37953038-6b18-46c4-866b-e41ef4e4edde",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:44:57,698 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_37953038-6b18-46c4-866b-e41ef4e4edde, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:44:57,698 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:44:57,698 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_37953038-6b18-46c4-866b-e41ef4e4edde200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:44:57,698 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: f107f8069813a47e6184172b9a396d3f41268cc7aec672280b95bc15575c7cb47912e6e41ae3f1411635710749692604b492a9b83dc6279ac24b562869545086
+2025-07-29 17:44:57,698 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: f107f8069813a47e6184172b9a396d3f41268cc7aec672280b95bc15575c7cb47912e6e41ae3f1411635710749692604b492a9b83dc6279ac24b562869545086
+2025-07-29 17:44:57,698 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_37953038-6b18-46c4-866b-e41ef4e4edde.
+2025-07-29 17:44:57,711 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_37953038-6b18-46c4-866b-e41ef4e4edde not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 17:46:28,778 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "f107f8069813a47e6184172b9a396d3f41268cc7aec672280b95bc15575c7cb47912e6e41ae3f1411635710749692604b492a9b83dc6279ac24b562869545086",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_37953038-6b18-46c4-866b-e41ef4e4edde",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:46:28,782 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_37953038-6b18-46c4-866b-e41ef4e4edde, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:46:28,789 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:46:28,789 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_37953038-6b18-46c4-866b-e41ef4e4edde200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:46:28,789 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: f107f8069813a47e6184172b9a396d3f41268cc7aec672280b95bc15575c7cb47912e6e41ae3f1411635710749692604b492a9b83dc6279ac24b562869545086
+2025-07-29 17:46:28,789 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: f107f8069813a47e6184172b9a396d3f41268cc7aec672280b95bc15575c7cb47912e6e41ae3f1411635710749692604b492a9b83dc6279ac24b562869545086
+2025-07-29 17:46:28,790 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_37953038-6b18-46c4-866b-e41ef4e4edde.
+2025-07-29 17:46:28,813 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_37953038-6b18-46c4-866b-e41ef4e4edde not found in database. This indicates a prior issue or an invalid callback.
+2025-07-29 17:46:48,906 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 17:47:19,376 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "3ccaca8ec43f2547ab3c34fc32e65dd028846a99ce92a25677daae8864050123a2b5c12433d2b81b3aac3ab7f44fa3e4cd4e0dc4ea19eb7a62b8e6b9f2b103f1",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_9d8146d0-78c5-4808-8097-1a70b8cbe853",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:47:19,377 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_9d8146d0-78c5-4808-8097-1a70b8cbe853, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:47:19,378 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:47:19,378 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_9d8146d0-78c5-4808-8097-1a70b8cbe853200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:47:19,379 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 3ccaca8ec43f2547ab3c34fc32e65dd028846a99ce92a25677daae8864050123a2b5c12433d2b81b3aac3ab7f44fa3e4cd4e0dc4ea19eb7a62b8e6b9f2b103f1
+2025-07-29 17:47:19,379 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 3ccaca8ec43f2547ab3c34fc32e65dd028846a99ce92a25677daae8864050123a2b5c12433d2b81b3aac3ab7f44fa3e4cd4e0dc4ea19eb7a62b8e6b9f2b103f1
+2025-07-29 17:47:19,379 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_9d8146d0-78c5-4808-8097-1a70b8cbe853.
+2025-07-29 17:47:19,407 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_9d8146d0-78c5-4808-8097-1a70b8cbe853 not found in database. This indicates a prior issue (initiation failed to save) or an invalid callback (order_id doesn't exist).
+2025-07-29 17:48:12,278 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 8c834cb5-3e7f-422e-8801-250c402856d6
+2025-07-29 17:48:12,290 | INFO | app.api.routes.artworks | Backend: Artwork 8c834cb5-3e7f-422e-8801-250c402856d6 found: Testing image 22
+2025-07-29 17:48:12,330 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 8c834cb5-3e7f-422e-8801-250c402856d6
+2025-07-29 17:48:12,333 | INFO | app.api.routes.artworks | Backend: Artwork 8c834cb5-3e7f-422e-8801-250c402856d6 found: Testing image 22
+2025-07-29 17:48:13,583 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: '8c834cb5-3e7f-422e-8801-250c402856d6' by user: 'muhammadfarelas1@gmail.com'
+2025-07-29 17:48:13,585 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: '8c834cb5-3e7f-422e-8801-250c402856d6', title: 'Testing image 22'
+2025-07-29 17:48:13,604 | WARNING | app.api.routes.payments | PAYMENTS/INITIATE: Existing active receipt found for user 0b737b7c-14a5-4403-b311-218cb9a34c43 and artwork 8c834cb5-3e7f-422e-8801-250c402856d6. Status: pending. Preventing duplicate transaction.
+2025-07-29 17:48:19,535 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6b2bb779-67f3-49b7-8b5b-c9921cc2c53a
+2025-07-29 17:48:19,540 | INFO | app.api.routes.artworks | Backend: Artwork 6b2bb779-67f3-49b7-8b5b-c9921cc2c53a found: Testing image 18
+2025-07-29 17:48:19,562 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6b2bb779-67f3-49b7-8b5b-c9921cc2c53a
+2025-07-29 17:48:19,567 | INFO | app.api.routes.artworks | Backend: Artwork 6b2bb779-67f3-49b7-8b5b-c9921cc2c53a found: Testing image 18
+2025-07-29 17:48:20,862 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: '6b2bb779-67f3-49b7-8b5b-c9921cc2c53a' by user: 'muhammadfarelas1@gmail.com'
+2025-07-29 17:48:20,864 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: '6b2bb779-67f3-49b7-8b5b-c9921cc2c53a', title: 'Testing image 18'
+2025-07-29 17:48:20,866 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Generated order_id: 'ORDER-ddc5f0c6-335f-49e7-89f7-ded1c9ba071c' and assigned buyer_secret_code for receipt: '43f1b467'
+2025-07-29 17:48:20,867 | ERROR | app.api.routes.payments | PAYMENTS/INITIATE: MIDTRANS_NOTIFICATION_URL_BASE not set in environment variables.
+2025-07-29 17:48:26,280 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 17:48:26,284 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 17:48:26,309 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 17:48:26,316 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 17:48:27,355 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: 'fb0dac63-91b4-459b-aad9-4d73122cfe58' by user: 'muhammadfarelas1@gmail.com'
+2025-07-29 17:48:27,356 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: 'fb0dac63-91b4-459b-aad9-4d73122cfe58', title: 'Testing image 20'
+2025-07-29 17:48:27,357 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Generated order_id: 'ORDER-13a2d1d4-8b52-43b2-90a6-47ac7981fbf4' and assigned buyer_secret_code for receipt: '925c7708'
+2025-07-29 17:48:27,357 | ERROR | app.api.routes.payments | PAYMENTS/INITIATE: MIDTRANS_NOTIFICATION_URL_BASE not set in environment variables.
+2025-07-29 17:48:56,237 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 17:50:25,247 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "0197e7550106ac97c53f8e958659e56a72b6a79510152019e9dd1f58778097aec3c446ddd853986602fa8ae790e17d2b528977c8b8982801a29b2de3aea0c3ad",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_6caef6dc-3e48-4263-9502-2d8d48347d5e",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:50:25,248 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_6caef6dc-3e48-4263-9502-2d8d48347d5e, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:50:25,250 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:50:25,250 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_6caef6dc-3e48-4263-9502-2d8d48347d5e200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:50:25,250 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 0197e7550106ac97c53f8e958659e56a72b6a79510152019e9dd1f58778097aec3c446ddd853986602fa8ae790e17d2b528977c8b8982801a29b2de3aea0c3ad
+2025-07-29 17:50:25,250 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 0197e7550106ac97c53f8e958659e56a72b6a79510152019e9dd1f58778097aec3c446ddd853986602fa8ae790e17d2b528977c8b8982801a29b2de3aea0c3ad
+2025-07-29 17:50:25,250 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_6caef6dc-3e48-4263-9502-2d8d48347d5e.
+2025-07-29 17:50:25,307 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_6caef6dc-3e48-4263-9502-2d8d48347d5e not found in database. This indicates a prior issue (initiation failed to save) or an invalid callback (order_id doesn't exist).
+2025-07-29 17:54:06,066 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "f107f8069813a47e6184172b9a396d3f41268cc7aec672280b95bc15575c7cb47912e6e41ae3f1411635710749692604b492a9b83dc6279ac24b562869545086",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_37953038-6b18-46c4-866b-e41ef4e4edde",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 17:54:06,074 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_37953038-6b18-46c4-866b-e41ef4e4edde, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 17:54:06,078 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 17:54:06,079 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_37953038-6b18-46c4-866b-e41ef4e4edde200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 17:54:06,079 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: f107f8069813a47e6184172b9a396d3f41268cc7aec672280b95bc15575c7cb47912e6e41ae3f1411635710749692604b492a9b83dc6279ac24b562869545086
+2025-07-29 17:54:06,079 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: f107f8069813a47e6184172b9a396d3f41268cc7aec672280b95bc15575c7cb47912e6e41ae3f1411635710749692604b492a9b83dc6279ac24b562869545086
+2025-07-29 17:54:06,079 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_37953038-6b18-46c4-866b-e41ef4e4edde.
+2025-07-29 17:54:06,143 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_37953038-6b18-46c4-866b-e41ef4e4edde not found in database. This indicates a prior issue (initiation failed to save) or an invalid callback (order_id doesn't exist).
+2025-07-29 18:07:17,259 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: 'fb0dac63-91b4-459b-aad9-4d73122cfe58' by user: 'muhammadfarelas1@gmail.com'
+2025-07-29 18:07:17,347 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: 'fb0dac63-91b4-459b-aad9-4d73122cfe58', title: 'Testing image 20'
+2025-07-29 18:07:17,368 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Generated order_id: 'ORDER-9a1f922d-febb-4164-a830-dc7e039e8696' and assigned buyer_secret_code for receipt: '925c7708'
+2025-07-29 18:07:17,369 | ERROR | app.api.routes.payments | PAYMENTS/INITIATE: MIDTRANS_NOTIFICATION_URL_BASE not set in environment variables.
+2025-07-29 18:10:02,680 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 18:10:12,536 | INFO | app.main | Server FastAPI dimulai...
+2025-07-29 18:10:51,043 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ef87af29-5c63-4a3c-93da-6fa844e836ce
+2025-07-29 18:10:51,077 | INFO | app.api.routes.artworks | Backend: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce found: Testing image 15
+2025-07-29 18:10:51,084 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ef87af29-5c63-4a3c-93da-6fa844e836ce
+2025-07-29 18:10:51,086 | INFO | app.api.routes.artworks | Backend: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce found: Testing image 15
+2025-07-29 18:10:54,740 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-29 18:10:54,743 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-29 18:10:54,763 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-29 18:10:54,766 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-29 18:11:01,343 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 18:11:01,347 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 18:11:01,374 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 18:11:01,378 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 18:11:02,870 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: 'fb0dac63-91b4-459b-aad9-4d73122cfe58' by user: 'muhammadfarelas1@gmail.com'
+2025-07-29 18:11:02,927 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: 'fb0dac63-91b4-459b-aad9-4d73122cfe58', title: 'Testing image 20'
+2025-07-29 18:11:02,935 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Generated order_id: 'ORDER-f4f82d2b-de01-4647-93ab-e54409d0d605' and assigned buyer_secret_code for receipt: '925c7708'
+2025-07-29 18:11:02,935 | ERROR | app.api.routes.payments | PAYMENTS/INITIATE: MIDTRANS_NOTIFICATION_URL_BASE not set in environment variables.
+2025-07-29 18:17:05,803 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "40f37435ffd5ce95a365b9b4d4a52663be3ac4664b7ec14a6c79dee8b71b02ad86d14d4dd36d26a654434af75789ccdd06fa182edc3732b5c493cebc3221b0a0",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_284a7c1c-3247-42da-9eb8-1cef3d334a51",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-29 18:17:05,808 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_284a7c1c-3247-42da-9eb8-1cef3d334a51, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-29 18:17:05,814 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-29 18:17:05,815 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_284a7c1c-3247-42da-9eb8-1cef3d334a51200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-29 18:17:05,815 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 40f37435ffd5ce95a365b9b4d4a52663be3ac4664b7ec14a6c79dee8b71b02ad86d14d4dd36d26a654434af75789ccdd06fa182edc3732b5c493cebc3221b0a0
+2025-07-29 18:17:05,815 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 40f37435ffd5ce95a365b9b4d4a52663be3ac4664b7ec14a6c79dee8b71b02ad86d14d4dd36d26a654434af75789ccdd06fa182edc3732b5c493cebc3221b0a0
+2025-07-29 18:17:05,815 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_284a7c1c-3247-42da-9eb8-1cef3d334a51.
+2025-07-29 18:17:05,956 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_284a7c1c-3247-42da-9eb8-1cef3d334a51 not found in database. This indicates a prior issue (initiation failed to save) or an invalid callback (order_id doesn't exist).
+2025-07-29 18:17:15,511 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 18:17:15,529 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 18:17:17,923 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: 'fb0dac63-91b4-459b-aad9-4d73122cfe58' by user: 'muhammadfarelas1@gmail.com'
+2025-07-29 18:17:17,927 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: 'fb0dac63-91b4-459b-aad9-4d73122cfe58', title: 'Testing image 20'
+2025-07-29 18:17:17,936 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Generated order_id: 'ORDER-2907b249-4e02-4ea1-bf47-93befb94b165' and assigned buyer_secret_code for receipt: '925c7708'
+2025-07-29 18:17:17,937 | ERROR | app.api.routes.payments | PAYMENTS/INITIATE: MIDTRANS_NOTIFICATION_URL_BASE not set in environment variables.
+2025-07-29 18:19:31,952 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6b2bb779-67f3-49b7-8b5b-c9921cc2c53a
+2025-07-29 18:19:31,962 | INFO | app.api.routes.artworks | Backend: Artwork 6b2bb779-67f3-49b7-8b5b-c9921cc2c53a found: Testing image 18
+2025-07-29 18:19:31,994 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6b2bb779-67f3-49b7-8b5b-c9921cc2c53a
+2025-07-29 18:19:31,999 | INFO | app.api.routes.artworks | Backend: Artwork 6b2bb779-67f3-49b7-8b5b-c9921cc2c53a found: Testing image 18
+2025-07-29 18:19:33,492 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: '6b2bb779-67f3-49b7-8b5b-c9921cc2c53a' by user: 'muhammadfarelas1@gmail.com'
+2025-07-29 18:19:33,494 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: '6b2bb779-67f3-49b7-8b5b-c9921cc2c53a', title: 'Testing image 18'
+2025-07-29 18:19:33,504 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Generated order_id: 'ORDER-7204c9f1-2e30-43cc-a987-8f5bbfcede38' and assigned buyer_secret_code for receipt: '43f1b467'
+2025-07-29 18:19:33,504 | ERROR | app.api.routes.payments | PAYMENTS/INITIATE: MIDTRANS_NOTIFICATION_URL_BASE not set in environment variables.
+2025-07-29 18:19:50,101 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 18:19:50,104 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 18:19:50,118 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 18:19:50,121 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 18:19:51,312 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: 'fb0dac63-91b4-459b-aad9-4d73122cfe58' by user: 'muhammadfarelas1@gmail.com'
+2025-07-29 18:19:51,313 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: 'fb0dac63-91b4-459b-aad9-4d73122cfe58', title: 'Testing image 20'
+2025-07-29 18:19:51,316 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Generated order_id: 'ORDER-66934a05-e067-44ff-8aab-396a731442ea' and assigned buyer_secret_code for receipt: '925c7708'
+2025-07-29 18:19:51,317 | ERROR | app.api.routes.payments | PAYMENTS/INITIATE: MIDTRANS_NOTIFICATION_URL_BASE not set in environment variables.
+2025-07-29 18:22:59,976 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 18:22:59,991 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 18:23:00,011 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-29 18:23:00,017 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-29 18:23:02,333 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: 'fb0dac63-91b4-459b-aad9-4d73122cfe58' by user: 'muhammadfarelas1@gmail.com'
+2025-07-29 18:23:02,335 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: 'fb0dac63-91b4-459b-aad9-4d73122cfe58', title: 'Testing image 20'
+2025-07-29 18:23:02,342 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Generated order_id: 'ORDER-85537c9f-9ebe-4830-ba4e-0dc1b8e3c6ae' and assigned buyer_secret_code for receipt: '925c7708'
+2025-07-29 18:23:02,343 | ERROR | app.api.routes.payments | PAYMENTS/INITIATE: MIDTRANS_NOTIFICATION_URL_BASE not set in environment variables.
+2025-07-29 18:25:26,477 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: 'fb0dac63-91b4-459b-aad9-4d73122cfe58' by user: 'muhammadfarelas1@gmail.com'
+2025-07-29 18:25:26,481 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: 'fb0dac63-91b4-459b-aad9-4d73122cfe58', title: 'Testing image 20'
+2025-07-29 18:25:26,484 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Generated order_id: 'ORDER-be57aae1-cdb9-47b2-822a-9cf78627524b' and assigned buyer_secret_code for receipt: '925c7708'
+2025-07-29 18:25:26,484 | ERROR | app.api.routes.payments | PAYMENTS/INITIATE: MIDTRANS_NOTIFICATION_URL_BASE not set in environment variables.
+2025-07-29 18:30:53,008 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-29 18:30:53,029 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-29 18:30:53,052 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-29 18:30:53,057 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-30 08:29:38,000 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 08:30:26,451 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "f5fe987c3c7cd7e23f33f5a9f4949354d00867775d0267dc6519bdeed30b77f907439f929567137671bb666b00a544aad39976e2f3795ffc0199ac9945c8e1dd",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_ed624b3c-7cd0-4f85-bff2-7de63c066ecd",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-30 08:30:26,455 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_ed624b3c-7cd0-4f85-bff2-7de63c066ecd, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-30 08:30:26,456 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-30 08:30:26,456 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_ed624b3c-7cd0-4f85-bff2-7de63c066ecd200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-30 08:30:26,456 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: f5fe987c3c7cd7e23f33f5a9f4949354d00867775d0267dc6519bdeed30b77f907439f929567137671bb666b00a544aad39976e2f3795ffc0199ac9945c8e1dd
+2025-07-30 08:30:26,456 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: f5fe987c3c7cd7e23f33f5a9f4949354d00867775d0267dc6519bdeed30b77f907439f929567137671bb666b00a544aad39976e2f3795ffc0199ac9945c8e1dd
+2025-07-30 08:30:26,456 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_ed624b3c-7cd0-4f85-bff2-7de63c066ecd.
+2025-07-30 08:30:26,590 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_ed624b3c-7cd0-4f85-bff2-7de63c066ecd not found in database. This indicates a prior issue (initiation failed to save) or an invalid callback (order_id doesn't exist).
+2025-07-30 08:34:25,143 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 08:35:07,493 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 08:35:35,870 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_time": "2023-11-15 18:45:13",
+  "transaction_status": "settlement",
+  "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "2b803c6f7ddb719879dd2eb8173574ee6ae529ddf9152d8aa09e1f06e0ffc43aba633ba5c5166623aa047a09c08ded42990f5ffee555170b424f50f5eba33512",
+  "settlement_time": "2023-11-15 22:45:13",
+  "payment_type": "gopay",
+  "order_id": "payment_notif_test_G663931957_032a2927-e5bf-4fb3-ad6c-25f9f2eea361",
+  "merchant_id": "G663931957",
+  "gross_amount": "105000.00",
+  "fraud_status": "accept",
+  "currency": "IDR"
+}
+2025-07-30 08:35:35,873 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: payment_notif_test_G663931957_032a2927-e5bf-4fb3-ad6c-25f9f2eea361, Status Code: 200, Gross Amount: 105000.00, Transaction Status: settlement
+2025-07-30 08:35:35,874 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-30 08:35:35,874 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: payment_notif_test_G663931957_032a2927-e5bf-4fb3-ad6c-25f9f2eea361200105000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-30 08:35:35,874 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 2b803c6f7ddb719879dd2eb8173574ee6ae529ddf9152d8aa09e1f06e0ffc43aba633ba5c5166623aa047a09c08ded42990f5ffee555170b424f50f5eba33512
+2025-07-30 08:35:35,874 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 2b803c6f7ddb719879dd2eb8173574ee6ae529ddf9152d8aa09e1f06e0ffc43aba633ba5c5166623aa047a09c08ded42990f5ffee555170b424f50f5eba33512
+2025-07-30 08:35:35,874 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: payment_notif_test_G663931957_032a2927-e5bf-4fb3-ad6c-25f9f2eea361.
+2025-07-30 08:35:35,900 | ERROR | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt for order_id payment_notif_test_G663931957_032a2927-e5bf-4fb3-ad6c-25f9f2eea361 not found in database. This indicates a prior issue (initiation failed to save) or an invalid callback (order_id doesn't exist).
+2025-07-30 08:37:04,787 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-30 08:37:04,806 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-30 08:37:04,840 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-30 08:37:04,844 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-30 08:37:06,749 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: 'fb0dac63-91b4-459b-aad9-4d73122cfe58' by user: 'muhammadfarelas1@gmail.com'
+2025-07-30 08:37:06,850 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: 'fb0dac63-91b4-459b-aad9-4d73122cfe58', title: 'Testing image 20'
+2025-07-30 08:37:06,867 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Generated order_id: 'ORDER-43d405b2-baa0-46d8-911e-2423dedc9977' and assigned buyer_secret_code for receipt: '925c7708'
+2025-07-30 08:37:06,867 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: 'a82bcda2-adce-4bd4-8f19-428e664866a9', order_id: 'ORDER-43d405b2-baa0-46d8-911e-2423dedc9977', status: 'pending' BEFORE Midtrans call.
+2025-07-30 08:37:06,899 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved for Order ID: 'ORDER-43d405b2-baa0-46d8-911e-2423dedc9977'. Confirmed buyer_secret_code from DB: '925c7708', status: 'pending'
+2025-07-30 08:37:06,900 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Midtrans notification callback URL set to: 'https://232c647f3e67.ngrok-free.app/api/payments/payment-callback/api/payments/payment-callback'
+2025-07-30 08:37:06,903 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Sending request to Midtrans API for Order ID: ORDER-43d405b2-baa0-46d8-911e-2423dedc9977.
+2025-07-30 08:37:07,095 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Midtrans API responded successfully for Order ID: ORDER-43d405b2-baa0-46d8-911e-2423dedc9977. Snap Token received.
+2025-07-30 08:37:30,510 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-30 08:37:30,514 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-30 08:37:33,910 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: 'fb0dac63-91b4-459b-aad9-4d73122cfe58' by user: 'muhammadfarelas1@gmail.com'
+2025-07-30 08:37:33,913 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: 'fb0dac63-91b4-459b-aad9-4d73122cfe58', title: 'Testing image 20'
+2025-07-30 08:37:33,914 | WARNING | app.api.routes.payments | PAYMENTS/INITIATE: Existing active receipt found for user 0b737b7c-14a5-4403-b311-218cb9a34c43 and artwork fb0dac63-91b4-459b-aad9-4d73122cfe58. Status: pending. Preventing duplicate transaction.
+2025-07-30 08:41:46,041 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-30 08:41:46,088 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-30 08:41:50,584 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fb0dac63-91b4-459b-aad9-4d73122cfe58
+2025-07-30 08:41:50,596 | INFO | app.api.routes.artworks | Backend: Artwork fb0dac63-91b4-459b-aad9-4d73122cfe58 found: Testing image 20
+2025-07-30 08:41:59,657 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 4ce0effb-ec24-409c-8bc6-02b622866975
+2025-07-30 08:41:59,661 | INFO | app.api.routes.artworks | Backend: Artwork 4ce0effb-ec24-409c-8bc6-02b622866975 found: Testing image 21
+2025-07-30 08:41:59,676 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 4ce0effb-ec24-409c-8bc6-02b622866975
+2025-07-30 08:41:59,682 | INFO | app.api.routes.artworks | Backend: Artwork 4ce0effb-ec24-409c-8bc6-02b622866975 found: Testing image 21
+2025-07-30 08:42:01,275 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: '4ce0effb-ec24-409c-8bc6-02b622866975' by user: 'muhammadfarelas1@gmail.com'
+2025-07-30 08:42:01,276 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: '4ce0effb-ec24-409c-8bc6-02b622866975', title: 'Testing image 21'
+2025-07-30 08:42:01,284 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Generated order_id: 'ORDER-cae2bab9-b77b-4a9e-a5e4-48ebc3f3a55e' and assigned buyer_secret_code for receipt: 'a0e8afe4'
+2025-07-30 08:42:01,289 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '308672a6-37e5-4c1a-a74e-c813f0a315aa', order_id: 'ORDER-cae2bab9-b77b-4a9e-a5e4-48ebc3f3a55e', status: 'pending' BEFORE Midtrans call.
+2025-07-30 08:42:01,316 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved for Order ID: 'ORDER-cae2bab9-b77b-4a9e-a5e4-48ebc3f3a55e'. Confirmed buyer_secret_code from DB: 'a0e8afe4', status: 'pending'
+2025-07-30 08:42:01,317 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Midtrans notification callback URL set to: 'https://232c647f3e67.ngrok-free.app/api/payments/payment-callback/api/payments/payment-callback'
+2025-07-30 08:42:01,319 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Sending request to Midtrans API for Order ID: ORDER-cae2bab9-b77b-4a9e-a5e4-48ebc3f3a55e.
+2025-07-30 08:42:01,538 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Midtrans API responded successfully for Order ID: ORDER-cae2bab9-b77b-4a9e-a5e4-48ebc3f3a55e. Snap Token received.
+2025-07-30 08:42:23,346 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 4ce0effb-ec24-409c-8bc6-02b622866975
+2025-07-30 08:42:23,350 | INFO | app.api.routes.artworks | Backend: Artwork 4ce0effb-ec24-409c-8bc6-02b622866975 found: Testing image 21
+2025-07-30 08:43:49,581 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 3ca34f8d-a3d8-4043-b840-8d65f239e231
+2025-07-30 08:43:49,587 | INFO | app.api.routes.artworks | Backend: Artwork 3ca34f8d-a3d8-4043-b840-8d65f239e231 found: Testing image 23
+2025-07-30 08:43:49,600 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 3ca34f8d-a3d8-4043-b840-8d65f239e231
+2025-07-30 08:43:49,603 | INFO | app.api.routes.artworks | Backend: Artwork 3ca34f8d-a3d8-4043-b840-8d65f239e231 found: Testing image 23
+2025-07-30 08:43:50,803 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: '3ca34f8d-a3d8-4043-b840-8d65f239e231' by user: 'muhammadfarelas1@gmail.com'
+2025-07-30 08:43:50,804 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: '3ca34f8d-a3d8-4043-b840-8d65f239e231', title: 'Testing image 23'
+2025-07-30 08:43:50,809 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Generated order_id: 'ORDER-859e5ee3-6e08-4d00-b8f6-1bc0b5efaa7d' and assigned buyer_secret_code for receipt: 'ba60caba'
+2025-07-30 08:43:50,809 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '48f9ed7e-b67a-4031-95e6-e5c0d85df9c6', order_id: 'ORDER-859e5ee3-6e08-4d00-b8f6-1bc0b5efaa7d', status: 'pending' BEFORE Midtrans call.
+2025-07-30 08:43:50,820 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved for Order ID: 'ORDER-859e5ee3-6e08-4d00-b8f6-1bc0b5efaa7d'. Confirmed buyer_secret_code from DB: 'ba60caba', status: 'pending'
+2025-07-30 08:43:50,820 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Midtrans notification callback URL set to: 'https://232c647f3e67.ngrok-free.app/api/payments/payment-callback/api/payments/payment-callback'
+2025-07-30 08:43:50,822 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Sending request to Midtrans API for Order ID: ORDER-859e5ee3-6e08-4d00-b8f6-1bc0b5efaa7d.
+2025-07-30 08:43:51,010 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Midtrans API responded successfully for Order ID: ORDER-859e5ee3-6e08-4d00-b8f6-1bc0b5efaa7d. Snap Token received.
+2025-07-30 08:44:29,449 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 3ca34f8d-a3d8-4043-b840-8d65f239e231
+2025-07-30 08:44:29,455 | INFO | app.api.routes.artworks | Backend: Artwork 3ca34f8d-a3d8-4043-b840-8d65f239e231 found: Testing image 23
+2025-07-30 08:44:38,347 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 3ca34f8d-a3d8-4043-b840-8d65f239e231
+2025-07-30 08:44:38,350 | INFO | app.api.routes.artworks | Backend: Artwork 3ca34f8d-a3d8-4043-b840-8d65f239e231 found: Testing image 23
+2025-07-30 08:48:35,091 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: '8c834cb5-3e7f-422e-8801-250c402856d6' by user: 'yuda@yopmail.com'
+2025-07-30 08:48:35,100 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: '8c834cb5-3e7f-422e-8801-250c402856d6', title: 'Testing image 22'
+2025-07-30 08:48:35,122 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Generated order_id: 'ORDER-6b50274f-4680-40ac-9c9a-8b00601610b2' and assigned buyer_secret_code for receipt: '977fb561'
+2025-07-30 08:48:35,124 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '5d54089e-cfe9-4a52-b8f8-643c27f01fcb', order_id: 'ORDER-6b50274f-4680-40ac-9c9a-8b00601610b2', status: 'pending' BEFORE Midtrans call.
+2025-07-30 08:48:35,143 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved for Order ID: 'ORDER-6b50274f-4680-40ac-9c9a-8b00601610b2'. Confirmed buyer_secret_code from DB: '977fb561', status: 'pending'
+2025-07-30 08:48:35,144 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Midtrans notification callback URL set to: 'https://232c647f3e67.ngrok-free.app/api/payments/payment-callback/api/payments/payment-callback'
+2025-07-30 08:48:35,146 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Sending request to Midtrans API for Order ID: ORDER-6b50274f-4680-40ac-9c9a-8b00601610b2.
+2025-07-30 08:48:35,382 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Midtrans API responded successfully for Order ID: ORDER-6b50274f-4680-40ac-9c9a-8b00601610b2. Snap Token received.
+2025-07-30 08:49:01,499 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 3ca34f8d-a3d8-4043-b840-8d65f239e231
+2025-07-30 08:49:01,503 | INFO | app.api.routes.artworks | Backend: Artwork 3ca34f8d-a3d8-4043-b840-8d65f239e231 found: Testing image 23
+2025-07-30 08:49:53,497 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 08:53:27,054 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 08:54:02,644 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 4ce0effb-ec24-409c-8bc6-02b622866975
+2025-07-30 08:54:02,656 | INFO | app.api.routes.artworks | Backend: Artwork 4ce0effb-ec24-409c-8bc6-02b622866975 found: Testing image 21
+2025-07-30 08:54:02,678 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 4ce0effb-ec24-409c-8bc6-02b622866975
+2025-07-30 08:54:02,681 | INFO | app.api.routes.artworks | Backend: Artwork 4ce0effb-ec24-409c-8bc6-02b622866975 found: Testing image 21
+2025-07-30 08:54:04,218 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '4ce0effb-ec24-409c-8bc6-02b622866975'
+2025-07-30 08:54:04,309 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '4ce0effb-ec24-409c-8bc6-02b622866975', artwork_secret_code from DB: 'a0e8afe4'
+2025-07-30 08:54:09,251 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 3ca34f8d-a3d8-4043-b840-8d65f239e231
+2025-07-30 08:54:09,259 | INFO | app.api.routes.artworks | Backend: Artwork 3ca34f8d-a3d8-4043-b840-8d65f239e231 found: Testing image 23
+2025-07-30 08:54:09,283 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 3ca34f8d-a3d8-4043-b840-8d65f239e231
+2025-07-30 08:54:09,283 | INFO | app.api.routes.artworks | Backend: Artwork 3ca34f8d-a3d8-4043-b840-8d65f239e231 found: Testing image 23
+2025-07-30 08:54:10,147 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '3ca34f8d-a3d8-4043-b840-8d65f239e231'
+2025-07-30 08:54:10,152 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '3ca34f8d-a3d8-4043-b840-8d65f239e231', artwork_secret_code from DB: 'ba60caba'
+2025-07-30 08:54:13,799 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 8c834cb5-3e7f-422e-8801-250c402856d6
+2025-07-30 08:54:13,799 | INFO | app.api.routes.artworks | Backend: Artwork 8c834cb5-3e7f-422e-8801-250c402856d6 found: Testing image 22
+2025-07-30 08:54:13,814 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 8c834cb5-3e7f-422e-8801-250c402856d6
+2025-07-30 08:54:13,820 | INFO | app.api.routes.artworks | Backend: Artwork 8c834cb5-3e7f-422e-8801-250c402856d6 found: Testing image 22
+2025-07-30 08:54:15,253 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '8c834cb5-3e7f-422e-8801-250c402856d6'
+2025-07-30 08:54:15,253 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '8c834cb5-3e7f-422e-8801-250c402856d6', artwork_secret_code from DB: '977fb561'
+2025-07-30 08:54:15,253 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: '977fb561' (from artwork.artwork_secret_code)
+2025-07-30 08:54:15,414 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: 'e23b9b30-20a3-484d-bf7f-b06b56a8abb1', buyer_secret_code: '977fb561'
+2025-07-30 08:54:15,434 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: '977fb561'
+2025-07-30 08:54:33,832 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 8c834cb5-3e7f-422e-8801-250c402856d6
+2025-07-30 08:54:33,838 | INFO | app.api.routes.artworks | Backend: Artwork 8c834cb5-3e7f-422e-8801-250c402856d6 found: Testing image 22
+2025-07-30 08:54:35,696 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '8c834cb5-3e7f-422e-8801-250c402856d6'
+2025-07-30 08:54:35,696 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '8c834cb5-3e7f-422e-8801-250c402856d6', artwork_secret_code from DB: '977fb561'
+2025-07-30 08:54:35,770 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '8c834cb5-3e7f-422e-8801-250c402856d6'
+2025-07-30 08:54:35,823 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '8c834cb5-3e7f-422e-8801-250c402856d6', artwork_secret_code from DB: '977fb561'
+2025-07-30 08:58:07,874 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 09:04:12,783 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 09:05:13,952 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 8c834cb5-3e7f-422e-8801-250c402856d6
+2025-07-30 09:05:14,056 | INFO | app.api.routes.artworks | Backend: Artwork 8c834cb5-3e7f-422e-8801-250c402856d6 found: Testing image 22
+2025-07-30 09:06:32,744 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 8c834cb5-3e7f-422e-8801-250c402856d6
+2025-07-30 09:06:32,768 | INFO | app.api.routes.artworks | Backend: Artwork 8c834cb5-3e7f-422e-8801-250c402856d6 found: Testing image 22
+2025-07-30 09:06:39,992 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e75d5b33-4bb3-444f-8509-146a8908c562
+2025-07-30 09:06:40,000 | INFO | app.api.routes.artworks | Backend: Artwork e75d5b33-4bb3-444f-8509-146a8908c562 found: Testing image 24
+2025-07-30 09:06:40,021 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e75d5b33-4bb3-444f-8509-146a8908c562
+2025-07-30 09:06:40,025 | INFO | app.api.routes.artworks | Backend: Artwork e75d5b33-4bb3-444f-8509-146a8908c562 found: Testing image 24
+2025-07-30 09:07:11,560 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e75d5b33-4bb3-444f-8509-146a8908c562
+2025-07-30 09:07:11,563 | INFO | app.api.routes.artworks | Backend: Artwork e75d5b33-4bb3-444f-8509-146a8908c562 found: Testing image 24
+2025-07-30 09:07:11,571 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e75d5b33-4bb3-444f-8509-146a8908c562
+2025-07-30 09:07:11,573 | INFO | app.api.routes.artworks | Backend: Artwork e75d5b33-4bb3-444f-8509-146a8908c562 found: Testing image 24
+2025-07-30 09:07:17,842 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e75d5b33-4bb3-444f-8509-146a8908c562
+2025-07-30 09:07:17,847 | INFO | app.api.routes.artworks | Backend: Artwork e75d5b33-4bb3-444f-8509-146a8908c562 found: Testing image 24
+2025-07-30 09:07:28,554 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e75d5b33-4bb3-444f-8509-146a8908c562
+2025-07-30 09:07:28,558 | INFO | app.api.routes.artworks | Backend: Artwork e75d5b33-4bb3-444f-8509-146a8908c562 found: Testing image 24
+2025-07-30 09:07:28,585 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e75d5b33-4bb3-444f-8509-146a8908c562
+2025-07-30 09:07:28,589 | INFO | app.api.routes.artworks | Backend: Artwork e75d5b33-4bb3-444f-8509-146a8908c562 found: Testing image 24
+2025-07-30 09:14:06,160 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 09:15:23,865 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e75d5b33-4bb3-444f-8509-146a8908c562
+2025-07-30 09:15:24,013 | INFO | app.api.routes.artworks | Backend: Artwork e75d5b33-4bb3-444f-8509-146a8908c562 found: Testing image 24
+2025-07-30 09:16:57,269 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 09:17:03,659 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e75d5b33-4bb3-444f-8509-146a8908c562
+2025-07-30 09:17:03,665 | INFO | app.api.routes.artworks | Backend: Artwork e75d5b33-4bb3-444f-8509-146a8908c562 found: Testing image 24
+2025-07-30 09:17:03,695 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e75d5b33-4bb3-444f-8509-146a8908c562
+2025-07-30 09:17:03,698 | INFO | app.api.routes.artworks | Backend: Artwork e75d5b33-4bb3-444f-8509-146a8908c562 found: Testing image 24
+2025-07-30 09:17:04,532 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: 'e75d5b33-4bb3-444f-8509-146a8908c562'
+2025-07-30 09:17:04,583 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: 'e75d5b33-4bb3-444f-8509-146a8908c562', artwork_secret_code from DB: '72ac85aa'
+2025-07-30 09:17:09,546 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-30 09:17:09,546 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-30 09:17:09,580 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-30 09:17:09,586 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-30 09:17:13,434 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ef87af29-5c63-4a3c-93da-6fa844e836ce
+2025-07-30 09:17:13,434 | INFO | app.api.routes.artworks | Backend: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce found: Testing image 15
+2025-07-30 09:17:13,448 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ef87af29-5c63-4a3c-93da-6fa844e836ce
+2025-07-30 09:17:13,454 | INFO | app.api.routes.artworks | Backend: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce found: Testing image 15
+2025-07-30 09:17:16,664 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6e27e694-451c-4958-ae75-82bce8b97185
+2025-07-30 09:17:16,669 | INFO | app.api.routes.artworks | Backend: Artwork 6e27e694-451c-4958-ae75-82bce8b97185 found: Mobil Porsche 13
+2025-07-30 09:17:16,682 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6e27e694-451c-4958-ae75-82bce8b97185
+2025-07-30 09:17:16,688 | INFO | app.api.routes.artworks | Backend: Artwork 6e27e694-451c-4958-ae75-82bce8b97185 found: Mobil Porsche 13
+2025-07-30 09:17:17,588 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '6e27e694-451c-4958-ae75-82bce8b97185'
+2025-07-30 09:17:17,588 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '6e27e694-451c-4958-ae75-82bce8b97185', artwork_secret_code from DB: 'None'
+2025-07-30 09:17:17,593 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Assigning buyer_secret_code for receipt: 'None' (from artwork.artwork_secret_code)
+2025-07-30 09:17:17,719 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: '79ed2c84-4e08-4ac8-a04e-6f673c71e551', buyer_secret_code: 'None'
+2025-07-30 09:17:17,731 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved. Confirmed buyer_secret_code from DB: 'None'
+2025-07-30 09:17:34,893 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6e27e694-451c-4958-ae75-82bce8b97185
+2025-07-30 09:17:34,902 | INFO | app.api.routes.artworks | Backend: Artwork 6e27e694-451c-4958-ae75-82bce8b97185 found: Mobil Porsche 13
+2025-07-30 09:18:45,939 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request.artwork_id: '6e27e694-451c-4958-ae75-82bce8b97185'
+2025-07-30 09:18:45,944 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Successfully retrieved artwork. Artwork ID from DB: '6e27e694-451c-4958-ae75-82bce8b97185', artwork_secret_code from DB: 'None'
+2025-07-30 09:24:05,573 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6e27e694-451c-4958-ae75-82bce8b97185
+2025-07-30 09:24:05,627 | WARNING | app.api.routes.artworks | Backend: Artwork with ID 6e27e694-451c-4958-ae75-82bce8b97185 NOT FOUND in database.
+2025-07-30 09:24:14,914 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-30 09:24:14,923 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-30 09:24:14,967 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-30 09:24:14,974 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-30 09:24:18,861 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ef87af29-5c63-4a3c-93da-6fa844e836ce
+2025-07-30 09:24:18,864 | INFO | app.api.routes.artworks | Backend: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce found: Testing image 15
+2025-07-30 09:24:18,883 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ef87af29-5c63-4a3c-93da-6fa844e836ce
+2025-07-30 09:24:18,887 | INFO | app.api.routes.artworks | Backend: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce found: Testing image 15
+2025-07-30 09:24:22,152 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 539adb47-ed8a-40a7-a3e6-751be5bb4ee4
+2025-07-30 09:24:22,159 | INFO | app.api.routes.artworks | Backend: Artwork 539adb47-ed8a-40a7-a3e6-751be5bb4ee4 found: Testing image 11
+2025-07-30 09:24:22,208 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 539adb47-ed8a-40a7-a3e6-751be5bb4ee4
+2025-07-30 09:24:22,210 | INFO | app.api.routes.artworks | Backend: Artwork 539adb47-ed8a-40a7-a3e6-751be5bb4ee4 found: Testing image 11
+2025-07-30 09:25:05,279 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 09:26:12,901 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 4533a0a4-0658-483e-972a-07d361455581
+2025-07-30 09:26:12,910 | INFO | app.api.routes.artworks | Backend: Artwork 4533a0a4-0658-483e-972a-07d361455581 found: Testing image 24
+2025-07-30 09:26:12,941 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 4533a0a4-0658-483e-972a-07d361455581
+2025-07-30 09:26:12,946 | INFO | app.api.routes.artworks | Backend: Artwork 4533a0a4-0658-483e-972a-07d361455581 found: Testing image 24
+2025-07-30 09:26:14,301 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: '4533a0a4-0658-483e-972a-07d361455581' by user: 'muhammadfarelas1@gmail.com'
+2025-07-30 09:26:14,304 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: '4533a0a4-0658-483e-972a-07d361455581', title: 'Testing image 24'
+2025-07-30 09:26:14,320 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Generated order_id: 'ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f' and assigned buyer_secret_code for receipt: 'cf723743'
+2025-07-30 09:26:14,321 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Midtrans notification callback URL set to: 'https://232c647f3e67.ngrok-free.app/api/payments/payment-callback/api/payments/payment-callback'
+2025-07-30 09:26:14,321 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Sending request to Midtrans API for Order ID: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f.
+2025-07-30 09:26:14,517 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Midtrans API responded successfully for Order ID: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f. Snap Token received.
+2025-07-30 09:26:14,517 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: 'c1f879d2-cb4c-4adf-9232-b3d890c38028', order_id: 'ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f', status: 'pending'
+2025-07-30 09:26:14,541 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved for Order ID: 'ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f'. Confirmed buyer_secret_code from DB: 'cf723743', status: 'pending'
+2025-07-30 09:26:19,342 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "off-us",
+  "transaction_time": "2025-07-30 09:26:18",
+  "transaction_status": "pending",
+  "transaction_id": "8e044ccb-bf59-4bda-aa69-4f79b24aae32",
+  "status_message": "midtrans payment notification",
+  "status_code": "201",
+  "signature_key": "e8a82a65d7a618a85af4641bd4c5de42db8a9e793f07de5189652daba4f5fca7ddfd69960c7ad0afd003b9f12faf894ef5eb9af4a332675e5ad3ef6c183319c8",
+  "payment_type": "qris",
+  "order_id": "ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f",
+  "merchant_id": "G663931957",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-30 09:41:18",
+  "currency": "IDR"
+}
+2025-07-30 09:26:19,344 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f, Status Code: 201, Gross Amount: 800000.00, Transaction Status: pending
+2025-07-30 09:26:19,344 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-30 09:26:19,344 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f201800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-30 09:26:19,344 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: e8a82a65d7a618a85af4641bd4c5de42db8a9e793f07de5189652daba4f5fca7ddfd69960c7ad0afd003b9f12faf894ef5eb9af4a332675e5ad3ef6c183319c8
+2025-07-30 09:26:19,344 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: e8a82a65d7a618a85af4641bd4c5de42db8a9e793f07de5189652daba4f5fca7ddfd69960c7ad0afd003b9f12faf894ef5eb9af4a332675e5ad3ef6c183319c8
+2025-07-30 09:26:19,344 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f.
+2025-07-30 09:26:19,353 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Found existing receipt c1f879d2-cb4c-4adf-9232-b3d890c38028 for Order ID: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f. Current status: pending.
+2025-07-30 09:26:19,353 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Transaction status is 'pending' for Order ID: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f. Receipt already 'pending'. No status update needed.
+2025-07-30 09:26:19,373 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt c1f879d2-cb4c-4adf-9232-b3d890c38028 (Order ID: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f) successfully updated in DB. Final Receipt Status: pending.
+2025-07-30 09:26:29,279 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "on-us",
+  "transaction_time": "2025-07-30 09:26:18",
+  "transaction_status": "settlement",
+  "transaction_id": "8e044ccb-bf59-4bda-aa69-4f79b24aae32",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "93c407967c36fabfc8af11dedcc8ecf91ac9a23ac34e2ff9c1c61276eaa3498fc2220443f991749a833b6b88e74c705610ec991746e223459f4b87af28ab57b2",
+  "settlement_time": "2025-07-30 09:26:28",
+  "payment_type": "qris",
+  "order_id": "ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f",
+  "merchant_id": "G663931957",
+  "merchant_cross_reference_id": "5c306999-5a31-4b0d-a6ed-32b2b3aff6ec",
+  "issuer": "gopay",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-30 09:41:18",
+  "currency": "IDR",
+  "acquirer": "gopay"
+}
+2025-07-30 09:26:29,279 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f, Status Code: 200, Gross Amount: 800000.00, Transaction Status: settlement
+2025-07-30 09:26:29,279 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-30 09:26:29,279 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f200800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-30 09:26:29,279 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 93c407967c36fabfc8af11dedcc8ecf91ac9a23ac34e2ff9c1c61276eaa3498fc2220443f991749a833b6b88e74c705610ec991746e223459f4b87af28ab57b2
+2025-07-30 09:26:29,279 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 93c407967c36fabfc8af11dedcc8ecf91ac9a23ac34e2ff9c1c61276eaa3498fc2220443f991749a833b6b88e74c705610ec991746e223459f4b87af28ab57b2
+2025-07-30 09:26:29,279 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f.
+2025-07-30 09:26:29,281 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Found existing receipt c1f879d2-cb4c-4adf-9232-b3d890c38028 for Order ID: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f. Current status: pending.
+2025-07-30 09:26:29,281 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Transaction status is 'settlement' for Order ID: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f. Updating receipt status to 'paid'.
+2025-07-30 09:26:29,281 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Artwork 4533a0a4-0658-483e-972a-07d361455581 prepared to be marked as sold.
+2025-07-30 09:26:29,286 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt c1f879d2-cb4c-4adf-9232-b3d890c38028 (Order ID: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f) successfully updated in DB. Final Receipt Status: paid.
+2025-07-30 09:26:29,286 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Artwork 4533a0a4-0658-483e-972a-07d361455581 successfully marked as sold for Order ID: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f.
+2025-07-30 09:26:32,550 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Purchase email successfully sent to muhammadfarelas1@gmail.com for Order ID: ORDER-05731c1f-6488-4c08-a3b5-ac34b9c1e84f.
+2025-07-30 09:26:32,571 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 4533a0a4-0658-483e-972a-07d361455581
+2025-07-30 09:26:32,578 | INFO | app.api.routes.artworks | Backend: Artwork 4533a0a4-0658-483e-972a-07d361455581 found: Testing image 24
+2025-07-30 09:41:04,742 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 4533a0a4-0658-483e-972a-07d361455581
+2025-07-30 09:41:04,753 | INFO | app.api.routes.artworks | Backend: Artwork 4533a0a4-0658-483e-972a-07d361455581 found: Testing image 24
+2025-07-30 09:41:04,776 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 4533a0a4-0658-483e-972a-07d361455581
+2025-07-30 09:41:04,783 | INFO | app.api.routes.artworks | Backend: Artwork 4533a0a4-0658-483e-972a-07d361455581 found: Testing image 24
+2025-07-30 09:55:32,456 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 09:57:20,920 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e366c44a-5ad2-4be9-a18d-79ef4eaf7573
+2025-07-30 09:57:20,929 | INFO | app.api.routes.artworks | Backend: Artwork e366c44a-5ad2-4be9-a18d-79ef4eaf7573 found: Testing image 25
+2025-07-30 09:57:21,023 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e366c44a-5ad2-4be9-a18d-79ef4eaf7573
+2025-07-30 09:57:21,029 | INFO | app.api.routes.artworks | Backend: Artwork e366c44a-5ad2-4be9-a18d-79ef4eaf7573 found: Testing image 25
+2025-07-30 09:57:22,937 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Received purchase_request for artwork_id: 'e366c44a-5ad2-4be9-a18d-79ef4eaf7573' by user: 'muhammadfarelas1@gmail.com'
+2025-07-30 09:57:22,937 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Retrieved artwork details for ID: 'e366c44a-5ad2-4be9-a18d-79ef4eaf7573', title: 'Testing image 25'
+2025-07-30 09:57:22,948 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Generated order_id: 'ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7' and assigned buyer_secret_code for receipt: 'e2e346aa'
+2025-07-30 09:57:22,948 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Midtrans notification callback URL set to: 'https://232c647f3e67.ngrok-free.app/api/payments/payment-callback/api/payments/payment-callback'
+2025-07-30 09:57:22,948 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Sending request to Midtrans API for Order ID: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7.
+2025-07-30 09:57:23,099 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Midtrans API responded successfully for Order ID: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7. Snap Token received.
+2025-07-30 09:57:23,099 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Attempting to save temp_receipt with ID: 'b760df5b-6e10-4e08-a64f-5db4a53c08c9', order_id: 'ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7', status: 'pending'
+2025-07-30 09:57:23,099 | INFO | app.api.routes.payments | PAYMENTS/INITIATE: Temp_receipt successfully saved for Order ID: 'ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7'. Confirmed buyer_secret_code from DB: 'e2e346aa', status: 'pending'
+2025-07-30 09:57:28,676 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "off-us",
+  "transaction_time": "2025-07-30 09:57:27",
+  "transaction_status": "pending",
+  "transaction_id": "68b96f55-a5dc-4f19-b785-c54222bfb3c4",
+  "status_message": "midtrans payment notification",
+  "status_code": "201",
+  "signature_key": "abf76873462a7a6912f3a53377c982a90c25f2b8196e109eae74ebd554aea02499252e6e2926f181962385df1c63e74925496c36a4e07a8d8ada1037954bd713",
+  "payment_type": "qris",
+  "order_id": "ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7",
+  "merchant_id": "G663931957",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-30 10:12:27",
+  "currency": "IDR"
+}
+2025-07-30 09:57:28,676 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7, Status Code: 201, Gross Amount: 800000.00, Transaction Status: pending
+2025-07-30 09:57:28,677 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-30 09:57:28,677 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7201800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-30 09:57:28,677 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: abf76873462a7a6912f3a53377c982a90c25f2b8196e109eae74ebd554aea02499252e6e2926f181962385df1c63e74925496c36a4e07a8d8ada1037954bd713
+2025-07-30 09:57:28,677 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: abf76873462a7a6912f3a53377c982a90c25f2b8196e109eae74ebd554aea02499252e6e2926f181962385df1c63e74925496c36a4e07a8d8ada1037954bd713
+2025-07-30 09:57:28,677 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7.
+2025-07-30 09:57:28,680 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Found existing receipt b760df5b-6e10-4e08-a64f-5db4a53c08c9 for Order ID: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7. Current status: pending.
+2025-07-30 09:57:28,680 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Transaction status is 'pending' for Order ID: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7. Receipt already 'pending'. No status update needed.
+2025-07-30 09:57:28,688 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt b760df5b-6e10-4e08-a64f-5db4a53c08c9 (Order ID: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7) successfully updated in DB. Final Receipt Status: pending.
+2025-07-30 09:57:38,693 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received raw callback data: {
+  "transaction_type": "on-us",
+  "transaction_time": "2025-07-30 09:57:27",
+  "transaction_status": "settlement",
+  "transaction_id": "68b96f55-a5dc-4f19-b785-c54222bfb3c4",
+  "status_message": "midtrans payment notification",
+  "status_code": "200",
+  "signature_key": "7331d335bd7642e51b0dc20e8d38848cb761bf56674a48daba3f09d2fee01095f80bb26d7dd624fa983c7b201230548d3c068c7858e457a239a3f571eb872899",
+  "settlement_time": "2025-07-30 09:57:38",
+  "payment_type": "qris",
+  "order_id": "ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7",
+  "merchant_id": "G663931957",
+  "merchant_cross_reference_id": "5c306999-5a31-4b0d-a6ed-32b2b3aff6ec",
+  "issuer": "gopay",
+  "gross_amount": "800000.00",
+  "fraud_status": "accept",
+  "expiry_time": "2025-07-30 10:12:27",
+  "currency": "IDR",
+  "acquirer": "gopay"
+}
+2025-07-30 09:57:38,693 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Extracted data - Order ID: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7, Status Code: 200, Gross Amount: 800000.00, Transaction Status: settlement
+2025-07-30 09:57:38,693 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: COMPARING SIGNATURES:
+2025-07-30 09:57:38,693 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Input for signature: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7200800000.00SB-Mid-server-h0ioErmlY553Kp2KMHS_FRGF
+2025-07-30 09:57:38,693 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Expected Signature: 7331d335bd7642e51b0dc20e8d38848cb761bf56674a48daba3f09d2fee01095f80bb26d7dd624fa983c7b201230548d3c068c7858e457a239a3f571eb872899
+2025-07-30 09:57:38,693 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Received Signature: 7331d335bd7642e51b0dc20e8d38848cb761bf56674a48daba3f09d2fee01095f80bb26d7dd624fa983c7b201230548d3c068c7858e457a239a3f571eb872899
+2025-07-30 09:57:38,693 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Signature successfully verified for Order ID: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7.
+2025-07-30 09:57:38,693 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Found existing receipt b760df5b-6e10-4e08-a64f-5db4a53c08c9 for Order ID: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7. Current status: pending.
+2025-07-30 09:57:38,696 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Transaction status is 'settlement' for Order ID: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7. Updating receipt status to 'paid'.
+2025-07-30 09:57:38,699 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Artwork e366c44a-5ad2-4be9-a18d-79ef4eaf7573 prepared to be marked as sold.
+2025-07-30 09:57:38,707 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Receipt b760df5b-6e10-4e08-a64f-5db4a53c08c9 (Order ID: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7) successfully updated in DB. Final Receipt Status: paid.
+2025-07-30 09:57:38,714 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Artwork e366c44a-5ad2-4be9-a18d-79ef4eaf7573 successfully marked as sold for Order ID: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7.
+2025-07-30 09:57:41,725 | INFO | app.api.routes.artworks | Backend received request for artwork ID: e366c44a-5ad2-4be9-a18d-79ef4eaf7573
+2025-07-30 09:57:41,732 | INFO | app.api.routes.artworks | Backend: Artwork e366c44a-5ad2-4be9-a18d-79ef4eaf7573 found: Testing image 25
+2025-07-30 09:57:41,980 | INFO | app.api.routes.payments | PAYMENTS/CALLBACK: Purchase email successfully sent to muhammadfarelas1@gmail.com for Order ID: ORDER-e68d725d-945c-4a12-afc9-0c08dc08fbd7.
+2025-07-30 10:04:26,278 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 10:10:48,778 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 10:15:54,581 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 10:16:46,145 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 10:20:05,658 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/580b576a_c2970245-2c28-4de8-80fa-087957ac3ba6_Testing_image_25.png
+2025-07-30 10:20:05,659 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'e2e346aa'
+2025-07-30 10:20:07,855 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpfgtov3pg.png
+2025-07-30 10:20:09,369 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:63a798bbd768a1e30d8bb269bfb3cb93017cdd14064366217a8fb1457192ffe1<USER_MESSAGE>,\DS R\WRZQ EA^DWA]\F
+STUXA WZ_W' (took 1.5126s)
+2025-07-30 10:20:09,370 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: ',\DS R\WRZQ EA^DWA]\F
+STUXA WZ_W'
+2025-07-30 10:20:09,371 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'e2e346aa'
+2025-07-30 10:20:09,372 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'Ini pesan rahasia jangan sampai bocor ketangan amerika'
+2025-07-30 10:20:09,373 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpfgtov3pg.png
+2025-07-30 10:20:31,772 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/580b576a_c2970245-2c28-4de8-80fa-087957ac3ba6_Testing_image_25.png
+2025-07-30 10:20:31,772 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'e2e346aa'
+2025-07-30 10:20:33,830 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpo872keck.png
+2025-07-30 10:20:35,139 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:63a798bbd768a1e30d8bb269bfb3cb93017cdd14064366217a8fb1457192ffe1<USER_MESSAGE>,\DS R\WRZQ EA^DWA]\F
+STUXA WZ_W' (took 1.3063s)
+2025-07-30 10:20:35,139 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: ',\DS R\WRZQ EA^DWA]\F
+STUXA WZ_W'
+2025-07-30 10:20:35,139 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'e2e346aa'
+2025-07-30 10:20:35,140 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'Ini pesan rahasia jangan sampai bocor ketangan amerika'
+2025-07-30 10:20:35,140 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpo872keck.png
+2025-07-30 10:25:39,881 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 10:26:50,750 | INFO | app.main | Server FastAPI dimulai...
+2025-07-30 10:34:11,847 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0ec29e46-2d47-4abb-8093-c2d82b9b446c
+2025-07-30 10:34:11,856 | INFO | app.api.routes.artworks | Backend: Artwork 0ec29e46-2d47-4abb-8093-c2d82b9b446c found: Testing image 16
+2025-07-30 10:34:11,898 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0ec29e46-2d47-4abb-8093-c2d82b9b446c
+2025-07-30 10:34:11,901 | INFO | app.api.routes.artworks | Backend: Artwork 0ec29e46-2d47-4abb-8093-c2d82b9b446c found: Testing image 16
+2025-07-30 10:34:44,473 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-30 10:34:44,473 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-30 10:34:44,497 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-07-30 10:34:44,502 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-07-30 10:35:40,030 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c
+2025-07-30 10:35:40,030 | INFO | app.api.routes.artworks | Backend: Artwork 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c found: Testing image 25
+2025-07-30 10:35:40,051 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c
+2025-07-30 10:35:40,061 | INFO | app.api.routes.artworks | Backend: Artwork 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c found: Testing image 25
+2025-07-30 10:35:59,283 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c
+2025-07-30 10:35:59,285 | INFO | app.api.routes.artworks | Backend: Artwork 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c found: Testing image 25
+2025-07-30 10:36:10,824 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/d6eacf6a_c2970245-2c28-4de8-80fa-087957ac3ba6_Testing_image_25.png
+2025-07-30 10:36:10,824 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'f6fd64c5'
+2025-07-30 10:36:12,892 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpvrjckaha.png
+2025-07-30 10:36:16,801 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:c96bf0e9735fbad5042406e04c6ba11a4ea599e27c78c5a98e7ed228650fd83e<USER_MESSAGE>/XDFQT^U\XS[FE	FU
+YDPWWZCTS]U' (took 3.9085s)
+2025-07-30 10:36:16,801 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '/XDFQT^U\XS[FE	FU
+YDPWWZCTS]U'
+2025-07-30 10:36:16,801 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'f6fd64c5'
+2025-07-30 10:36:16,801 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'Ini pesan rahasia jangan sampai bocor ketangan amerika'
+2025-07-30 10:36:16,801 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpvrjckaha.png

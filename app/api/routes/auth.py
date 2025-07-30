@@ -54,7 +54,7 @@ def login(login_data: UserLogin, db: Session = Depends(get_db)):
     access_token_expires = timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
     to_encode = {
         "sub": str(user.id),
-        "exp": datetime.utcnow() + access_token_expires
+        "exp": int((datetime.utcnow() + access_token_expires).timestamp())
     }
     token = jwt.encode(to_encode, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
 
