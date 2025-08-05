@@ -3347,3 +3347,88 @@ D[UD [WXQ]G]W'
 2025-07-30 16:39:22,356 | INFO | app.api.routes.artworks | Backend: Artwork 0c39bbde-d9ad-43c9-a8d5-8ff15bf2f684 found: Testing image 1
 2025-07-30 16:40:02,145 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0c39bbde-d9ad-43c9-a8d5-8ff15bf2f684
 2025-07-30 16:40:02,321 | INFO | app.api.routes.artworks | Backend: Artwork 0c39bbde-d9ad-43c9-a8d5-8ff15bf2f684 found: Testing image 1
+2025-07-31 11:05:40,809 | INFO | app.main | Server FastAPI dimulai...
+2025-07-31 13:34:20,623 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c
+2025-07-31 13:34:20,719 | INFO | app.api.routes.artworks | Backend: Artwork 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c found: Testing image 25
+2025-07-31 13:34:20,775 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c
+2025-07-31 13:34:20,779 | INFO | app.api.routes.artworks | Backend: Artwork 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c found: Testing image 25
+2025-07-31 13:35:57,871 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-07-31 13:35:57,884 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-07-31 13:35:57,932 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-07-31 13:35:57,938 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-04 07:49:20,611 | INFO | app.main | Server FastAPI dimulai...
+2025-08-04 07:51:33,694 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-08-04 07:51:33,778 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-08-04 07:51:33,795 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-04 07:51:33,795 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-04 07:51:45,361 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 76cd5199-da36-44b6-893e-7e797252463f
+2025-08-04 07:51:45,375 | INFO | app.api.routes.artworks | Backend: Artwork 76cd5199-da36-44b6-893e-7e797252463f found: Testing image 14
+2025-08-04 07:51:45,391 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 76cd5199-da36-44b6-893e-7e797252463f
+2025-08-04 07:51:45,394 | INFO | app.api.routes.artworks | Backend: Artwork 76cd5199-da36-44b6-893e-7e797252463f found: Testing image 14
+2025-08-04 07:51:52,226 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0ec29e46-2d47-4abb-8093-c2d82b9b446c
+2025-08-04 07:51:52,234 | INFO | app.api.routes.artworks | Backend: Artwork 0ec29e46-2d47-4abb-8093-c2d82b9b446c found: Testing image 16
+2025-08-04 07:51:52,270 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0ec29e46-2d47-4abb-8093-c2d82b9b446c
+2025-08-04 07:51:52,277 | INFO | app.api.routes.artworks | Backend: Artwork 0ec29e46-2d47-4abb-8093-c2d82b9b446c found: Testing image 16
+2025-08-04 09:16:58,879 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-08-04 09:16:58,982 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-08-04 09:16:59,049 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-04 09:16:59,049 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-04 09:17:14,975 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ef87af29-5c63-4a3c-93da-6fa844e836ce
+2025-08-04 09:17:14,980 | INFO | app.api.routes.artworks | Backend: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce found: Testing image 15
+2025-08-04 09:17:15,007 | INFO | app.api.routes.artworks | Backend received request for artwork ID: ef87af29-5c63-4a3c-93da-6fa844e836ce
+2025-08-04 09:17:15,011 | INFO | app.api.routes.artworks | Backend: Artwork ef87af29-5c63-4a3c-93da-6fa844e836ce found: Testing image 15
+2025-08-04 09:18:56,068 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-08-04 09:18:56,073 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-04 09:18:56,133 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-08-04 09:18:56,137 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-04 18:46:40,494 | INFO | app.main | Server FastAPI dimulai...
+2025-08-05 09:43:56,593 | INFO | app.main | Server FastAPI dimulai...
+2025-08-05 09:59:27,874 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-08-05 09:59:27,915 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-08-05 09:59:27,957 | INFO | app.api.routes.artworks | Backend received request for artwork ID: f37cad45-c41a-4cfc-a0b4-56164c270784
+2025-08-05 09:59:28,097 | INFO | app.api.routes.artworks | Backend: Artwork f37cad45-c41a-4cfc-a0b4-56164c270784 found: Testing image 17
+2025-08-05 10:00:39,357 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 76cd5199-da36-44b6-893e-7e797252463f
+2025-08-05 10:00:39,364 | INFO | app.api.routes.artworks | Backend: Artwork 76cd5199-da36-44b6-893e-7e797252463f found: Testing image 14
+2025-08-05 10:00:39,416 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 76cd5199-da36-44b6-893e-7e797252463f
+2025-08-05 10:00:39,420 | INFO | app.api.routes.artworks | Backend: Artwork 76cd5199-da36-44b6-893e-7e797252463f found: Testing image 14
+2025-08-05 10:00:51,312 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 76cd5199-da36-44b6-893e-7e797252463f
+2025-08-05 10:00:51,321 | INFO | app.api.routes.artworks | Backend: Artwork 76cd5199-da36-44b6-893e-7e797252463f found: Testing image 14
+2025-08-05 10:00:51,391 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 76cd5199-da36-44b6-893e-7e797252463f
+2025-08-05 10:00:51,394 | INFO | app.api.routes.artworks | Backend: Artwork 76cd5199-da36-44b6-893e-7e797252463f found: Testing image 14
+2025-08-05 10:01:35,694 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-08-05 10:01:35,705 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-05 10:01:35,799 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-08-05 10:01:35,807 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-05 10:01:44,573 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-08-05 10:01:44,574 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-05 10:49:54,710 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fe17e3ee-b02f-4289-88a2-be03846ee115
+2025-08-05 10:49:54,726 | INFO | app.api.routes.artworks | Backend: Artwork fe17e3ee-b02f-4289-88a2-be03846ee115 found: Testing Image 4
+2025-08-05 10:49:54,814 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fe17e3ee-b02f-4289-88a2-be03846ee115
+2025-08-05 10:49:54,825 | INFO | app.api.routes.artworks | Backend: Artwork fe17e3ee-b02f-4289-88a2-be03846ee115 found: Testing Image 4
+2025-08-05 10:50:01,615 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6f3613af-4045-4459-ba1f-6b84ab8d3d10
+2025-08-05 10:50:01,628 | INFO | app.api.routes.artworks | Backend: Artwork 6f3613af-4045-4459-ba1f-6b84ab8d3d10 found: Testing Image 89
+2025-08-05 10:50:01,722 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6f3613af-4045-4459-ba1f-6b84ab8d3d10
+2025-08-05 10:50:01,728 | INFO | app.api.routes.artworks | Backend: Artwork 6f3613af-4045-4459-ba1f-6b84ab8d3d10 found: Testing Image 89
+2025-08-05 10:50:58,580 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6f3613af-4045-4459-ba1f-6b84ab8d3d10
+2025-08-05 10:50:58,617 | INFO | app.api.routes.artworks | Backend: Artwork 6f3613af-4045-4459-ba1f-6b84ab8d3d10 found: Testing Image 89
+2025-08-05 10:51:05,535 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6f3613af-4045-4459-ba1f-6b84ab8d3d10
+2025-08-05 10:51:05,545 | INFO | app.api.routes.artworks | Backend: Artwork 6f3613af-4045-4459-ba1f-6b84ab8d3d10 found: Testing Image 89
+2025-08-05 10:51:11,480 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6f3613af-4045-4459-ba1f-6b84ab8d3d10
+2025-08-05 10:51:11,484 | INFO | app.api.routes.artworks | Backend: Artwork 6f3613af-4045-4459-ba1f-6b84ab8d3d10 found: Testing Image 89
+2025-08-05 10:51:24,885 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6f3613af-4045-4459-ba1f-6b84ab8d3d10
+2025-08-05 10:51:24,888 | INFO | app.api.routes.artworks | Backend: Artwork 6f3613af-4045-4459-ba1f-6b84ab8d3d10 found: Testing Image 89
+2025-08-05 10:58:51,064 | INFO | app.main | Server FastAPI dimulai...
+2025-08-05 11:01:02,606 | INFO | app.main | Server FastAPI dimulai...
+2025-08-05 11:02:26,497 | INFO | app.main | Server FastAPI dimulai...
+2025-08-05 11:04:29,235 | INFO | app.main | Server FastAPI dimulai...
+2025-08-05 11:05:37,600 | INFO | app.main | Server FastAPI dimulai...
+2025-08-05 11:07:04,817 | INFO | app.main | Server FastAPI dimulai...
+2025-08-05 11:12:52,827 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-08-05 11:12:52,971 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-05 11:12:53,005 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-08-05 11:12:53,029 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-05 11:12:57,262 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0ec29e46-2d47-4abb-8093-c2d82b9b446c
+2025-08-05 11:12:57,265 | INFO | app.api.routes.artworks | Backend: Artwork 0ec29e46-2d47-4abb-8093-c2d82b9b446c found: Testing image 16
+2025-08-05 11:12:57,312 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0ec29e46-2d47-4abb-8093-c2d82b9b446c
+2025-08-05 11:12:57,320 | INFO | app.api.routes.artworks | Backend: Artwork 0ec29e46-2d47-4abb-8093-c2d82b9b446c found: Testing image 16
+2025-08-05 11:26:29,501 | INFO | app.main | Server FastAPI dimulai...

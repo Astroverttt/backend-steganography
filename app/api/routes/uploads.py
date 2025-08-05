@@ -59,7 +59,7 @@ async def upload_artwork(
         existing_artworks = db.query(Artwork).all()
         for artwork_item in existing_artworks: 
             if is_similar_image(uploaded_hashes, pil_image, artwork_item):
-                raise HTTPException(status_code=400, detail="Gambar terlalu mirip (duplikat atau visual).")
+                raise HTTPException(status_code=400, detail="Gambar Ditemukan mirip atau sudah pernah diunggap (terdeteksi duplikat).")
 
         with open(temp_file_path, "wb") as f:
             f.write(content)
@@ -86,7 +86,8 @@ async def upload_artwork(
         os.rename(watermarked_image_path, final_image_path)
 
         BASE_URL = "http://localhost:8000"
-        image_url_db = f"/static/watermarked/{final_image_name}"
+        image_url_db = f"/static/watermarked/{final_image_name
+        }"
         image_url_full = f"{BASE_URL}{image_url_db}"
 
 

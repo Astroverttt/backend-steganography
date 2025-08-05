@@ -17,3 +17,6 @@ bcrypt
 jose
 scikit-image
 torch
+opencv-python
+imagehash
+torchvision
