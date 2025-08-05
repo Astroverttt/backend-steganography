@@ -42,18 +42,21 @@ logger.info("Server FastAPI dimulai...")
 origins = [
     "http://localhost:3000",
     "http://192.168.56.1:3000",
-    "www.pajangan.online"
-    "35.197.149.115",
+    "http://www.pajangan.online",
+    "https://www.pajangan.online",
+    "http://35.197.149.115",
+    "https://35.197.149.115",
     "null"
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://steganography-ta.vercel.app/"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 app.include_router(users.router, prefix="/api/users", tags=["Users"])
 app.include_router(auth.router, prefix="/api/auth", tags=["Auth"])
