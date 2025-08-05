@@ -42,11 +42,7 @@ logger.info("Server FastAPI dimulai...")
 origins = [
     "http://localhost:3000",
     "http://192.168.56.1:3000",
-    "http://www.pajangan.online",
     "https://www.pajangan.online",
-    "http://35.197.149.115",
-    "https://35.197.149.115",
-    "null"
 ]
 
 app.add_middleware(
