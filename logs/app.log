@@ -3432,3 +3432,26 @@ D[UD [WXQ]G]W'
 2025-08-05 11:12:57,312 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 0ec29e46-2d47-4abb-8093-c2d82b9b446c
 2025-08-05 11:12:57,320 | INFO | app.api.routes.artworks | Backend: Artwork 0ec29e46-2d47-4abb-8093-c2d82b9b446c found: Testing image 16
 2025-08-05 11:26:29,501 | INFO | app.main | Server FastAPI dimulai...
+2025-08-05 15:04:25,958 | INFO | app.main | Server FastAPI dimulai...
+2025-08-05 15:04:44,061 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c
+2025-08-05 15:04:44,069 | INFO | app.api.routes.artworks | Backend: Artwork 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c found: Testing image 25
+2025-08-05 15:04:44,085 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c
+2025-08-05 15:04:44,091 | INFO | app.api.routes.artworks | Backend: Artwork 1566bf21-c96d-40f5-a4fe-e6f9385f0d7c found: Testing image 25
+2025-08-05 15:04:48,194 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fe17e3ee-b02f-4289-88a2-be03846ee115
+2025-08-05 15:04:48,203 | INFO | app.api.routes.artworks | Backend: Artwork fe17e3ee-b02f-4289-88a2-be03846ee115 found: Testing Image 4
+2025-08-05 15:04:48,238 | INFO | app.api.routes.artworks | Backend received request for artwork ID: fe17e3ee-b02f-4289-88a2-be03846ee115
+2025-08-05 15:04:48,243 | INFO | app.api.routes.artworks | Backend: Artwork fe17e3ee-b02f-4289-88a2-be03846ee115 found: Testing Image 4
+2025-08-05 15:04:51,280 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6f3613af-4045-4459-ba1f-6b84ab8d3d10
+2025-08-05 15:04:51,284 | INFO | app.api.routes.artworks | Backend: Artwork 6f3613af-4045-4459-ba1f-6b84ab8d3d10 found: Testing Image 89
+2025-08-05 15:04:51,298 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6f3613af-4045-4459-ba1f-6b84ab8d3d10
+2025-08-05 15:04:51,307 | INFO | app.api.routes.artworks | Backend: Artwork 6f3613af-4045-4459-ba1f-6b84ab8d3d10 found: Testing Image 89
+2025-08-05 15:06:41,041 | INFO | app.api.routes.artworks | Backend received request for artwork ID: 6f3613af-4045-4459-ba1f-6b84ab8d3d10
+2025-08-05 15:06:41,048 | INFO | app.api.routes.artworks | Backend: Artwork 6f3613af-4045-4459-ba1f-6b84ab8d3d10 found: Testing Image 89
+2025-08-05 15:40:27,562 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/1fcf1e17_0b737b7c-14a5-4403-b311-218cb9a34c43_Testing_Image_89.png
+2025-08-05 15:40:27,570 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: '3e86d3ba'
+2025-08-05 15:40:29,762 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmpqc5qsl66.png
+2025-08-05 15:40:32,484 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:0369b732c175985430dd7194877c6c52395aff6da83663dac0933c2696f2aa64<USER_MESSAGE>APWZ' (took 2.7219s)
+2025-08-05 15:40:32,485 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: 'APWZ'
+2025-08-05 15:40:32,486 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: '3e86d3ba'
+2025-08-05 15:40:32,487 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'rahasia'
+2025-08-05 15:40:32,489 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmpqc5qsl66.png
