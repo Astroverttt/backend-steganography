@@ -86,8 +86,7 @@ async def upload_artwork(
         os.rename(watermarked_image_path, final_image_path)
 
         BASE_URL = "http://localhost:8000"
-        image_url_db = f"/static/watermarked/{final_image_name
-        }"
+        image_url_db = f"/static/watermarked/{final_image_name}"
         image_url_full = f"{BASE_URL}{image_url_db}"
 
 
