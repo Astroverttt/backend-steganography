@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "Blog"
     PROJECT_VERSION: str = "1.0.0"
 
-    DATABASE_URL: str = Field(..., env="DBTAURL")
+    DATABASE_URL: str = Field(..., env="DATABASE_URL")
     SECRET_KEY: str = Field(..., env="SECRET_KEY")
     ALGORITHM: str = Field("HS256", env="ALGORITHM")
     ACCESS_TOKEN_EXPIRE_MINUTES: int = Field(60 * 24 * 7, env="ACCESS_TOKEN_EXPIRE_MINUTES")

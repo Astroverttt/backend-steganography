@@ -8,19 +8,19 @@ from app.db.database import Base, engine
 from app.api.routes import users, auth, uploads, explore, payments, extract, likes, artwork_me
 from app.api.routes.artworks import router as artworks_router
 from app.api.routes import purchase
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+# from sqlalchemy import create_engine
+# from sqlalchemy.orm import sessionmaker
 
 load_dotenv()
 
-Base.metadata.create_all(bind=engine)
+# Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
-engine = create_engine(DATABASE_URL)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+# engine = create_engine(DATABASE_URL)
+# SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Logging setup
 LOG_DIR = "logs"
@@ -42,18 +42,17 @@ logger.info("Server FastAPI dimulai...")
 origins = [
     "http://localhost:3000",
     "http://192.168.56.1:3000",
-    "www.pajangan.online"
-    "35.197.149.115",
-    "null"
+    "https://www.pajangan.online",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://steganography-ta.vercel.app/"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 app.include_router(users.router, prefix="/api/users", tags=["Users"])
 app.include_router(auth.router, prefix="/api/auth", tags=["Auth"])

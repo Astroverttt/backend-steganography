@@ -230,7 +230,7 @@ async def get_my_purchases(
             "price": float(r.amount),
             "buyer_secret_code": r.buyer_secret_code,
             "download_url": f"{FRONTEND_BASE_URL}{r.artwork.image_url}" if r.artwork and r.artwork.image_url else None,
-            "watermark_api": f"{FRONTEND_BASE_URL}/api/extract/extract-watermark",
+            "watermark_api": f"{BACKEND_API_BASE_URL}/api/extract/extract-watermark",
             "status": r.status.value
         } for r in receipts
     ]
@@ -261,5 +261,6 @@ async def get_receipt_detail(
         "buyer_secret_code": receipt.buyer_secret_code,
         "download_url": f"{FRONTEND_BASE_URL}{artwork.image_url}",
         "watermark_api": f"{BACKEND_API_BASE_URL}/api/extract/extract-watermark",
-        "status": receipt.status.value
+        "status": receipt.status.value,
+        "is_sold": artwork.is_sold
     }
