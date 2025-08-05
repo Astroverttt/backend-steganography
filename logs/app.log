@@ -3565,3 +3565,19 @@ D[UD [WXQ]G]W'
 2025-08-06 06:20:07,741 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
 2025-08-06 06:20:07,765 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
 2025-08-06 06:25:11,211 | INFO | app.main | Server FastAPI dimulai...
+2025-08-06 06:27:56,144 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-08-06 06:27:56,411 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-06 06:28:21,564 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-08-06 06:28:21,569 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-06 06:31:01,118 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-08-06 06:31:01,133 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-06 06:31:37,831 | INFO | app.api.routes.artworks | Backend received request for artwork ID: c0327a4c-dd89-4712-9ab2-456ae83a60aa
+2025-08-06 06:31:37,836 | INFO | app.api.routes.artworks | Backend: Artwork c0327a4c-dd89-4712-9ab2-456ae83a60aa found: Testing image 0
+2025-08-06 06:31:47,082 | INFO | app.api.routes.extract | EXTRACT: Received request for image_url: http://localhost:8000/static/watermarked/47e568f8_c2970245-2c28-4de8-80fa-087957ac3ba6_Testing_image_0.png
+2025-08-06 06:31:47,087 | INFO | app.api.routes.extract | EXTRACT: Received buyer_secret_code for decryption: 'a62a0e49'
+2025-08-06 06:31:49,203 | INFO | app.api.routes.extract | EXTRACT: Image downloaded to temporary path: C:\Users\farel\AppData\Local\Temp\tmp8m5lwy9x.png
+2025-08-06 06:31:51,773 | INFO | app.api.routes.extract | EXTRACT: Raw extracted message: 'COPYRIGHT:a3132f6361cad3ca77bfaef3ab86427cc6cf7dd5b1277e93a2805e52e5e46e53<USER_MESSAGE>(X[A@ GX@ XGP X ^UWAES@]YQBE_\W\QXS@[' (took 2.5702s)
+2025-08-06 06:31:51,773 | INFO | app.api.routes.extract | EXTRACT: Encrypted creator message part: '(X[A@ GX@ XGP X ^UWAES@]YQBE_\W\QXS@['
+2025-08-06 06:31:51,773 | INFO | app.api.routes.extract | EXTRACT: Attempting to decrypt with buyer_secret_code: 'a62a0e49'
+2025-08-06 06:31:51,779 | INFO | app.api.routes.extract | EXTRACT: Decrypted creator message: 'Ini pesan rahasia jangan sampai bocor ketangan amerika'
+2025-08-06 06:31:51,779 | INFO | app.api.routes.extract | EXTRACT: Cleaned up temporary file: C:\Users\farel\AppData\Local\Temp\tmp8m5lwy9x.png
