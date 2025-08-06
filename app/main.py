@@ -39,7 +39,12 @@ logger = logging.getLogger(__name__)
 logger.info("Server FastAPI dimulai...")
 
 # CORS
-origins = ["*"]
+origins = [
+    "http://localhost:3000",
+    "http://192.168.56.1:3000",
+    "https://www.pajangan.online",
+    "https://reverse-proxy-587824585699.us-central1.run.app"
+]
 
 app.add_middleware(
     CORSMiddleware,
