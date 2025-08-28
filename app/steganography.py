@@ -96,3 +96,49 @@ def extract_message_lsb(stego_image_path: str) -> str:
             break
 
     return ''.join(chars).replace("<END>", "")
+
+def embed_message_lsb_from_pil_image(image: Image.Image, message: str) -> Image.Image:
+    """Menyisipkan pesan ke dalam image dengan metode LSB"""
+    encoded = image.copy()
+    width, height = encoded.size
+    message += chr(0)  # menambahkan karakter terminator
+    message_bits = ''.join([format(ord(char), '08b') for char in message])
+
+    data_index = 0
+    pixels = encoded.load()
+
+    for y in range(height):
+        for x in range(width):
+            if data_index < len(message_bits):
+                r, g, b = pixels[x, y]
+                r = (r & ~1) | int(message_bits[data_index])
+                pixels[x, y] = (r, g, b)
+                data_index += 1
+            else:
+                return encoded
+    return encoded
+
+
+def extract_message_lsb_from_pil_image(image: Image.Image) -> str:
+    """Mengambil pesan dari image dengan metode LSB"""
+    pixels = image.load()
+    width, height = image.size
+    bits = []
+    for y in range(height):
+        for x in range(width):
+            r, g, b = pixels[x, y]
+            bits.append(str(r & 1))
+
+    message = ""
+    for i in range(0, len(bits), 8):
+        byte = bits[i:i+8]
+        char = chr(int("".join(byte), 2))
+        if char == chr(0):  # terminator
+            break
+        message += char
+    return message
+
+
+def rotate_image(image: Image.Image, angle: int) -> Image.Image:
+    """Rotasi image dengan sudut tertentu (0, 90, 180, 270)"""
+    return image.rotate(angle, expand=True)
